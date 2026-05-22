@@ -2,12 +2,12 @@ const initializeRankingBoard = (board) => {
     const pool = board.querySelector('[data-dropzone="pool"]');
     const bucketZones = Array.from(board.querySelectorAll('[data-dropzone="bucket"]'));
     const resetButton = board.querySelector('[data-action="reset"]');
-    const finalizeButton = board.querySelector('[data-action="finalize"]');
     const downloadButton = board.querySelector('[data-action="download"]');
     const resultBody = board.querySelector('.ranking-result-body');
     const statusText = board.querySelector('.ranking-status');
     const placedCount = board.querySelector('.placed-count');
     const pageShell = board.closest('.page-shell');
+    const finalizeButton = pageShell ? pageShell.querySelector('[data-action="finalize"]') : null;
     const completeUrl = pageShell ? pageShell.dataset.completeUrl : '';
     const modal = document.querySelector('[data-event-modal]');
     const modalTitle = modal ? modal.querySelector('[data-event-modal-title]') : null;
@@ -83,6 +83,43 @@ const initializeRankingBoard = (board) => {
         board.querySelectorAll('.event-card').forEach(updateCardStar);
     };
 
+    const updateBucketLayoutState = () => {
+        const bucketCounts = bucketZones.map((zone) => {
+            const bucket = zone.closest('.bucket');
+            const cardCount = zone.querySelectorAll('.event-card').length;
+            const bucketGrow = cardCount > 2 ? (3.2 + ((cardCount - 3) * 0.9)) : 0.7;
+
+            if (bucket) {
+                bucket.dataset.cardCount = String(cardCount);
+                bucket.classList.toggle('is-expanded', cardCount > 2);
+                bucket.style.setProperty('--bucket-grow', String(bucketGrow));
+            }
+
+            return cardCount;
+        });
+
+        const hasExpandedBucket = bucketCounts.some((count) => count > 2);
+
+        board.classList.toggle('has-dense-buckets', hasExpandedBucket);
+
+        bucketZones.forEach((zone) => {
+            const bucket = zone.closest('.bucket');
+            const cardCount = Number(bucket ? bucket.dataset.cardCount || '0' : '0');
+
+            if (bucket) {
+                bucket.classList.toggle('is-compact', hasExpandedBucket && cardCount <= 2);
+
+                if (hasExpandedBucket && cardCount <= 2) {
+                    bucket.style.setProperty('--bucket-grow', '0.55');
+                } else if (cardCount > 2) {
+                    bucket.style.setProperty('--bucket-grow', String(3.2 + ((cardCount - 3) * 0.9)));
+                } else {
+                    bucket.style.setProperty('--bucket-grow', '0.7');
+                }
+            }
+        });
+    };
+
     const getDragAfterElement = (container, clientX) => {
         const draggableElements = Array.from(container.querySelectorAll('.event-card:not(.is-dragging)'));
 
@@ -110,6 +147,7 @@ const initializeRankingBoard = (board) => {
 
     const renderResults = () => {
         updateAllCardStars();
+        updateBucketLayoutState();
         const rankedCards = getRankedCards();
         const placed = rankedCards.length;
         const remaining = initialOrder.length - placed;

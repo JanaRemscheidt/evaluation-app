@@ -127,9 +127,6 @@
                             <p class="eyebrow">Schritt 1</p>
                             <h2 id="pool-heading">10 Events anordnen</h2>
                         </div>
-                        <div class="board-actions">
-                            <button class="primary-btn" type="button" data-action="finalize">Abschließen</button>
-                        </div>
                     </div>
 
                     <p class="panel-note">Ziehe die Karten aus dem Startbereich in eine Sterne-Kategorie. Innerhalb der Kategorie kannst du die Reihenfolge weiter sortieren.</p>
@@ -176,7 +173,10 @@
         </main>
 
         <footer class="site-footer">
-            <p>Nach dem Abschließen wird automatisch zur nächsten Persona weitergeleitet.</p>
+            <p>Wenn du bereit bist, geht es mit der nächsten Persona weiter.</p>
+            <div class="footer-actions">
+                <button class="primary-btn" type="button" data-action="finalize">Weiter</button>
+            </div>
         </footer>
     </div>
 
@@ -190,19 +190,11 @@
                 </div>
                 <button class="event-modal-close" type="button" data-event-action="close-modal">Schließen</button>
             </div>
-            <div class="event-modal-meta event-meta">
-                <span data-event-modal-type></span>
-                <span data-event-modal-date></span>
-            </div>
             <p class="event-modal-summary event-summary" data-event-modal-description></p>
             <div class="event-facts event-modal-facts">
                 <div>
                     <span>Ort</span>
                     <strong data-event-modal-location></strong>
-                </div>
-                <div>
-                    <span>Tags</span>
-                    <strong data-event-modal-tags></strong>
                 </div>
             </div>
         </div>
