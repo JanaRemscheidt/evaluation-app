@@ -39,6 +39,15 @@ python app.py
 
 Die App läuft standardmäßig auf `http://0.0.0.0:5005`.
 
+**Deployment (Wasmer / Wasix)**
+
+Wenn du die App bei Wasmer/Wasix hosten willst, verwende folgende Einstellungen:
+
+- Install-Command: `pip install -r requirements.txt`
+- Start-Command: `uvicorn app:app --interface wsgi --host 0.0.0.0 --port ${PORT:-8080}`
+
+Wichtig: das WSGI-Target muss auf `app:app` zeigen (nicht `a:app`), da die Flask-Instanz in `app.py` als `app` definiert ist.
+
 **Projektstruktur (Kurzüberblick)**
 - `app.py` – Haupt-Flask-Anwendung und Routen
 - `requirements.txt` – Python-Abhängigkeiten
