@@ -1,5 +1,6 @@
 import json
 import re
+import os
 import random
 import mimetypes
 import sqlite3
@@ -12,6 +13,8 @@ from flask import Flask, jsonify, redirect, render_template, request, session, u
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "evaluation-app-development"
+
+port = int(os.environ.get("PORT", 5005))
 
 mimetypes.add_type("application/javascript", ".js")
 mimetypes.add_type("text/css", ".css")
