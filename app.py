@@ -2,10 +2,13 @@ import json
 import re
 import random
 import mimetypes
+import sqlite3
+import uuid
 from functools import lru_cache
+from datetime import datetime, timezone
 from pathlib import Path
 
-from flask import Flask, jsonify, redirect, render_template, session, url_for
+from flask import Flask, jsonify, redirect, render_template, request, session, url_for
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "evaluation-app-development"
@@ -15,12 +18,62 @@ mimetypes.add_type("text/css", ".css")
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
+DATABASE_PATH = DATA_DIR / "evaluation.sqlite3"
 
 
 @lru_cache(maxsize=8)
 def load_json_file(filename):
     with (DATA_DIR / filename).open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def get_db_connection():
+    connection = sqlite3.connect(DATABASE_PATH)
+    connection.row_factory = sqlite3.Row
+    connection.execute("PRAGMA foreign_keys = ON")
+    return connection
+
+
+def initialize_storage():
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    with get_db_connection() as connection:
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS ranking_submissions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                submission_uuid TEXT NOT NULL UNIQUE,
+                session_uuid TEXT NOT NULL,
+                persona_id TEXT NOT NULL,
+                persona_name TEXT NOT NULL,
+                persona_bio TEXT,
+                generated_at TEXT,
+                saved_at TEXT NOT NULL,
+                ranking_json TEXT NOT NULL,
+                raw_payload_json TEXT NOT NULL,
+                UNIQUE(session_uuid, persona_id)
+            )
+            """
+        )
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS ranking_submission_items (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                submission_id INTEGER NOT NULL,
+                position INTEGER NOT NULL,
+                event_id TEXT NOT NULL,
+                event_name TEXT NOT NULL,
+                star_category INTEGER NOT NULL,
+                location_name TEXT,
+                tags_json TEXT NOT NULL,
+                event_type TEXT,
+                FOREIGN KEY (submission_id) REFERENCES ranking_submissions(id) ON DELETE CASCADE
+            )
+            """
+        )
+
+
+initialize_storage()
 
 
 def compact_text(value, max_length=180):
@@ -209,6 +262,144 @@ def get_personas():
     return [build_persona_record(persona) for persona in load_json_file("personas.json")]
 
 
+def get_participant_uuid():
+    participant_uuid = session.get("participant_uuid")
+
+    if not participant_uuid:
+        participant_uuid = uuid.uuid4().hex
+        session["participant_uuid"] = participant_uuid
+
+    return participant_uuid
+
+
+def normalize_submission_ranking(ranking_entries):
+    normalized_entries = []
+
+    if not isinstance(ranking_entries, list):
+        raise ValueError("ranking must be a list")
+
+    for fallback_position, entry in enumerate(ranking_entries, start=1):
+        if not isinstance(entry, dict):
+            raise ValueError("ranking entry must be an object")
+
+        event_id = str(entry.get("eventId") or "").strip()
+
+        if not event_id:
+            raise ValueError("ranking entry is missing eventId")
+
+        normalized_entries.append(
+            {
+                "position": int(entry.get("position") or fallback_position),
+                "event_id": event_id,
+                "event_name": str(entry.get("eventName") or "Unbenanntes Event"),
+                "star_category": int(entry.get("starCategory") or 0),
+                "location_name": str(entry.get("location") or ""),
+                "tags": [tag for tag in (entry.get("tags") or []) if isinstance(tag, str) and tag.strip()],
+                "event_type": str(entry.get("eventType") or "Event"),
+            }
+        )
+
+    normalized_entries.sort(key=lambda item: item["position"])
+
+    return normalized_entries
+
+
+def save_ranking_submission(persona, payload):
+    ranking_entries = normalize_submission_ranking(payload.get("ranking", []))
+
+    if len(ranking_entries) != 10:
+        raise ValueError("ranking must contain exactly 10 events")
+
+    participant_uuid = get_participant_uuid()
+    submission_uuid = uuid.uuid4().hex
+    generated_at = str(payload.get("generatedAt") or "")
+    saved_at = datetime.now(timezone.utc).isoformat()
+
+    raw_payload_json = json.dumps(payload, ensure_ascii=False)
+    ranking_json = json.dumps(ranking_entries, ensure_ascii=False)
+
+    with get_db_connection() as connection:
+        connection.execute(
+            """
+            INSERT INTO ranking_submissions (
+                submission_uuid,
+                session_uuid,
+                persona_id,
+                persona_name,
+                persona_bio,
+                generated_at,
+                saved_at,
+                ranking_json,
+                raw_payload_json
+            )
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(session_uuid, persona_id) DO UPDATE SET
+                submission_uuid = excluded.submission_uuid,
+                persona_name = excluded.persona_name,
+                persona_bio = excluded.persona_bio,
+                generated_at = excluded.generated_at,
+                saved_at = excluded.saved_at,
+                ranking_json = excluded.ranking_json,
+                raw_payload_json = excluded.raw_payload_json
+            """,
+            (
+                submission_uuid,
+                participant_uuid,
+                persona["id"],
+                persona["name"],
+                payload.get("persona", {}).get("bio") or persona.get("bio", ""),
+                generated_at,
+                saved_at,
+                ranking_json,
+                raw_payload_json,
+            ),
+        )
+
+        submission_row = connection.execute(
+            "SELECT id FROM ranking_submissions WHERE session_uuid = ? AND persona_id = ?",
+            (participant_uuid, persona["id"]),
+        ).fetchone()
+
+        if submission_row is None:
+            raise RuntimeError("failed to resolve saved submission")
+
+        submission_id = submission_row["id"]
+        connection.execute("DELETE FROM ranking_submission_items WHERE submission_id = ?", (submission_id,))
+
+        for entry in ranking_entries:
+            connection.execute(
+                """
+                INSERT INTO ranking_submission_items (
+                    submission_id,
+                    position,
+                    event_id,
+                    event_name,
+                    star_category,
+                    location_name,
+                    tags_json,
+                    event_type
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    submission_id,
+                    entry["position"],
+                    entry["event_id"],
+                    entry["event_name"],
+                    entry["star_category"],
+                    entry["location_name"],
+                    json.dumps(entry["tags"], ensure_ascii=False),
+                    entry["event_type"],
+                ),
+            )
+
+    return {
+        "submissionId": submission_uuid,
+        "sessionId": participant_uuid,
+        "rankingCount": len(ranking_entries),
+    }
+
+
 def build_persona_ranking_record(event):
     top_shared_features = event.get("top_shared_features") or []
     feature_summary = ", ".join(
@@ -362,6 +553,16 @@ def complete_persona(persona_id):
     if persona_id != expected_persona_id:
         return jsonify({"nextUrl": url_for("persona_page", persona_id=expected_persona_id), "completed": False}), 409
 
+    payload = request.get_json(silent=True) or {}
+
+    try:
+        save_ranking_submission(
+            next(persona for persona in personas if persona["id"] == persona_id),
+            payload,
+        )
+    except (StopIteration, ValueError, RuntimeError) as error:
+        return jsonify({"error": str(error), "completed": False}), 400
+
     completed_persona_ids = session.get("completed_persona_ids", [])
     if persona_id not in completed_persona_ids:
         completed_persona_ids.append(persona_id)
@@ -370,7 +571,7 @@ def complete_persona(persona_id):
     next_persona_id = get_expected_persona_id(persona_order)
     next_url = url_for("persona_page", persona_id=next_persona_id) if next_persona_id else url_for("complete_page")
 
-    return jsonify({"nextUrl": next_url, "completed": next_persona_id is None})
+    return jsonify({"nextUrl": next_url, "completed": next_persona_id is None, "saved": True})
 
 
 @app.route("/complete")

@@ -145,6 +145,28 @@ const initializeRankingBoard = (board) => {
             })));
     };
 
+    const buildSubmissionPayload = () => {
+        const rankedCards = getRankedCards();
+
+        return {
+            persona: {
+                id: document.querySelector('.page-shell') ? document.querySelector('.page-shell').dataset.personaId : '',
+                name: document.querySelector('.page-shell') ? document.querySelector('.page-shell').dataset.personaName : '',
+                bio: board.querySelector('.persona-bio') ? board.querySelector('.persona-bio').textContent : '',
+            },
+            generatedAt: new Date().toISOString(),
+            ranking: rankedCards.map((entry, index) => ({
+                position: index + 1,
+                eventId: entry.card.dataset.eventId,
+                eventName: entry.card.dataset.eventName,
+                eventType: entry.card.dataset.eventType,
+                starCategory: entry.star,
+                location: entry.card.dataset.eventLocation,
+                tags: (entry.card.dataset.eventTags || '').split(', ').filter(Boolean),
+            })),
+        };
+    };
+
     const renderResults = () => {
         updateAllCardStars();
         updateBucketLayoutState();
@@ -204,7 +226,8 @@ const initializeRankingBoard = (board) => {
     };
 
     const finalizeBoard = async () => {
-        const rankedCards = getRankedCards();
+        const payload = buildSubmissionPayload();
+        const rankedCards = payload.ranking;
 
         if (rankedCards.length !== initialOrder.length) {
             const remaining = initialOrder.length - rankedCards.length;
@@ -225,13 +248,20 @@ const initializeRankingBoard = (board) => {
             const response = await fetch(completeUrl, {
                 method: 'POST',
                 headers: {
+                    'Content-Type': 'application/json',
                     'X-Requested-With': 'fetch',
                 },
+                body: JSON.stringify(payload),
             });
-            const payload = await response.json();
+
+            const responsePayload = await response.json();
+
+            if (!response.ok) {
+                throw new Error(responsePayload.error || 'Ranking konnte nicht gespeichert werden.');
+            }
 
             window.setTimeout(() => {
-                window.location.assign(payload.nextUrl || completeUrl);
+                window.location.assign(responsePayload.nextUrl || completeUrl);
             }, 500);
         } catch (error) {
             finalized = false;
@@ -245,29 +275,13 @@ const initializeRankingBoard = (board) => {
     };
 
     const downloadResult = () => {
-        const rankedCards = getRankedCards();
+        const payload = buildSubmissionPayload();
+        const rankedCards = payload.ranking;
 
         if (!finalized || rankedCards.length !== initialOrder.length) {
             if (statusText) statusText.textContent = 'Bitte das Ranking zuerst finalisieren, bevor du exportierst.';
             return;
         }
-
-        const payload = {
-            persona: {
-                id: document.querySelector('.page-shell') ? document.querySelector('.page-shell').dataset.personaId : '',
-                name: document.querySelector('.page-shell') ? document.querySelector('.page-shell').dataset.personaName : '',
-                bio: board.querySelector('.persona-bio') ? board.querySelector('.persona-bio').textContent : '',
-            },
-            generatedAt: new Date().toISOString(),
-            ranking: rankedCards.map((entry, index) => ({
-                position: index + 1,
-                eventId: entry.card.dataset.eventId,
-                eventName: entry.card.dataset.eventName,
-                starCategory: entry.star,
-                location: entry.card.dataset.eventLocation,
-                tags: (entry.card.dataset.eventTags || '').split(', ').filter(Boolean),
-            })),
-        };
 
         const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);

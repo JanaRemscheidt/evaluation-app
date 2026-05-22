@@ -980,6 +980,14 @@ body.has-event-overlay {
     justify-content: flex-end;
 }
 
+.footer-actions .primary-btn {
+    min-height: 92px;
+    min-width: 12.5rem;
+    padding: 0 32px;
+    font-size: 1.08rem;
+    border-radius: 20px;
+}
+
 body.is-finalized .event-card {
     cursor: default;
 }
