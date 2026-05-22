@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Persona-driven mock dashboard for the evaluation app.">
+    <title>Evaluation App - Personas & Mock Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="page-shell" data-persona-id="{{ persona.id }}" data-persona-name="{{ persona.name }}" data-complete-url="{{ complete_url }}">
+        <main class="evaluation-layout" data-persona-board>
+            <section class="panel persona-panel board-subpanel persona-hero-panel">
+                <div class="persona-hero-layout">
+
+                    <!-- LEFT: Identity -->
+                    <aside class="persona-identity">
+                        <div
+                            class="persona-avatar persona-avatar-hero"
+                            {% if persona.avatar_style and persona.avatar_style|length >= 2 %}
+                            style="
+                                --persona-primary: {{ persona.avatar_style[0] }};
+                                --persona-secondary: {{ persona.avatar_style[1] }};
+                                background: linear-gradient(
+                                    135deg,
+                                    var(--persona-primary),
+                                    var(--persona-secondary)
+                                );
+                            "
+                            {% endif %}
+                        >
+                            {{ persona.initials }}
+                        </div>
+
+                        <div class="persona-identity-meta">
+                            <p class="persona-label">Persona</p>
+                            <h2 class="persona-name">{{ persona.name }}</h2>
+                        </div>
+                    </aside>
+
+                    <!-- CENTER: Story -->
+                    <section class="persona-story">
+                        {% if persona.quote %}
+                        <blockquote class="persona-hero-quote">
+                            „{{ persona.quote }}“
+                        </blockquote>
+                        {% endif %}
+
+                        <p class="persona-bio hero-bio">
+                            {{ persona.bio }}
+                        </p>
+
+                        {% if persona.motivation %}
+                        <div class="persona-motivation-card">
+                            <span class="motivation-label">Motivation</span>
+                            <p>{{ persona.motivation }}</p>
+                        </div>
+                        {% endif %}
+
+                        {% if persona.speech %}
+                        <div class="persona-speech-inline">
+                            <span>Typischer Satz</span>
+                            <p>„{{ persona.speech }}“</p>
+                        </div>
+                        {% endif %}
+                    </section>
+
+                    <!-- RIGHT: DNA -->
+                    <aside class="persona-dna">
+
+                        <div class="dna-section">
+                            <div class="dna-head positive">
+                                <span>+</span>
+                                <h4>Mag ich</h4>
+                            </div>
+
+                            <div class="chip-cloud">
+                                {% for genre in persona.liked_genres %}
+                                <span class="persona-chip positive">
+                                    {{ genre.name }}
+                                </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="dna-section">
+                            <div class="dna-head negative">
+                                <span>–</span>
+                                <h4>Vermeide ich</h4>
+                            </div>
+
+                            <div class="chip-cloud">
+                                {% for genre in persona.disliked_genres %}
+                                <span class="persona-chip negative">
+                                    {{ genre.name }}
+                                </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="dna-section">
+                            <div class="dna-head neutral">
+                                <span>◆</span>
+                                <h4>Persönlichkeit</h4>
+                            </div>
+
+                            <div class="chip-cloud">
+                                {% for tag in persona.tags %}
+                                <span class="persona-chip neutral">
+                                    {{ tag }}
+                                </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                    </aside>
+
+                </div>
+            </section>
+
+                <section class="panel pool-panel board-subpanel" aria-labelledby="pool-heading">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">Schritt 1</p>
+                            <h2 id="pool-heading">10 Events anordnen</h2>
+                        </div>
+                        <div class="board-actions">
+                            <button class="primary-btn" type="button" data-action="finalize">Abschließen</button>
+                        </div>
+                    </div>
+
+                    <p class="panel-note">Ziehe die Karten aus dem Startbereich in eine Sterne-Kategorie. Innerhalb der Kategorie kannst du die Reihenfolge weiter sortieren.</p>
+                    <p class="panel-note">Klicke auf "Details", um die Beschreibung groß zu lesen.</p>
+
+                    <div class="event-pool dropzone" data-dropzone="pool" aria-label="Unbewertete Events für {{ persona.name }}">
+                        {% for event in events %}
+                        <article class="event-card" draggable="true" data-event-id="{{ event.id }}" data-event-name="{{ event.name }}" data-event-date="{{ event.start_date or '' }}" data-event-location="{{ event.location_name }}" data-event-tags="{{ event.keywords | join(', ') }}" data-event-type="{{ event.type }}" data-event-description='{{ event.description | tojson }}' data-source-order="{{ loop.index0 }}">
+                            <div class="event-card-preview">
+                                <div class="event-card-title-wrap">
+                                    <h3>{{ event.name }}</h3>
+                                    <button class="event-card-toggle" type="button" draggable="false" data-event-action="open-details">Details</button>
+                                </div>
+                            </div>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="panel ranking-panel board-subpanel" aria-labelledby="ranking-heading">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">Schritt 2</p>
+                            <h2 id="ranking-heading">Sterne bewerten</h2>
+                        </div>
+                        <span class="section-chip"><span class="placed-count">0</span>/{{ event_count }} platziert</span>
+                    </div>
+
+                    <div class="star-board">
+                        {% for star in range(5, 0, -1) %}
+                        <section class="bucket" data-star="{{ star }}">
+                            <div class="bucket-head">
+                                <span class="bucket-stars">{{ '★' * star }}</span>
+                                <span>{{ star }} Stern{% if star > 1 %}e{% endif %}</span>
+                            </div>
+                            <div class="dropzone bucket-dropzone" data-dropzone="bucket" data-star="{{ star }}"></div>
+                        </section>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <!-- Live ranking removed per user request -->
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Nach dem Abschließen wird automatisch zur nächsten Persona weitergeleitet.</p>
+        </footer>
+    </div>
+
+    <div class="event-modal" data-event-modal hidden aria-hidden="true">
+        <div class="event-modal-backdrop" data-event-action="close-modal"></div>
+        <div class="event-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
+            <div class="event-modal-header">
+                <div>
+                    <p class="eyebrow">Event-Details</p>
+                    <h2 id="event-modal-title" data-event-modal-title>Details</h2>
+                </div>
+                <button class="event-modal-close" type="button" data-event-action="close-modal">Schließen</button>
+            </div>
+            <div class="event-modal-meta event-meta">
+                <span data-event-modal-type></span>
+                <span data-event-modal-date></span>
+            </div>
+            <p class="event-modal-summary event-summary" data-event-modal-description></p>
+            <div class="event-facts event-modal-facts">
+                <div>
+                    <span>Ort</span>
+                    <strong data-event-modal-location></strong>
+                </div>
+                <div>
+                    <span>Tags</span>
+                    <strong data-event-modal-tags></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>

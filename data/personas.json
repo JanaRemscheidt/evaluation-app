@@ -1,0 +1,602 @@
+[
+  {
+    "id": "persona_01",
+    "display": {
+      "name": "Leonie",
+      "quote": "Ich mag Abende, die noch ein bisschen nachhallen.",
+      "description": "Leonie fühlt sich dort wohl, wo Atmosphäre, Ideen und Menschen zusammenkommen. Sie mag Veranstaltungen, die inspirieren oder neue Perspektiven eröffnen – ohne dabei verkopft zu wirken.",
+      "motivation": "Sie besucht Veranstaltungen, um inspiriert zu werden, neue Gedanken mitzunehmen und Momente zu erleben, über die man danach noch spricht.",
+      "event_reflection": "Irgendwas daran bleibt mir noch im Kopf.",
+      "avatarStyle": [
+        "#8b5cf6",
+        "#22d3ee"
+      ]
+    },
+    "preferences": {
+      "liked_genres": [
+        "Poetry Slam",
+        "Kabarett",
+        "Schauspiel",
+        "Literatur",
+        "Jazz",
+        "Performance"
+      ],
+      "disliked_genres": [
+        "Schlager",
+        "Party",
+        "Märkte, Messen, Feste"
+      ]
+    },
+    "recommendation_profile": {
+      "tags": [
+        "culture_enthusiast",
+        "reflective",
+        "curious",
+        "experimental",
+        "urban"
+      ],
+      "behavior": {
+        "planning_style": "MIXED",
+        "group_preference": "SMALL_GROUP",
+        "companion_preference": "FRIENDS"
+      }
+    },
+    "feature_preferences": {
+      "audience": {
+        "families": 0.12,
+        "teenagers": 0.34,
+        "young_adults": 0.84,
+        "seniors": 0.41,
+        "students": 0.79,
+        "tourists": 0.18,
+        "couples": 0.47,
+        "singles": 0.56,
+        "friends": 0.94,
+        "locals": 0.83,
+        "adults": 0.88
+      },
+      "style": {
+        "classic": 0.48,
+        "contemporary": 0.9,
+        "alternative": 0.86,
+        "mainstream": 0.14,
+        "minimalist": 0.44,
+        "luxurious": 0.1
+      },
+      "emotion": {
+        "joyful": 0.58,
+        "humorous": 0.76,
+        "romantic": 0.18,
+        "dramatic": 0.67,
+        "melancholic": 0.55,
+        "exciting": 0.63,
+        "relaxing": 0.39
+      },
+      "environment": {
+        "urban": 0.96,
+        "nature": 0.16,
+        "historic": 0.52,
+        "industrial": 0.61
+      },
+      "activity": 0.54,
+      "outdoor_affinity": 0.19,
+      "social_distance": 0.81,
+      "participation": 0.46,
+      "vibes": {
+        "instagrammable": 0.22,
+        "spiritual": 0.18,
+        "retro": 0.37,
+        "futuristic": 0.33,
+        "edgy": 0.72,
+        "bohemian": 0.84,
+        "surreal": 0.58,
+        "elegant": 0.41,
+        "mystical": 0.24,
+        "playful": 0.62,
+        "dark": 0.36,
+        "raw": 0.69,
+        "cozy": 0.74
+      }
+    }
+  },
+  {
+    "id": "persona_02",
+    "display": {
+      "name": "Daniel",
+      "quote": "Mich begeistert vor allem, wenn etwas wirklich gut gemacht ist.",
+      "description": "Daniel liebt Veranstaltungen mit Qualität, Präsenz und Atmosphäre. Besonders Live-Musik begeistert ihn – von Klassik bis Jazz, manchmal auch überraschend moderne Formate.",
+      "motivation": "Er besucht Veranstaltungen, um Musik und Kultur intensiv zu erleben und besondere Live-Momente zu genießen, die man zuhause nicht reproduzieren kann.",
+      "event_reflection": "Da war viel Gefühl drin.",
+      "avatarStyle": [
+        "#f59e0b",
+        "#fb7185"
+      ]
+    },
+    "preferences": {
+      "liked_genres": [
+        "Klassik",
+        "Chormusik",
+        "Jazz",
+        "Weltmusik",
+        "Neue Musik",
+        "Akustische Konzerte"
+      ],
+      "disliked_genres": [
+        "Rap, Hip-Hop",
+        "Clubkultur",
+        "elektronische Musik"
+      ]
+    },
+    "recommendation_profile": {
+      "tags": [
+        "culture_enthusiast",
+        "quality_oriented",
+        "connoisseur",
+        "reflective",
+        "low_novelty"
+      ],
+      "behavior": {
+        "planning_style": "PLANNED",
+        "group_preference": "SMALL_GROUP",
+        "companion_preference": "FRIENDS"
+      }
+    },
+    "feature_preferences": {
+      "audience": {
+        "families": 0.26,
+        "teenagers": 0.05,
+        "young_adults": 0.34,
+        "seniors": 0.71,
+        "students": 0.28,
+        "tourists": 0.18,
+        "couples": 0.56,
+        "singles": 0.19,
+        "friends": 0.84,
+        "locals": 0.74,
+        "adults": 0.89
+      },
+      "style": {
+        "classic": 0.93,
+        "contemporary": 0.42,
+        "alternative": 0.21,
+        "mainstream": 0.25,
+        "minimalist": 0.61,
+        "luxurious": 0.68
+      },
+      "emotion": {
+        "joyful": 0.52,
+        "humorous": 0.14,
+        "romantic": 0.33,
+        "dramatic": 0.66,
+        "melancholic": 0.58,
+        "exciting": 0.37,
+        "relaxing": 0.74
+      },
+      "environment": {
+        "urban": 0.62,
+        "nature": 0.29,
+        "historic": 0.87,
+        "industrial": 0.12
+      },
+      "activity": 0.24,
+      "outdoor_affinity": 0.22,
+      "social_distance": 0.78,
+      "participation": 0.18,
+      "vibes": {
+        "instagrammable": 0.12,
+        "spiritual": 0.41,
+        "retro": 0.54,
+        "futuristic": 0.16,
+        "edgy": 0.07,
+        "bohemian": 0.38,
+        "surreal": 0.12,
+        "elegant": 0.91,
+        "mystical": 0.29,
+        "playful": 0.11,
+        "dark": 0.21,
+        "raw": 0.17,
+        "cozy": 0.67
+      }
+    }
+  },
+  {
+    "id": "persona_03",
+    "display": {
+      "name": "Nadia",
+      "quote": "Am schönsten ist es, wenn alle etwas davon haben.",
+      "description": "Nadia mag lebendige Veranstaltungen, die unkompliziert sind und Menschen zusammenbringen. Besonders familienfreundliche Kulturformate, Stadtfeste und gemeinsames Entdecken machen ihr Spaß.",
+      "motivation": "Für sie sind Veranstaltungen eine Gelegenheit, gemeinsam Zeit zu verbringen, Neues zu erleben und Erinnerungen zu schaffen.",
+      "event_reflection": "Das war genau richtig für uns alle.",
+      "avatarStyle": [
+        "#10b981",
+        "#22d3ee"
+      ]
+    },
+    "preferences": {
+      "liked_genres": [
+        "Kinderprogramm",
+        "Märkte, Messen, Feste",
+        "Musical",
+        "Zirkus, Varieté",
+        "Figurentheater",
+        "Open-Air-Events"
+      ],
+      "disliked_genres": [
+        "Clubkultur",
+        "Kabarett",
+        "Online-Veranstaltungen"
+      ]
+    },
+    "recommendation_profile": {
+      "tags": [
+        "family",
+        "shared_experience",
+        "warm",
+        "social",
+        "practical"
+      ],
+      "behavior": {
+        "planning_style": "PLANNED",
+        "group_preference": "SMALL_GROUP",
+        "companion_preference": "FAMILY"
+      }
+    },
+    "feature_preferences": {
+      "audience": {
+        "families": 1.0,
+        "teenagers": 0.25,
+        "young_adults": 0.35,
+        "seniors": 0.45,
+        "students": 0.2,
+        "tourists": 0.4,
+        "couples": 0.45,
+        "singles": 0.1,
+        "friends": 0.7,
+        "locals": 0.85,
+        "adults": 0.6
+      },
+      "style": {
+        "classic": 0.45,
+        "contemporary": 0.55,
+        "alternative": 0.15,
+        "mainstream": 0.85,
+        "minimalist": 0.2,
+        "luxurious": 0.1
+      },
+      "emotion": {
+        "joyful": 0.95,
+        "humorous": 0.8,
+        "romantic": 0.2,
+        "dramatic": 0.35,
+        "melancholic": 0.05,
+        "exciting": 0.75,
+        "relaxing": 0.65
+      },
+      "environment": {
+        "urban": 0.8,
+        "nature": 0.55,
+        "historic": 0.45,
+        "industrial": 0.05
+      },
+      "activity": 0.72,
+      "outdoor_affinity": 0.9,
+      "social_distance": 0.9,
+      "participation": 0.68,
+      "vibes": {
+        "instagrammable": 0.35,
+        "spiritual": 0.05,
+        "retro": 0.3,
+        "futuristic": 0.1,
+        "edgy": 0.0,
+        "bohemian": 0.2,
+        "surreal": 0.25,
+        "elegant": 0.2,
+        "mystical": 0.1,
+        "playful": 0.95,
+        "dark": 0.0,
+        "raw": 0.15,
+        "cozy": 0.85
+      }
+    }
+  },
+  {
+    "id": "persona_04",
+    "display": {
+      "name": "Yusuf",
+      "quote": "Die besten Abende plant man meistens nicht.",
+      "description": "Yusuf liebt Veranstaltungen mit Energie und dem Gefühl, Teil von etwas zu sein. Er entdeckt gern neue Orte, folgt Empfehlungen von Freunden und entscheidet oft erst kurzfristig, worauf er Lust hat.",
+      "motivation": "Er besucht Veranstaltungen wegen der besonderen Dynamik von Live-Erlebnissen und dem Gefühl, gemeinsam etwas Unerwartetes zu entdecken.",
+      "event_reflection": "Komm einfach mit, wird gut.",
+      "avatarStyle": [
+        "#f97316",
+        "#ef4444"
+      ]
+    },
+    "preferences": {
+      "liked_genres": [
+        "Elektronic",
+        "Rock",
+        "Alternative",
+        "Jazz",
+        "Rap, Hip-Hop",
+        "Reggae, Ska"
+      ],
+      "disliked_genres": [
+        "Klassik",
+        "Orgelmusik",
+        "Advent, Weihnachtszeit"
+      ]
+    },
+    "recommendation_profile": {
+      "tags": [
+        "nightlife",
+        "social",
+        "energetic",
+        "high_novelty",
+        "spontaneous"
+      ],
+      "behavior": {
+        "planning_style": "SPONTANEOUS",
+        "group_preference": "LARGE_GROUP",
+        "companion_preference": "FRIENDS"
+      }
+    },
+    "feature_preferences": {
+      "audience": {
+        "families": 0.05,
+        "teenagers": 0.46,
+        "young_adults": 0.95,
+        "seniors": 0.06,
+        "students": 0.78,
+        "tourists": 0.58,
+        "couples": 0.22,
+        "singles": 0.83,
+        "friends": 1.0,
+        "locals": 0.74,
+        "adults": 0.67
+      },
+      "style": {
+        "classic": 0.03,
+        "contemporary": 0.88,
+        "alternative": 0.89,
+        "mainstream": 0.61,
+        "minimalist": 0.24,
+        "luxurious": 0.12
+      },
+      "emotion": {
+        "joyful": 0.84,
+        "humorous": 0.48,
+        "romantic": 0.12,
+        "dramatic": 0.36,
+        "melancholic": 0.14,
+        "exciting": 0.98,
+        "relaxing": 0.21
+      },
+      "environment": {
+        "urban": 0.92,
+        "nature": 0.34,
+        "historic": 0.18,
+        "industrial": 0.72
+      },
+      "activity": 0.95,
+      "outdoor_affinity": 0.52,
+      "social_distance": 0.39,
+      "participation": 0.74,
+      "vibes": {
+        "instagrammable": 0.56,
+        "spiritual": 0.05,
+        "retro": 0.37,
+        "futuristic": 0.67,
+        "edgy": 0.81,
+        "bohemian": 0.43,
+        "surreal": 0.28,
+        "elegant": 0.09,
+        "mystical": 0.08,
+        "playful": 0.71,
+        "dark": 0.63,
+        "raw": 0.77,
+        "cozy": 0.18
+      }
+    }
+  },
+  {
+    "id": "persona_05",
+    "display": {
+      "name": "Elena",
+      "quote": "Mich reizt vor allem das, womit ich nicht gerechnet habe.",
+      "description": "Elena entdeckt gern neue Themen, ungewöhnliche Formate und Veranstaltungen abseits ihrer Gewohnheiten. Besonders experimentelle Konzepte wecken ihre Neugier. Sie geht genauso gern allein wie mit anderen los – je nachdem, worauf sie Lust hat.",
+      "motivation": "Für sie sind Veranstaltungen eine Möglichkeit, neue Denkanstöße mit in den Alltag zu nehmen.",
+      "event_reflection": "Das war irgendwie anders als erwartet.",
+      "avatarStyle": [
+        "#06b6d4",
+        "#8b5cf6"
+      ]
+    },
+    "preferences": {
+      "liked_genres": [
+        "Vorträge, Infotainment, Talk",
+        "Workshop",
+        "Ausstellungen",
+        "Performance",
+        "Neue Musik",
+        "Film, Kino"
+      ],
+      "disliked_genres": [
+        "Schlager",
+        "Show, Zauber, Magie",
+        "Party"
+      ]
+    },
+    "recommendation_profile": {
+      "tags": [
+        "intellectual",
+        "experimental",
+        "curious",
+        "high_novelty",
+        "independent"
+      ],
+      "behavior": {
+        "planning_style": "MIXED",
+        "group_preference": "ALONE",
+        "companion_preference": "ALONE"
+      }
+    },
+    "feature_preferences": {
+      "audience": {
+        "families": 0.08,
+        "teenagers": 0.24,
+        "young_adults": 0.72,
+        "seniors": 0.38,
+        "students": 0.86,
+        "tourists": 0.18,
+        "couples": 0.22,
+        "singles": 0.78,
+        "friends": 0.58,
+        "locals": 0.74,
+        "adults": 0.84
+      },
+      "style": {
+        "classic": 0.16,
+        "contemporary": 0.92,
+        "alternative": 0.95,
+        "mainstream": 0.06,
+        "minimalist": 0.58,
+        "luxurious": 0.08
+      },
+      "emotion": {
+        "joyful": 0.44,
+        "humorous": 0.36,
+        "romantic": 0.06,
+        "dramatic": 0.48,
+        "melancholic": 0.32,
+        "exciting": 0.84,
+        "relaxing": 0.28
+      },
+      "environment": {
+        "urban": 0.88,
+        "nature": 0.18,
+        "historic": 0.34,
+        "industrial": 0.72
+      },
+      "activity": 0.62,
+      "outdoor_affinity": 0.22,
+      "social_distance": 0.42,
+      "participation": 0.68,
+      "vibes": {
+        "instagrammable": 0.18,
+        "spiritual": 0.16,
+        "retro": 0.12,
+        "futuristic": 0.82,
+        "edgy": 0.84,
+        "bohemian": 0.46,
+        "surreal": 0.78,
+        "elegant": 0.18,
+        "mystical": 0.14,
+        "playful": 0.42,
+        "dark": 0.38,
+        "raw": 0.66,
+        "cozy": 0.26
+      }
+    }
+  },
+  {
+    "id": "persona_06",
+    "display": {
+      "name": "Stefan",
+      "quote": "Ein Abend, der einfach gut tut.",
+      "description": "Stefan genießt Veranstaltungen, die leicht zugänglich sind und eine angenehme Atmosphäre schaffen. Ob Konzert, Comedy oder saisonales Stadt-Event – für ihn zählt vor allem die gemeinsame Zeit und das Gefühl, unkompliziert einen schönen Abend zu verbringen.",
+      "motivation": "Für ihn sind Veranstaltungen eine kleine Auszeit vom Alltag.",
+      "event_reflection": "Das war genau mein Geschmack.",
+      "avatarStyle": [
+        "#84cc16",
+        "#f59e0b"
+      ]
+    },
+    "preferences": {
+      "liked_genres": [
+        "Komödie",
+        "Pop",
+        "Oldies",
+        "Singer, Songwriter",
+        "Stadtführungen, Erlebnisführungen",
+        "Open-Air-Konzerte"
+      ],
+      "disliked_genres": [
+        "Rap, Hip-Hop",
+        "Neue Musik",
+        "Performance"
+      ]
+    },
+    "recommendation_profile": {
+      "tags": [
+        "mainstream",
+        "social",
+        "comfort_seeker",
+        "couple",
+        "routine"
+      ],
+      "behavior": {
+        "planning_style": "PLANNED",
+        "group_preference": "SMALL_GROUP",
+        "companion_preference": "FRIENDS"
+      }
+    },
+    "feature_preferences": {
+      "audience": {
+        "families": 0.58,
+        "teenagers": 0.18,
+        "young_adults": 0.42,
+        "seniors": 0.54,
+        "students": 0.22,
+        "tourists": 0.46,
+        "couples": 0.88,
+        "singles": 0.24,
+        "friends": 0.93,
+        "locals": 0.81,
+        "adults": 0.89
+      },
+      "style": {
+        "classic": 0.56,
+        "contemporary": 0.44,
+        "alternative": 0.08,
+        "mainstream": 0.95,
+        "minimalist": 0.31,
+        "luxurious": 0.12
+      },
+      "emotion": {
+        "joyful": 0.9,
+        "humorous": 0.95,
+        "romantic": 0.52,
+        "dramatic": 0.14,
+        "melancholic": 0.16,
+        "exciting": 0.58,
+        "relaxing": 0.84
+      },
+      "environment": {
+        "urban": 0.74,
+        "nature": 0.41,
+        "historic": 0.57,
+        "industrial": 0.09
+      },
+      "activity": 0.45,
+      "outdoor_affinity": 0.69,
+      "social_distance": 0.79,
+      "participation": 0.36,
+      "vibes": {
+        "instagrammable": 0.28,
+        "spiritual": 0.03,
+        "retro": 0.76,
+        "futuristic": 0.04,
+        "edgy": 0.05,
+        "bohemian": 0.19,
+        "surreal": 0.02,
+        "elegant": 0.26,
+        "mystical": 0.04,
+        "playful": 0.82,
+        "dark": 0.03,
+        "raw": 0.11,
+        "cozy": 0.92
+      }
+    }
+  }
+]

@@ -1,0 +1,841 @@
+{
+  "generated_at": "2026-05-22T20:34:18.090821Z",
+  "source": {
+    "personas_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\personas.json",
+    "db_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\events.db",
+    "persona_count": 6,
+    "event_count": 843,
+    "cluster_count_requested": 5,
+    "top_per_cluster": 2
+  },
+  "persona_id": "persona_02",
+  "persona_name": "Daniel",
+  "cluster_count_requested": 5,
+  "cluster_count_actual": 5,
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "cluster_label": "passt am besten",
+      "size": 263,
+      "centroid": [
+        0.9443557889269061
+      ],
+      "selected_events": [
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/630373",
+          "event_url": "https://www.remscheid-live.de/630373",
+          "title": "2 x T | Malerei und Radierungen",
+          "event_type": "ExhibitionEvent",
+          "startDate": "2026-07-02T16:00:00",
+          "city": "Wuppertal",
+          "venue": "Schwarzbach-Galerie",
+          "performer": null,
+          "keywords": [
+            "Ausstellung",
+            "EXHIBITION"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\nBild © Ölbild  von Fernando Tejeda aus Chile\n\n\n2 x T - TEJEDA und TE LAAKE\n\n\n\n\n\n Malerei / Radierungen\n\n\n\n\n\nFernando Tejeda - 1953 geb. in Los Angeles/Chile - lebt und arbeitet in Frankfurt/Main und Antuco/Chile\n\n\n\nHeinz Te Laake   - 1925 - 2001 geb. in Berlin * gest. Schloss Reinharts hausen/Hessen\n \n\n\nBild © Ölbild  von Fernando Tejeda aus Chile\n\n\n \n\n\nBild © Ölbild  von Fernando Tejeda aus Chile\n\n\n \n\n\nBild © handcolourierte Radierung von Heinz Te Laake\n\n\nhandcolourierte Radierung von Heinz Te Laake\n\n\n\n\n\n\n\n\nAusstellungsdauer:\n\n\n21.06 - 05.07.2026\n\n\n\nÖffnungszeiten\n\n\n\n\nDi 23.06. + Do 25.06. + So 28.06. + Di 30.06. + Do 02.07. + So 05.07. 2026 jeweils 16-19 Uhr \n\nund nach Vereinbarung 0202/664876\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+          "rank": 1,
+          "cluster_id": 0,
+          "cluster_label": "passt am besten",
+          "match_score": 0.9754957933909376,
+          "vector_length": 46,
+          "strongest_feature_group": "style",
+          "top_shared_features": [
+            {
+              "group": "style",
+              "feature": "classic",
+              "strength": 0.0186
+            },
+            {
+              "group": "emotion",
+              "feature": "relaxing",
+              "strength": 0.011930612244897958
+            },
+            {
+              "group": "environment",
+              "feature": "urban",
+              "strength": 0.011538888888888888
+            }
+          ]
+        },
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/616992",
+          "event_url": "https://www.remscheid-live.de/616992",
+          "title": "Herdecke genießen - Feierabendmarkt",
+          "event_type": "Event",
+          "startDate": "2026-07-10T17:00:00",
+          "city": "Herdecke",
+          "venue": "Frederuna Brunnen Herdecke",
+          "performer": null,
+          "keywords": [
+            "Märkte, Messen & Feste",
+            "MARKETS"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\nVon Herdeckern für Herdecker - Jeden zweiten Freitag im Monat bieten Herdecker Gastronomen rund um den Frederuna Brunnen in der Fußgängerzone kulinarische Köstlichenkeiten von Nudeln über verschiedene Fleischgerichte bis hin zu Bier und Wein. Jede Veranstaltung steht dabei unter einem anderen Motto.\n \n\n\nFreitag, 17. April  Afrika, Würzig, bunt und voller Lebensfreude.\n\n\nFreitag, 08. MaiEuropa, Vielfältig, klassisch, überraschend.\n\n\n\nFreitag, 12. Juni Südamerika, Feurig, fruchtig, temperamentvoll.\n\n\n\nFreitag, 10. JuliAustralien, Down Under trifft Altstadt-Charme.\n\n\n\nFreitag, 14. AugustNordamerika oder Indien, Köstliche Entscheidung folgt bald – halten Sie sich bereit!\n\n\n\nFreitag, 11. September  Asien, Aromatisch, duftend, faszinierend.",
+          "rank": 263,
+          "cluster_id": 0,
+          "cluster_label": "passt am besten",
+          "match_score": 0.9197893929866925,
+          "vector_length": 46,
+          "strongest_feature_group": "audience",
+          "top_shared_features": [
+            {
+              "group": "environment",
+              "feature": "historic",
+              "strength": 0.014983333333333333
+            },
+            {
+              "group": "environment",
+              "feature": "urban",
+              "strength": 0.014811111111111108
+            },
+            {
+              "group": "emotion",
+              "feature": "relaxing",
+              "strength": 0.011477551020408162
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "cluster_label": "passt gut",
+      "size": 174,
+      "centroid": [
+        0.894247284268439
+      ],
+      "selected_events": [
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/618996",
+          "event_url": "https://www.remscheid-live.de/618996",
+          "title": "Büchermarkt",
+          "event_type": "Event",
+          "startDate": "2026-08-15T11:00:00",
+          "city": "Wuppertal",
+          "venue": "Botanischer Garten Wuppertal / Elisenturm",
+          "performer": null,
+          "keywords": [
+            "Märkte, Messen & Feste",
+            "MARKETS"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\nDer Büchermarkt startet während des Sommerfestes am 15. August und wird bis zum 23. August im Glashaus des Botanischen Gartens fortgeführt. \n\n\nEntdecken Sie eine vielfältige und gut sortierte Auswahl an gebrauchten, gut erhaltenen Büchern aus den verschiedensten Bereichen: spannende Romane, Kinderbücher, Hobby- und Gartenratgeber, Kochbücher, Sachbücher zur Geschichte, Kultur und vieles mehr. Für jeden Lesegeschmack ist etwas dabei! \n\n\n\nDer Erlös kommt direkt dem Förderverein zugute und unterstützt damit den Botanischen Garten bei seinen vielfältigen Projekten und der Pflege der Pflanzenwelt. Wir laden alle Bücherfreunde herzlich ein, das Angebot zu durchstöbern und das ein oder andere neue Lieblingsbuch zu entdecken.\n \n\n\nKontakt und Spenden: Wir sind das ganze Jahr über auf der Suche nach gut erhaltenen Büchern, CDs, DVDs und Schallplatten, die Sie gerne als Spende abgeben können. Ihre Beiträge helfen uns, das Angebot stetig zu erweitern und den Botanischen Garten zu fördern. Für weitere Informationen und Absprachen erreichen Sie uns unter: \nTel. 0202 5634180 oder\nverein.botanischergarten@stadt.wuppertal.de",
+          "rank": 264,
+          "cluster_id": 1,
+          "cluster_label": "passt gut",
+          "match_score": 0.919249009848226,
+          "vector_length": 46,
+          "strongest_feature_group": "style",
+          "top_shared_features": [
+            {
+              "group": "style",
+              "feature": "classic",
+              "strength": 0.02015
+            },
+            {
+              "group": "emotion",
+              "feature": "relaxing",
+              "strength": 0.012685714285714285
+            },
+            {
+              "group": "environment",
+              "feature": "historic",
+              "strength": 0.008216666666666667
+            }
+          ]
+        },
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/632942",
+          "event_url": "https://www.remscheid-live.de/632942",
+          "title": "Abschlusskonzert Sommersemester",
+          "event_type": "MusicEvent",
+          "startDate": "2026-07-07T20:00:00",
+          "city": "Wuppertal",
+          "venue": "Kulturzentrum Immanuel - Immanuelskirche",
+          "performer": {
+            "@type": "Organization",
+            "name": "Chor und Orchester der Bergischen Universität"
+          },
+          "keywords": [
+            "Chormusik",
+            "CONCERT"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\nBild © Uni Wuppertal\n\n\nAm 7. Juli laden Chor und Orchester der Bergischen Universität Wuppertal um 20 Uhr zu ihrem Semester-Abschlusskonzert in die Immanuelskirche ein. Es erwartet Sie ein Programm voll Magie und voller mitreißender Emotionen. So spielt das UNI Orchester “Eine Nacht auf dem kahlen Berge” von Modest Mussorgsky, ein Stück wie eine moderne Filmmusik, das einen Hexensabbat auf einem russischen Berg beschreibt, dazu ein Medley aus der Harry Potter-Filmreihe und als besonderes Special ein Stück für Stepptänzer und Orchester des deutschen Komponisten Bobbi Fischer, getanzt von Bernd Paffrath. Der UNI Chor nimmt sie mit in die Welt des Musicals mit Stücken aus “Jekyll & Hyde” und “Next to Normal” und präsentiert außerdem “Time after time” von Cindy Lauper, “ATP.” Von Bruno Mars und “Lovely” von Billie Eilish. \n\nAlso Special Guest tritt erneut das Vokalensemble der Fachgruppe Musikpädagogik auf, das schon im vergangenen Januar in den Winterkonzerten für Begeisterung sorgte.\n\nAm Ende verbinden sich alle Ensembles zu einem Klangkörper mit der Friedenshymne “Let there be peace on earth” - leider in diesen Zeiten ein Ruf, der drängender kaum sein könnte.\n\nKarten erhalten Sie wie immer bei \nwww.wuppertal-live.de\n und den bekannten Vorverkaufsstellen.\n\nWir freuen uns auf Sie!\n \n\nEinlass ca. 19:30 Uhr",
+          "rank": 437,
+          "cluster_id": 1,
+          "cluster_label": "passt gut",
+          "match_score": 0.8624769514407101,
+          "vector_length": 46,
+          "strongest_feature_group": "style",
+          "top_shared_features": [
+            {
+              "group": "style",
+              "feature": "classic",
+              "strength": 0.02015
+            },
+            {
+              "group": "environment",
+              "feature": "historic",
+              "strength": 0.018366666666666663
+            },
+            {
+              "group": "environment",
+              "feature": "urban",
+              "strength": 0.012227777777777777
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_label": "passt mittel",
+      "size": 169,
+      "centroid": [
+        0.8303262860179493
+      ],
+      "selected_events": [
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/640168",
+          "event_url": "https://www.remscheid-live.de/640168",
+          "title": "Blickfang",
+          "event_type": "TheaterEvent",
+          "startDate": "2026-07-04T20:00:00",
+          "city": "Wuppertal",
+          "venue": "Zaubertheater Wiepen",
+          "performer": null,
+          "keywords": [
+            "Zauber & Magie",
+            "SHOW"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\n„Wie macht er das nur?“, werden Sie sich in dieser Show mehr als einmal fragen. Unglaubliche und scheinbar unerklärliche Kunststücke lassen Sie ratlos, aber glücklich zurück. Dieses Format garantiert Witz und Unterhaltung auf höchstem Niveau.\n \n\nAltersempfehlung: ab 12 Jahre\n\n\n\nWeiter Infos:\nzaubertheater-wuppertal.de",
+          "rank": 438,
+          "cluster_id": 2,
+          "cluster_label": "passt mittel",
+          "match_score": 0.862077368350724,
+          "vector_length": 46,
+          "strongest_feature_group": "style",
+          "top_shared_features": [
+            {
+              "group": "style",
+              "feature": "classic",
+              "strength": 0.011625
+            },
+            {
+              "group": "emotion",
+              "feature": "joyful",
+              "strength": 0.009338775510204081
+            },
+            {
+              "group": "style",
+              "feature": "contemporary",
+              "strength": 0.007933333333333334
+            }
+          ]
+        },
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/620006",
+          "event_url": "https://www.remscheid-live.de/620006",
+          "title": "Botanische Illustration mit Aquarellfarben",
+          "event_type": "EducationEvent",
+          "startDate": "2026-07-18T10:00:00",
+          "city": "Wuppertal",
+          "venue": "Botanischer Garten Wuppertal / Elisenturm",
+          "performer": null,
+          "keywords": [
+            "Workshop",
+            "LECTURE"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\nDieser Kurs ist eine Einführung in die alte Kunst der Botanischen Malerei. Er widmet sich dem detailgenauen Darstellen von Pflanzen, Blüten und Früchten.\nGeeignet für Anfänger und Fortgeschrittene.\n\nKursgebühr: pro Person 45,00 Euro.\n\nDie Teilnehmerzahl ist begrenzt.\n\n\n\nMehr Informationen und eine verbindliche Anmeldung sind erforderlich bei:\n\nOrt: wird bei Anmeldung bekannt gegeben\n\nNortrud McLellan, Förderverein Botanischer Garten,\n\nTel. 0202 2536706, E-Mail:\nan.mclellan@unitybox.de",
+          "rank": 606,
+          "cluster_id": 2,
+          "cluster_label": "passt mittel",
+          "match_score": 0.7945636601412724,
+          "vector_length": 46,
+          "strongest_feature_group": "style",
+          "top_shared_features": [
+            {
+              "group": "style",
+              "feature": "classic",
+              "strength": 0.022216666666666662
+            },
+            {
+              "group": "emotion",
+              "feature": "relaxing",
+              "strength": 0.012987755102040813
+            },
+            {
+              "group": "style",
+              "feature": "minimalist",
+              "strength": 0.010505555555555554
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_label": "passt nicht so gut",
+      "size": 200,
+      "centroid": [
+        0.7541148519115113
+      ],
+      "selected_events": [
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/410062",
+          "event_url": "https://www.remscheid-live.de/410062",
+          "title": "Deutsches Klingenmuseum",
+          "event_type": "Event",
+          "startDate": "2026-05-18T06:00:00",
+          "city": "Solingen",
+          "venue": "Deutsches Klingenmuseum",
+          "performer": null,
+          "keywords": [
+            "Museen",
+            "MUSEUMS"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\nBild © Made in Solingen\n\n\nDas Deutsche Klingenmuseum ist stark in der Historie der regionalen Schneidwarenherstellung verwurzelt. Es präsentiert die Geschichte der unterschiedlichsten Schneidgeräte und zeigt eine große Vielzahl von Exponaten. \n\n\n\nZahlreiche Informationen gibt es zur Entwicklung und Bedeutung rund um das spannende Thema „schneiden“. Ein Rundgang durch das Museum ist dabei wie ein Gang durch die Welt-Geschichte der Blankwaffen und der Tafelkultur: vom Bronzeschwert aus dem Iran bis zum Prunkdegen der Neuzeit und vom einfachen Messer hin zum Designerbesteck des 21. Jahrhunderts. Wobei die historische Bestecksammlung des Museums inzwischen weltweit die größte Sammlung ihrer Art darstellt.\n \n\n\nBild © Blick ins obere Foyer \n\n\nIm Jubiläumsjahr der Klingenstadt Solingen hat das Deutsche Klingenmuseum nun den ersten Teil seiner neuen Dauerausstellung eröffnet:\n\n\n\n „ME FECIT SOLINGEN – Klingen : Stadt : Geschichte“\n\n\n\n„ME FECIT SOLINGEN“ – das ist Latein für „Mich hat Solingen gemacht“. Der Satz steht auf vielen alten Schwertklingen aus Solingen und zeigt den Stolz der Stadt auf ihre Handwerkskunst. Warum und wie wurde gerade Solingen zur weltbekannten Klingenstadt?\n\n\n\nDie Dauerausstellung des Deutschen Klingenmuseums gibt darauf Antworten. Sie zeigt die Entwicklung und Bedeutung der Solinger Klingenherstellung vom Mittelalter und Früher Neuzeit bis ca. 1700 auf faszinierende Weise.\n\n\n\nAuf über 300 Quadratmeter lädt eine beeindruckende Inszenierung die Gäste ein, sich dem Thema interaktiv zu nähern: Eine historische, zehn Meter breite Landkarte des Bergischen Landes lässt sich durch Projektionen zum Leben erwecken, Hands-On Exponate zeigen die Herstellung einer Klinge, und in einer Fechtstation kann man selbst ein (stumpfes) Schwert schwingen. Viele weitere Themen werden durch die Exponate, großformatige Illustrationen und interaktive Touchscreens beleuchtet, ein Überblick über die heutigen Solinger Klingenhersteller rundet die Ausstellung ab. Und im Foyer der neuen Dauerausstellung setzt eine deckenhohe Großvitrine über 300 Messer, Schwerter und Klingen aus aller Welt und von der Steinzeit bis in die Gegenwart imposant in Szene.\n\n\n\n\n\n\n\n„ME FECIT SOLINGEN“ ist es der erste Schritt zur Rundumerneuerung der 30 Jahre alten Dauerausstellung des Klingenmuseums; der nächste folgt am 04.04.2025 mit der Eröffnung der Kinderausstellung „Drache und Zauberschwert“.\n \n\n\nBild © Die Schwertspirale \n\n\n \n\n\nÖffnungszeiten\n\n\n\n\nmontags geschlossen | dienstags 14:00 – 17:00 | mittwochs bis sonntags 10:00 – 17:00\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.\nwww.klingenmuseum.de/",
+          "rank": 607,
+          "cluster_id": 3,
+          "cluster_label": "passt nicht so gut",
+          "match_score": 0.7912837785353476,
+          "vector_length": 46,
+          "strongest_feature_group": "style",
+          "top_shared_features": [
+            {
+              "group": "environment",
+              "feature": "historic",
+              "strength": 0.023441666666666663
+            },
+            {
+              "group": "style",
+              "feature": "classic",
+              "strength": 0.022733333333333335
+            },
+            {
+              "group": "environment",
+              "feature": "urban",
+              "strength": 0.011022222222222221
+            }
+          ]
+        },
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/629040",
+          "event_url": "https://www.remscheid-live.de/629040",
+          "title": "Mural Harbor Revisited",
+          "event_type": "ExhibitionEvent",
+          "startDate": "2026-07-04T20:00:00",
+          "city": "Wuppertal",
+          "venue": "Visiodrom im Gaskessel Wuppertal",
+          "performer": {
+            "@type": "Organization",
+            "name": "Visiodrom BeSides - Immersive Kunst am Abend"
+          },
+          "keywords": [
+            "Kunst",
+            "EXHIBITION"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\nBild © Heinrich Brinkmöller-Becker\n\n\nNach dem großen Erfolg 2024 kehrt die Mural Harbor Gallery im Visiodrom in einer aktualisierten Fassung zurück. Die Outdoor-Galerie im Linzer Hafen zählt zu den weltweit größten Projekten für Urban Art und ist ein Treffpunkt internationaler Street Artists.\n\n\n\nHeinrich Brinkmöller-Becker hat den Hafen erneut besucht und massive Veränderungen dokumentiert. Die immersive Projektion führt durch diese sich wandelnde Kunstlandschaft und macht Urban Art im Großformat als lebendigen Prozess erfahrbar.\n\n\n\nAm 4. Juli mit Musik vom Tonträger.\n \n\nEinlass ca. 19:00 Uhr",
+          "rank": 806,
+          "cluster_id": 3,
+          "cluster_label": "passt nicht so gut",
+          "match_score": 0.6860995964314509,
+          "vector_length": 46,
+          "strongest_feature_group": "audience",
+          "top_shared_features": [
+            {
+              "group": "environment",
+              "feature": "urban",
+              "strength": 0.016877777777777776
+            },
+            {
+              "group": "style",
+              "feature": "contemporary",
+              "strength": 0.011316666666666664
+            },
+            {
+              "group": "emotion",
+              "feature": "relaxing",
+              "strength": 0.007248979591836733
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_label": "passt gar nicht",
+      "size": 37,
+      "centroid": [
+        0.6074146495532643
+      ],
+      "selected_events": [
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/615689",
+          "event_url": "https://www.remscheid-live.de/615689",
+          "title": "Probiert? Kapiert! Die Mitmach-Ausstellung für Kinder, Jugendliche und Familien",
+          "event_type": "ExhibitionEvent",
+          "startDate": "2025-05-18T10:00:00",
+          "city": "Solingen",
+          "venue": "LVR-Industriemuseum Solingen Gesenkschmiede Hendrichs",
+          "performer": null,
+          "keywords": [
+            "Ausstellung",
+            "EXHIBITION"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\n\n\nDie Mitmach-Ausstellung für Kinder, Jugendliche\n\nund Familien\n\n\n\n\n\nProbiert? Kapiert! heißt die Mitmach-Ausstellung, die ab dem 18. Mai zum Tüfteln in der Gesenkschmiede Hendrichs in Solingen einlädt.\n\n\n\nWie transportiert man kinderleicht schwere Waren? Wie treibt man große Maschinen an? Wie stellt man festes Gewebe her und welche Möglichkeiten zur platzsparenden Verpackung gibt es? An den Mitmach-Stationen der Ausstellung finden Kinder, Schüler*innen, Familien und Erwachsene clevere Lösungen für unterschiedliche technische Herausforderungen. Webstuhl, Flaschenzug und verschiedene Teamstationen bieten rund um die Themen Energie, Transport, Lagerung und Produktion viele Möglichkeiten zum Ausprobieren.\n\n\n\nIm Zentrum von Probiert? Kapiert! steht das „Tinkern“ – Tüfteln –, mit dem alle Besucher*innen spielerisch naturwissenschaftliche und technische Inhalte kennenlernen. So erwartet sie als Höhepunkt des Ausstellungsbesuchs der gemeinsame Bau einer großen Kettenreaktion. Viel Spaß, Kreativität und Action sind garantiert.\n \n\n\n\n\n\n\nBild © Magnetwand | Stefan Arendt, ZMB\n\n\n \n\n\nBild © kettenreaktion copyright lvr industriemuseum | foto s arendt\n\n\n \n\n\nAusstellungsdauer:\n\n18.05.2025 - 11.10.2026\n\n\n\nÖffnungszeiten\n\n\n\n\nDi - Fr 10 - 17 Uhr\n\nSa, So, Feiertage 11 - 18 Uhr\n\n\n\nDie Ausstellung ist barrierefrei zugänglich.\n\n\n\nFür (Klein-)Gruppen besteht mit dem Beginn der Ausstellung die Möglichkeit, den betreuten Workshop „Angestoßen!“ zu buchen. Dieser kann für verschiedene Altersgruppen angepasst werden: Von Vorschulgruppen über Schulklassen bis zum Teamevent oder dem Kindergeburtstag ist für alle etwas dabei. \n\nDie Ausstellung wird ganzjährig durch ein umfangreiches Familienprogramm begleitet. Dazu zählen unter anderem das Papiertheater „Knösterpitter“ oder auch ein Foto-Workshop mit selbstgebauten Lochkameras.  \n\n\n\n\n\nInformationen zu Besuch und Buchungen von Führungen bei kulturinfo rheinland per Mail an info@kulturinfo-rheinland.de oder unter Tel.: 02234/9921-555 (Mo–Fr 8–18 Uhr, Sa, So und an Feiertagen 10–15 Uhr)\n\n\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+          "rank": 807,
+          "cluster_id": 4,
+          "cluster_label": "passt gar nicht",
+          "match_score": 0.6781547011357221,
+          "vector_length": 46,
+          "strongest_feature_group": "environment",
+          "top_shared_features": [
+            {
+              "group": "environment",
+              "feature": "historic",
+              "strength": 0.01788333333333333
+            },
+            {
+              "group": "emotion",
+              "feature": "joyful",
+              "strength": 0.009763265306122449
+            },
+            {
+              "group": "style",
+              "feature": "contemporary",
+              "strength": 0.0084
+            }
+          ]
+        },
+        {
+          "event_id": "schema:https://www.remscheid-live.de/event/612324",
+          "event_url": "https://www.remscheid-live.de/612324",
+          "title": "In Vain präsentiert InVain",
+          "event_type": "MusicEvent",
+          "startDate": "2026-07-11T20:00:00",
+          "city": "Wülfrath",
+          "venue": "Kathedrale - Kommunikations-Center",
+          "performer": null,
+          "keywords": [
+            "Rock",
+            "CONCERT"
+          ],
+          "description": "Infos\n\t\t\t\t\n\n\n\n\nIn Vain präsentiert In Vain –\n\nLive und Open Air!\n\n\n\nSie wollen Party? Diese Band ist eine Party! Erwarten Sie tumultartige Zustände und hemmungslose Euphorie.\n\n\n\nMenschen, die sich im Partyrausch in die Menge schmeißen, werden durch die anwesende Gemeinde aufgefangen und durch die Luft weitergereicht, während sich alle anderen durch wildes auf und ab springen ihrer Ekstase hingeben.\n\n\n\nEin In Vain Konzert gilt seit jeher als radikale Verjüngungskur und wurde im Laufe der Zeit zum begehrten Elixier unter Partyfreunden und denen, die es gerne werden möchten.\n\nIn Vain - make Party great again!\n \n\nEinlass ca. 18:00 Uhr",
+          "rank": 843,
+          "cluster_id": 4,
+          "cluster_label": "passt gar nicht",
+          "match_score": 0.4814416204040747,
+          "vector_length": 46,
+          "strongest_feature_group": "emotion",
+          "top_shared_features": [
+            {
+              "group": "environment",
+              "feature": "urban",
+              "strength": 0.0124
+            },
+            {
+              "group": "emotion",
+              "feature": "joyful",
+              "strength": 0.010187755102040815
+            },
+            {
+              "group": "style",
+              "feature": "contemporary",
+              "strength": 0.009799999999999998
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "selected_events": [
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/630373",
+      "event_url": "https://www.remscheid-live.de/630373",
+      "title": "2 x T | Malerei und Radierungen",
+      "event_type": "ExhibitionEvent",
+      "startDate": "2026-07-02T16:00:00",
+      "city": "Wuppertal",
+      "venue": "Schwarzbach-Galerie",
+      "performer": null,
+      "keywords": [
+        "Ausstellung",
+        "EXHIBITION"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\nBild © Ölbild  von Fernando Tejeda aus Chile\n\n\n2 x T - TEJEDA und TE LAAKE\n\n\n\n\n\n Malerei / Radierungen\n\n\n\n\n\nFernando Tejeda - 1953 geb. in Los Angeles/Chile - lebt und arbeitet in Frankfurt/Main und Antuco/Chile\n\n\n\nHeinz Te Laake   - 1925 - 2001 geb. in Berlin * gest. Schloss Reinharts hausen/Hessen\n \n\n\nBild © Ölbild  von Fernando Tejeda aus Chile\n\n\n \n\n\nBild © Ölbild  von Fernando Tejeda aus Chile\n\n\n \n\n\nBild © handcolourierte Radierung von Heinz Te Laake\n\n\nhandcolourierte Radierung von Heinz Te Laake\n\n\n\n\n\n\n\n\nAusstellungsdauer:\n\n\n21.06 - 05.07.2026\n\n\n\nÖffnungszeiten\n\n\n\n\nDi 23.06. + Do 25.06. + So 28.06. + Di 30.06. + Do 02.07. + So 05.07. 2026 jeweils 16-19 Uhr \n\nund nach Vereinbarung 0202/664876\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "rank": 1,
+      "cluster_id": 0,
+      "cluster_label": "passt am besten",
+      "match_score": 0.9754957933909376,
+      "vector_length": 46,
+      "strongest_feature_group": "style",
+      "top_shared_features": [
+        {
+          "group": "style",
+          "feature": "classic",
+          "strength": 0.0186
+        },
+        {
+          "group": "emotion",
+          "feature": "relaxing",
+          "strength": 0.011930612244897958
+        },
+        {
+          "group": "environment",
+          "feature": "urban",
+          "strength": 0.011538888888888888
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/616992",
+      "event_url": "https://www.remscheid-live.de/616992",
+      "title": "Herdecke genießen - Feierabendmarkt",
+      "event_type": "Event",
+      "startDate": "2026-07-10T17:00:00",
+      "city": "Herdecke",
+      "venue": "Frederuna Brunnen Herdecke",
+      "performer": null,
+      "keywords": [
+        "Märkte, Messen & Feste",
+        "MARKETS"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\nVon Herdeckern für Herdecker - Jeden zweiten Freitag im Monat bieten Herdecker Gastronomen rund um den Frederuna Brunnen in der Fußgängerzone kulinarische Köstlichenkeiten von Nudeln über verschiedene Fleischgerichte bis hin zu Bier und Wein. Jede Veranstaltung steht dabei unter einem anderen Motto.\n \n\n\nFreitag, 17. April  Afrika, Würzig, bunt und voller Lebensfreude.\n\n\nFreitag, 08. MaiEuropa, Vielfältig, klassisch, überraschend.\n\n\n\nFreitag, 12. Juni Südamerika, Feurig, fruchtig, temperamentvoll.\n\n\n\nFreitag, 10. JuliAustralien, Down Under trifft Altstadt-Charme.\n\n\n\nFreitag, 14. AugustNordamerika oder Indien, Köstliche Entscheidung folgt bald – halten Sie sich bereit!\n\n\n\nFreitag, 11. September  Asien, Aromatisch, duftend, faszinierend.",
+      "rank": 263,
+      "cluster_id": 0,
+      "cluster_label": "passt am besten",
+      "match_score": 0.9197893929866925,
+      "vector_length": 46,
+      "strongest_feature_group": "audience",
+      "top_shared_features": [
+        {
+          "group": "environment",
+          "feature": "historic",
+          "strength": 0.014983333333333333
+        },
+        {
+          "group": "environment",
+          "feature": "urban",
+          "strength": 0.014811111111111108
+        },
+        {
+          "group": "emotion",
+          "feature": "relaxing",
+          "strength": 0.011477551020408162
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/618996",
+      "event_url": "https://www.remscheid-live.de/618996",
+      "title": "Büchermarkt",
+      "event_type": "Event",
+      "startDate": "2026-08-15T11:00:00",
+      "city": "Wuppertal",
+      "venue": "Botanischer Garten Wuppertal / Elisenturm",
+      "performer": null,
+      "keywords": [
+        "Märkte, Messen & Feste",
+        "MARKETS"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\nDer Büchermarkt startet während des Sommerfestes am 15. August und wird bis zum 23. August im Glashaus des Botanischen Gartens fortgeführt. \n\n\nEntdecken Sie eine vielfältige und gut sortierte Auswahl an gebrauchten, gut erhaltenen Büchern aus den verschiedensten Bereichen: spannende Romane, Kinderbücher, Hobby- und Gartenratgeber, Kochbücher, Sachbücher zur Geschichte, Kultur und vieles mehr. Für jeden Lesegeschmack ist etwas dabei! \n\n\n\nDer Erlös kommt direkt dem Förderverein zugute und unterstützt damit den Botanischen Garten bei seinen vielfältigen Projekten und der Pflege der Pflanzenwelt. Wir laden alle Bücherfreunde herzlich ein, das Angebot zu durchstöbern und das ein oder andere neue Lieblingsbuch zu entdecken.\n \n\n\nKontakt und Spenden: Wir sind das ganze Jahr über auf der Suche nach gut erhaltenen Büchern, CDs, DVDs und Schallplatten, die Sie gerne als Spende abgeben können. Ihre Beiträge helfen uns, das Angebot stetig zu erweitern und den Botanischen Garten zu fördern. Für weitere Informationen und Absprachen erreichen Sie uns unter: \nTel. 0202 5634180 oder\nverein.botanischergarten@stadt.wuppertal.de",
+      "rank": 264,
+      "cluster_id": 1,
+      "cluster_label": "passt gut",
+      "match_score": 0.919249009848226,
+      "vector_length": 46,
+      "strongest_feature_group": "style",
+      "top_shared_features": [
+        {
+          "group": "style",
+          "feature": "classic",
+          "strength": 0.02015
+        },
+        {
+          "group": "emotion",
+          "feature": "relaxing",
+          "strength": 0.012685714285714285
+        },
+        {
+          "group": "environment",
+          "feature": "historic",
+          "strength": 0.008216666666666667
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/632942",
+      "event_url": "https://www.remscheid-live.de/632942",
+      "title": "Abschlusskonzert Sommersemester",
+      "event_type": "MusicEvent",
+      "startDate": "2026-07-07T20:00:00",
+      "city": "Wuppertal",
+      "venue": "Kulturzentrum Immanuel - Immanuelskirche",
+      "performer": {
+        "@type": "Organization",
+        "name": "Chor und Orchester der Bergischen Universität"
+      },
+      "keywords": [
+        "Chormusik",
+        "CONCERT"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\nBild © Uni Wuppertal\n\n\nAm 7. Juli laden Chor und Orchester der Bergischen Universität Wuppertal um 20 Uhr zu ihrem Semester-Abschlusskonzert in die Immanuelskirche ein. Es erwartet Sie ein Programm voll Magie und voller mitreißender Emotionen. So spielt das UNI Orchester “Eine Nacht auf dem kahlen Berge” von Modest Mussorgsky, ein Stück wie eine moderne Filmmusik, das einen Hexensabbat auf einem russischen Berg beschreibt, dazu ein Medley aus der Harry Potter-Filmreihe und als besonderes Special ein Stück für Stepptänzer und Orchester des deutschen Komponisten Bobbi Fischer, getanzt von Bernd Paffrath. Der UNI Chor nimmt sie mit in die Welt des Musicals mit Stücken aus “Jekyll & Hyde” und “Next to Normal” und präsentiert außerdem “Time after time” von Cindy Lauper, “ATP.” Von Bruno Mars und “Lovely” von Billie Eilish. \n\nAlso Special Guest tritt erneut das Vokalensemble der Fachgruppe Musikpädagogik auf, das schon im vergangenen Januar in den Winterkonzerten für Begeisterung sorgte.\n\nAm Ende verbinden sich alle Ensembles zu einem Klangkörper mit der Friedenshymne “Let there be peace on earth” - leider in diesen Zeiten ein Ruf, der drängender kaum sein könnte.\n\nKarten erhalten Sie wie immer bei \nwww.wuppertal-live.de\n und den bekannten Vorverkaufsstellen.\n\nWir freuen uns auf Sie!\n \n\nEinlass ca. 19:30 Uhr",
+      "rank": 437,
+      "cluster_id": 1,
+      "cluster_label": "passt gut",
+      "match_score": 0.8624769514407101,
+      "vector_length": 46,
+      "strongest_feature_group": "style",
+      "top_shared_features": [
+        {
+          "group": "style",
+          "feature": "classic",
+          "strength": 0.02015
+        },
+        {
+          "group": "environment",
+          "feature": "historic",
+          "strength": 0.018366666666666663
+        },
+        {
+          "group": "environment",
+          "feature": "urban",
+          "strength": 0.012227777777777777
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/640168",
+      "event_url": "https://www.remscheid-live.de/640168",
+      "title": "Blickfang",
+      "event_type": "TheaterEvent",
+      "startDate": "2026-07-04T20:00:00",
+      "city": "Wuppertal",
+      "venue": "Zaubertheater Wiepen",
+      "performer": null,
+      "keywords": [
+        "Zauber & Magie",
+        "SHOW"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\n„Wie macht er das nur?“, werden Sie sich in dieser Show mehr als einmal fragen. Unglaubliche und scheinbar unerklärliche Kunststücke lassen Sie ratlos, aber glücklich zurück. Dieses Format garantiert Witz und Unterhaltung auf höchstem Niveau.\n \n\nAltersempfehlung: ab 12 Jahre\n\n\n\nWeiter Infos:\nzaubertheater-wuppertal.de",
+      "rank": 438,
+      "cluster_id": 2,
+      "cluster_label": "passt mittel",
+      "match_score": 0.862077368350724,
+      "vector_length": 46,
+      "strongest_feature_group": "style",
+      "top_shared_features": [
+        {
+          "group": "style",
+          "feature": "classic",
+          "strength": 0.011625
+        },
+        {
+          "group": "emotion",
+          "feature": "joyful",
+          "strength": 0.009338775510204081
+        },
+        {
+          "group": "style",
+          "feature": "contemporary",
+          "strength": 0.007933333333333334
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/620006",
+      "event_url": "https://www.remscheid-live.de/620006",
+      "title": "Botanische Illustration mit Aquarellfarben",
+      "event_type": "EducationEvent",
+      "startDate": "2026-07-18T10:00:00",
+      "city": "Wuppertal",
+      "venue": "Botanischer Garten Wuppertal / Elisenturm",
+      "performer": null,
+      "keywords": [
+        "Workshop",
+        "LECTURE"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\nDieser Kurs ist eine Einführung in die alte Kunst der Botanischen Malerei. Er widmet sich dem detailgenauen Darstellen von Pflanzen, Blüten und Früchten.\nGeeignet für Anfänger und Fortgeschrittene.\n\nKursgebühr: pro Person 45,00 Euro.\n\nDie Teilnehmerzahl ist begrenzt.\n\n\n\nMehr Informationen und eine verbindliche Anmeldung sind erforderlich bei:\n\nOrt: wird bei Anmeldung bekannt gegeben\n\nNortrud McLellan, Förderverein Botanischer Garten,\n\nTel. 0202 2536706, E-Mail:\nan.mclellan@unitybox.de",
+      "rank": 606,
+      "cluster_id": 2,
+      "cluster_label": "passt mittel",
+      "match_score": 0.7945636601412724,
+      "vector_length": 46,
+      "strongest_feature_group": "style",
+      "top_shared_features": [
+        {
+          "group": "style",
+          "feature": "classic",
+          "strength": 0.022216666666666662
+        },
+        {
+          "group": "emotion",
+          "feature": "relaxing",
+          "strength": 0.012987755102040813
+        },
+        {
+          "group": "style",
+          "feature": "minimalist",
+          "strength": 0.010505555555555554
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/410062",
+      "event_url": "https://www.remscheid-live.de/410062",
+      "title": "Deutsches Klingenmuseum",
+      "event_type": "Event",
+      "startDate": "2026-05-18T06:00:00",
+      "city": "Solingen",
+      "venue": "Deutsches Klingenmuseum",
+      "performer": null,
+      "keywords": [
+        "Museen",
+        "MUSEUMS"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\nBild © Made in Solingen\n\n\nDas Deutsche Klingenmuseum ist stark in der Historie der regionalen Schneidwarenherstellung verwurzelt. Es präsentiert die Geschichte der unterschiedlichsten Schneidgeräte und zeigt eine große Vielzahl von Exponaten. \n\n\n\nZahlreiche Informationen gibt es zur Entwicklung und Bedeutung rund um das spannende Thema „schneiden“. Ein Rundgang durch das Museum ist dabei wie ein Gang durch die Welt-Geschichte der Blankwaffen und der Tafelkultur: vom Bronzeschwert aus dem Iran bis zum Prunkdegen der Neuzeit und vom einfachen Messer hin zum Designerbesteck des 21. Jahrhunderts. Wobei die historische Bestecksammlung des Museums inzwischen weltweit die größte Sammlung ihrer Art darstellt.\n \n\n\nBild © Blick ins obere Foyer \n\n\nIm Jubiläumsjahr der Klingenstadt Solingen hat das Deutsche Klingenmuseum nun den ersten Teil seiner neuen Dauerausstellung eröffnet:\n\n\n\n „ME FECIT SOLINGEN – Klingen : Stadt : Geschichte“\n\n\n\n„ME FECIT SOLINGEN“ – das ist Latein für „Mich hat Solingen gemacht“. Der Satz steht auf vielen alten Schwertklingen aus Solingen und zeigt den Stolz der Stadt auf ihre Handwerkskunst. Warum und wie wurde gerade Solingen zur weltbekannten Klingenstadt?\n\n\n\nDie Dauerausstellung des Deutschen Klingenmuseums gibt darauf Antworten. Sie zeigt die Entwicklung und Bedeutung der Solinger Klingenherstellung vom Mittelalter und Früher Neuzeit bis ca. 1700 auf faszinierende Weise.\n\n\n\nAuf über 300 Quadratmeter lädt eine beeindruckende Inszenierung die Gäste ein, sich dem Thema interaktiv zu nähern: Eine historische, zehn Meter breite Landkarte des Bergischen Landes lässt sich durch Projektionen zum Leben erwecken, Hands-On Exponate zeigen die Herstellung einer Klinge, und in einer Fechtstation kann man selbst ein (stumpfes) Schwert schwingen. Viele weitere Themen werden durch die Exponate, großformatige Illustrationen und interaktive Touchscreens beleuchtet, ein Überblick über die heutigen Solinger Klingenhersteller rundet die Ausstellung ab. Und im Foyer der neuen Dauerausstellung setzt eine deckenhohe Großvitrine über 300 Messer, Schwerter und Klingen aus aller Welt und von der Steinzeit bis in die Gegenwart imposant in Szene.\n\n\n\n\n\n\n\n„ME FECIT SOLINGEN“ ist es der erste Schritt zur Rundumerneuerung der 30 Jahre alten Dauerausstellung des Klingenmuseums; der nächste folgt am 04.04.2025 mit der Eröffnung der Kinderausstellung „Drache und Zauberschwert“.\n \n\n\nBild © Die Schwertspirale \n\n\n \n\n\nÖffnungszeiten\n\n\n\n\nmontags geschlossen | dienstags 14:00 – 17:00 | mittwochs bis sonntags 10:00 – 17:00\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.\nwww.klingenmuseum.de/",
+      "rank": 607,
+      "cluster_id": 3,
+      "cluster_label": "passt nicht so gut",
+      "match_score": 0.7912837785353476,
+      "vector_length": 46,
+      "strongest_feature_group": "style",
+      "top_shared_features": [
+        {
+          "group": "environment",
+          "feature": "historic",
+          "strength": 0.023441666666666663
+        },
+        {
+          "group": "style",
+          "feature": "classic",
+          "strength": 0.022733333333333335
+        },
+        {
+          "group": "environment",
+          "feature": "urban",
+          "strength": 0.011022222222222221
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/629040",
+      "event_url": "https://www.remscheid-live.de/629040",
+      "title": "Mural Harbor Revisited",
+      "event_type": "ExhibitionEvent",
+      "startDate": "2026-07-04T20:00:00",
+      "city": "Wuppertal",
+      "venue": "Visiodrom im Gaskessel Wuppertal",
+      "performer": {
+        "@type": "Organization",
+        "name": "Visiodrom BeSides - Immersive Kunst am Abend"
+      },
+      "keywords": [
+        "Kunst",
+        "EXHIBITION"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\nBild © Heinrich Brinkmöller-Becker\n\n\nNach dem großen Erfolg 2024 kehrt die Mural Harbor Gallery im Visiodrom in einer aktualisierten Fassung zurück. Die Outdoor-Galerie im Linzer Hafen zählt zu den weltweit größten Projekten für Urban Art und ist ein Treffpunkt internationaler Street Artists.\n\n\n\nHeinrich Brinkmöller-Becker hat den Hafen erneut besucht und massive Veränderungen dokumentiert. Die immersive Projektion führt durch diese sich wandelnde Kunstlandschaft und macht Urban Art im Großformat als lebendigen Prozess erfahrbar.\n\n\n\nAm 4. Juli mit Musik vom Tonträger.\n \n\nEinlass ca. 19:00 Uhr",
+      "rank": 806,
+      "cluster_id": 3,
+      "cluster_label": "passt nicht so gut",
+      "match_score": 0.6860995964314509,
+      "vector_length": 46,
+      "strongest_feature_group": "audience",
+      "top_shared_features": [
+        {
+          "group": "environment",
+          "feature": "urban",
+          "strength": 0.016877777777777776
+        },
+        {
+          "group": "style",
+          "feature": "contemporary",
+          "strength": 0.011316666666666664
+        },
+        {
+          "group": "emotion",
+          "feature": "relaxing",
+          "strength": 0.007248979591836733
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/615689",
+      "event_url": "https://www.remscheid-live.de/615689",
+      "title": "Probiert? Kapiert! Die Mitmach-Ausstellung für Kinder, Jugendliche und Familien",
+      "event_type": "ExhibitionEvent",
+      "startDate": "2025-05-18T10:00:00",
+      "city": "Solingen",
+      "venue": "LVR-Industriemuseum Solingen Gesenkschmiede Hendrichs",
+      "performer": null,
+      "keywords": [
+        "Ausstellung",
+        "EXHIBITION"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\n\n\nDie Mitmach-Ausstellung für Kinder, Jugendliche\n\nund Familien\n\n\n\n\n\nProbiert? Kapiert! heißt die Mitmach-Ausstellung, die ab dem 18. Mai zum Tüfteln in der Gesenkschmiede Hendrichs in Solingen einlädt.\n\n\n\nWie transportiert man kinderleicht schwere Waren? Wie treibt man große Maschinen an? Wie stellt man festes Gewebe her und welche Möglichkeiten zur platzsparenden Verpackung gibt es? An den Mitmach-Stationen der Ausstellung finden Kinder, Schüler*innen, Familien und Erwachsene clevere Lösungen für unterschiedliche technische Herausforderungen. Webstuhl, Flaschenzug und verschiedene Teamstationen bieten rund um die Themen Energie, Transport, Lagerung und Produktion viele Möglichkeiten zum Ausprobieren.\n\n\n\nIm Zentrum von Probiert? Kapiert! steht das „Tinkern“ – Tüfteln –, mit dem alle Besucher*innen spielerisch naturwissenschaftliche und technische Inhalte kennenlernen. So erwartet sie als Höhepunkt des Ausstellungsbesuchs der gemeinsame Bau einer großen Kettenreaktion. Viel Spaß, Kreativität und Action sind garantiert.\n \n\n\n\n\n\n\nBild © Magnetwand | Stefan Arendt, ZMB\n\n\n \n\n\nBild © kettenreaktion copyright lvr industriemuseum | foto s arendt\n\n\n \n\n\nAusstellungsdauer:\n\n18.05.2025 - 11.10.2026\n\n\n\nÖffnungszeiten\n\n\n\n\nDi - Fr 10 - 17 Uhr\n\nSa, So, Feiertage 11 - 18 Uhr\n\n\n\nDie Ausstellung ist barrierefrei zugänglich.\n\n\n\nFür (Klein-)Gruppen besteht mit dem Beginn der Ausstellung die Möglichkeit, den betreuten Workshop „Angestoßen!“ zu buchen. Dieser kann für verschiedene Altersgruppen angepasst werden: Von Vorschulgruppen über Schulklassen bis zum Teamevent oder dem Kindergeburtstag ist für alle etwas dabei. \n\nDie Ausstellung wird ganzjährig durch ein umfangreiches Familienprogramm begleitet. Dazu zählen unter anderem das Papiertheater „Knösterpitter“ oder auch ein Foto-Workshop mit selbstgebauten Lochkameras.  \n\n\n\n\n\nInformationen zu Besuch und Buchungen von Führungen bei kulturinfo rheinland per Mail an info@kulturinfo-rheinland.de oder unter Tel.: 02234/9921-555 (Mo–Fr 8–18 Uhr, Sa, So und an Feiertagen 10–15 Uhr)\n\n\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "rank": 807,
+      "cluster_id": 4,
+      "cluster_label": "passt gar nicht",
+      "match_score": 0.6781547011357221,
+      "vector_length": 46,
+      "strongest_feature_group": "environment",
+      "top_shared_features": [
+        {
+          "group": "environment",
+          "feature": "historic",
+          "strength": 0.01788333333333333
+        },
+        {
+          "group": "emotion",
+          "feature": "joyful",
+          "strength": 0.009763265306122449
+        },
+        {
+          "group": "style",
+          "feature": "contemporary",
+          "strength": 0.0084
+        }
+      ]
+    },
+    {
+      "event_id": "schema:https://www.remscheid-live.de/event/612324",
+      "event_url": "https://www.remscheid-live.de/612324",
+      "title": "In Vain präsentiert InVain",
+      "event_type": "MusicEvent",
+      "startDate": "2026-07-11T20:00:00",
+      "city": "Wülfrath",
+      "venue": "Kathedrale - Kommunikations-Center",
+      "performer": null,
+      "keywords": [
+        "Rock",
+        "CONCERT"
+      ],
+      "description": "Infos\n\t\t\t\t\n\n\n\n\nIn Vain präsentiert In Vain –\n\nLive und Open Air!\n\n\n\nSie wollen Party? Diese Band ist eine Party! Erwarten Sie tumultartige Zustände und hemmungslose Euphorie.\n\n\n\nMenschen, die sich im Partyrausch in die Menge schmeißen, werden durch die anwesende Gemeinde aufgefangen und durch die Luft weitergereicht, während sich alle anderen durch wildes auf und ab springen ihrer Ekstase hingeben.\n\n\n\nEin In Vain Konzert gilt seit jeher als radikale Verjüngungskur und wurde im Laufe der Zeit zum begehrten Elixier unter Partyfreunden und denen, die es gerne werden möchten.\n\nIn Vain - make Party great again!\n \n\nEinlass ca. 18:00 Uhr",
+      "rank": 843,
+      "cluster_id": 4,
+      "cluster_label": "passt gar nicht",
+      "match_score": 0.4814416204040747,
+      "vector_length": 46,
+      "strongest_feature_group": "emotion",
+      "top_shared_features": [
+        {
+          "group": "environment",
+          "feature": "urban",
+          "strength": 0.0124
+        },
+        {
+          "group": "emotion",
+          "feature": "joyful",
+          "strength": 0.010187755102040815
+        },
+        {
+          "group": "style",
+          "feature": "contemporary",
+          "strength": 0.009799999999999998
+        }
+      ]
+    }
+  ]
+}
