@@ -37,18 +37,20 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Die App läuft standardmäßig auf `http://0.0.0.0:8080` und akzeptiert optional `HOST`, `PORT`, `SECRET_KEY` und `EVALUATION_DB_PATH` als Umgebungsvariablen.
+Die App läuft standardmäßig auf `http://0.0.0.0:8080` und akzeptiert optional `HOST`, `PORT`, `SECRET_KEY` und `DATABASE_URL` als Umgebungsvariablen.
 
 **Deployment (Wasmer / Wasix)**
 
 Das Projekt ist bereits mit einer Wasmer-Konfiguration vorbereitet. Die zentrale Flask-App wird als `app:app` exportiert, und Wasmer kann sie direkt starten.
 
-Die vorhandene Datei `wasmer-annotations.yaml` enthält bereits die nötigen Start- und Install-Befehle.
+Die vorhandene Datei `wasmer.toml` enthält bereits die nötigen Start-Befehle.
 
 Wenn du die Werte manuell setzen willst, verwende:
 
 - Install-Command: `pip install -r requirements.txt`
 - Start-Command: `gunicorn app:app --bind 0.0.0.0:${PORT:-8080}`
+
+Für Wasmer solltest du `DATABASE_URL` auf eine PostgreSQL-Verbindung setzen. Lokal kannst du ohne weitere Konfiguration weiterarbeiten, weil die App automatisch auf SQLite unter `data/evaluation.sqlite3` zurückfällt.
 
 Wichtig: das WSGI-Target muss auf `app:app` zeigen, da die Flask-Instanz in `app.py` als `app` definiert ist.
 
@@ -62,7 +64,7 @@ Wichtig: das WSGI-Target muss auf `app:app` zeigen, da die Flask-Instanz in `app
 **Daten & Speicher**
 - Personas werden aus `data/personas.json` geladen.
 - Vorab vorhandene persona-Rankings liegen in `data/persona_rankings/events_persona_XX.json`.
-- Benutzer-Rankings werden standardmäßig in `data/evaluation.sqlite3` gespeichert; alternativ kann `EVALUATION_DB_PATH` auf einen externen beschreibbaren Pfad gesetzt werden.
+- Benutzer-Rankings werden über SQLAlchemy gespeichert. Ohne `DATABASE_URL` verwendet die App lokal SQLite unter `data/evaluation.sqlite3`; auf Wasmer ist PostgreSQL über `DATABASE_URL` die empfohlene Variante.
 
 **Wichtige Routen**
 - `/` – Einstieg; leitet zur nächsten offenen Persona weiter

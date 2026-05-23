@@ -3,25 +3,67 @@ import re
 import os
 import random
 import mimetypes
-import sqlite3
 import uuid
 from functools import lru_cache
 from datetime import datetime, timezone
 from pathlib import Path
 
 from flask import Flask, jsonify, redirect, render_template, request, session, url_for
+from dotenv import load_dotenv
+from sqlalchemy import Column, ForeignKey, Integer, MetaData, String, Table, Text, UniqueConstraint, create_engine, delete, select
+from sqlalchemy.dialects.postgresql import insert as postgres_insert
+from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "evaluation-app-development"
+load_dotenv()
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "evaluation-app-development")
 
-port = int(os.environ.get("PORT", 5005))
+host = os.environ.get("HOST", "0.0.0.0")
+port = int(os.environ.get("PORT", 8080))
+debug_mode = os.environ.get("FLASK_DEBUG", "").lower() in {"1", "true", "yes", "on"}
 
 mimetypes.add_type("application/javascript", ".js")
 mimetypes.add_type("text/css", ".css")
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
-DATABASE_PATH = DATA_DIR / "evaluation.sqlite3"
+DATABASE_URL = os.environ.get(
+    "DATABASE_URL",
+    f"sqlite:///{(DATA_DIR / 'evaluation.sqlite3').resolve().as_posix()}",
+)
+engine = create_engine(DATABASE_URL, future=True)
+metadata = MetaData()
+
+ranking_submissions = Table(
+    "ranking_submissions",
+    metadata,
+    Column("id", Integer, primary_key=True),
+    Column("submission_uuid", String(64), nullable=False, unique=True),
+    Column("session_uuid", String(64), nullable=False),
+    Column("persona_id", String(64), nullable=False),
+    Column("persona_name", String(255), nullable=False),
+    Column("persona_bio", Text),
+    Column("generated_at", Text),
+    Column("saved_at", Text, nullable=False),
+    Column("ranking_json", Text, nullable=False),
+    Column("raw_payload_json", Text, nullable=False),
+    UniqueConstraint("session_uuid", "persona_id", name="uq_ranking_submissions_session_persona"),
+    sqlite_autoincrement=True,
+)
+
+ranking_submission_items = Table(
+    "ranking_submission_items",
+    metadata,
+    Column("id", Integer, primary_key=True),
+    Column("submission_id", Integer, ForeignKey("ranking_submissions.id", ondelete="CASCADE"), nullable=False),
+    Column("position", Integer, nullable=False),
+    Column("event_id", String(255), nullable=False),
+    Column("event_name", String(255), nullable=False),
+    Column("star_category", Integer, nullable=False),
+    Column("location_name", Text),
+    Column("tags_json", Text, nullable=False),
+    Column("event_type", String(255)),
+)
 
 
 @lru_cache(maxsize=8)
@@ -30,50 +72,9 @@ def load_json_file(filename):
         return json.load(handle)
 
 
-def get_db_connection():
-    connection = sqlite3.connect(DATABASE_PATH)
-    connection.row_factory = sqlite3.Row
-    connection.execute("PRAGMA foreign_keys = ON")
-    return connection
-
-
 def initialize_storage():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-    with get_db_connection() as connection:
-        connection.execute(
-            """
-            CREATE TABLE IF NOT EXISTS ranking_submissions (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                submission_uuid TEXT NOT NULL UNIQUE,
-                session_uuid TEXT NOT NULL,
-                persona_id TEXT NOT NULL,
-                persona_name TEXT NOT NULL,
-                persona_bio TEXT,
-                generated_at TEXT,
-                saved_at TEXT NOT NULL,
-                ranking_json TEXT NOT NULL,
-                raw_payload_json TEXT NOT NULL,
-                UNIQUE(session_uuid, persona_id)
-            )
-            """
-        )
-        connection.execute(
-            """
-            CREATE TABLE IF NOT EXISTS ranking_submission_items (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                submission_id INTEGER NOT NULL,
-                position INTEGER NOT NULL,
-                event_id TEXT NOT NULL,
-                event_name TEXT NOT NULL,
-                star_category INTEGER NOT NULL,
-                location_name TEXT,
-                tags_json TEXT NOT NULL,
-                event_type TEXT,
-                FOREIGN KEY (submission_id) REFERENCES ranking_submissions(id) ON DELETE CASCADE
-            )
-            """
-        )
+    metadata.create_all(engine)
 
 
 initialize_storage()
@@ -321,79 +322,63 @@ def save_ranking_submission(persona, payload):
     raw_payload_json = json.dumps(payload, ensure_ascii=False)
     ranking_json = json.dumps(ranking_entries, ensure_ascii=False)
 
-    with get_db_connection() as connection:
+    submission_values = {
+        "submission_uuid": submission_uuid,
+        "session_uuid": participant_uuid,
+        "persona_id": persona["id"],
+        "persona_name": persona["name"],
+        "persona_bio": payload.get("persona", {}).get("bio") or persona.get("bio", ""),
+        "generated_at": generated_at,
+        "saved_at": saved_at,
+        "ranking_json": ranking_json,
+        "raw_payload_json": raw_payload_json,
+    }
+
+    update_values = {
+        "submission_uuid": submission_uuid,
+        "persona_name": persona["name"],
+        "persona_bio": payload.get("persona", {}).get("bio") or persona.get("bio", ""),
+        "generated_at": generated_at,
+        "saved_at": saved_at,
+        "ranking_json": ranking_json,
+        "raw_payload_json": raw_payload_json,
+    }
+
+    insert_statement = sqlite_insert(ranking_submissions) if engine.dialect.name == "sqlite" else postgres_insert(ranking_submissions)
+
+    with engine.begin() as connection:
         connection.execute(
-            """
-            INSERT INTO ranking_submissions (
-                submission_uuid,
-                session_uuid,
-                persona_id,
-                persona_name,
-                persona_bio,
-                generated_at,
-                saved_at,
-                ranking_json,
-                raw_payload_json
+            insert_statement.values(**submission_values).on_conflict_do_update(
+                index_elements=["session_uuid", "persona_id"],
+                set_=update_values,
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(session_uuid, persona_id) DO UPDATE SET
-                submission_uuid = excluded.submission_uuid,
-                persona_name = excluded.persona_name,
-                persona_bio = excluded.persona_bio,
-                generated_at = excluded.generated_at,
-                saved_at = excluded.saved_at,
-                ranking_json = excluded.ranking_json,
-                raw_payload_json = excluded.raw_payload_json
-            """,
-            (
-                submission_uuid,
-                participant_uuid,
-                persona["id"],
-                persona["name"],
-                payload.get("persona", {}).get("bio") or persona.get("bio", ""),
-                generated_at,
-                saved_at,
-                ranking_json,
-                raw_payload_json,
-            ),
         )
 
         submission_row = connection.execute(
-            "SELECT id FROM ranking_submissions WHERE session_uuid = ? AND persona_id = ?",
-            (participant_uuid, persona["id"]),
-        ).fetchone()
+            select(ranking_submissions.c.id).where(
+                ranking_submissions.c.session_uuid == participant_uuid,
+                ranking_submissions.c.persona_id == persona["id"],
+            )
+        ).mappings().first()
 
         if submission_row is None:
             raise RuntimeError("failed to resolve saved submission")
 
         submission_id = submission_row["id"]
-        connection.execute("DELETE FROM ranking_submission_items WHERE submission_id = ?", (submission_id,))
+        connection.execute(delete(ranking_submission_items).where(ranking_submission_items.c.submission_id == submission_id))
 
         for entry in ranking_entries:
             connection.execute(
-                """
-                INSERT INTO ranking_submission_items (
-                    submission_id,
-                    position,
-                    event_id,
-                    event_name,
-                    star_category,
-                    location_name,
-                    tags_json,
-                    event_type
+                ranking_submission_items.insert().values(
+                    submission_id=submission_id,
+                    position=entry["position"],
+                    event_id=entry["event_id"],
+                    event_name=entry["event_name"],
+                    star_category=entry["star_category"],
+                    location_name=entry["location_name"],
+                    tags_json=json.dumps(entry["tags"], ensure_ascii=False),
+                    event_type=entry["event_type"],
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                """,
-                (
-                    submission_id,
-                    entry["position"],
-                    entry["event_id"],
-                    entry["event_name"],
-                    entry["star_category"],
-                    entry["location_name"],
-                    json.dumps(entry["tags"], ensure_ascii=False),
-                    entry["event_type"],
-                ),
             )
 
     return {
@@ -591,4 +576,4 @@ def restart():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5005)
+    app.run(debug=debug_mode, host=host, port=port)

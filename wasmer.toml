@@ -8,4 +8,4 @@ kind = "python"
 instance_type = "shared"
 
 [app.commands]
-start = "gunicorn app:app"
+start = "gunicorn app:app --bind 0.0.0.0:${PORT:-8080}"
