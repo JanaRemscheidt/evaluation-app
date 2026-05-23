@@ -37,16 +37,20 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Die App läuft standardmäßig auf `http://0.0.0.0:5005`.
+Die App läuft standardmäßig auf `http://0.0.0.0:8080` und akzeptiert optional `HOST`, `PORT`, `SECRET_KEY` und `EVALUATION_DB_PATH` als Umgebungsvariablen.
 
 **Deployment (Wasmer / Wasix)**
 
-Wenn du die App bei Wasmer/Wasix hosten willst, verwende folgende Einstellungen:
+Das Projekt ist bereits mit einer Wasmer-Konfiguration vorbereitet. Die zentrale Flask-App wird als `app:app` exportiert, und Wasmer kann sie direkt starten.
+
+Die vorhandene Datei `wasmer-annotations.yaml` enthält bereits die nötigen Start- und Install-Befehle.
+
+Wenn du die Werte manuell setzen willst, verwende:
 
 - Install-Command: `pip install -r requirements.txt`
-- Start-Command: `uvicorn app:app --interface wsgi --host 0.0.0.0 --port ${PORT:-8080}`
+- Start-Command: `gunicorn app:app --bind 0.0.0.0:${PORT:-8080}`
 
-Wichtig: das WSGI-Target muss auf `app:app` zeigen (nicht `a:app`), da die Flask-Instanz in `app.py` als `app` definiert ist.
+Wichtig: das WSGI-Target muss auf `app:app` zeigen, da die Flask-Instanz in `app.py` als `app` definiert ist.
 
 **Projektstruktur (Kurzüberblick)**
 - `app.py` – Haupt-Flask-Anwendung und Routen
@@ -58,7 +62,7 @@ Wichtig: das WSGI-Target muss auf `app:app` zeigen (nicht `a:app`), da die Flask
 **Daten & Speicher**
 - Personas werden aus `data/personas.json` geladen.
 - Vorab vorhandene persona-Rankings liegen in `data/persona_rankings/events_persona_XX.json`.
-- Benutzer-Rankings werden in `data/evaluation.sqlite3` in den Tabellen `ranking_submissions` und `ranking_submission_items` gespeichert.
+- Benutzer-Rankings werden standardmäßig in `data/evaluation.sqlite3` gespeichert; alternativ kann `EVALUATION_DB_PATH` auf einen externen beschreibbaren Pfad gesetzt werden.
 
 **Wichtige Routen**
 - `/` – Einstieg; leitet zur nächsten offenen Persona weiter
@@ -71,7 +75,7 @@ Wichtig: das WSGI-Target muss auf `app:app` zeigen (nicht `a:app`), da die Flask
 - Öffne die Startseite, bearbeite die Rangliste für die dargestellte Persona und sende ab. Die App verwaltet die Persona-Reihenfolge in der Session.
 
 **Entwicklung & Hinweise**
-- Die `SECRET_KEY` ist in `app.py` für Entwicklungszwecke gesetzt; vor Produktion ändern.
+- Die `SECRET_KEY` sollte in Produktion über die Umgebungsvariable `SECRET_KEY` gesetzt werden.
 - `data/` wird beim Start initialisiert, falls nötig.
 - Tests oder CI sind nicht enthalten; für lokale Entwicklung ist ein virtuelles Environment ausreichend.
 
