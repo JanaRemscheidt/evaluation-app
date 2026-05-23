@@ -6,14 +6,14 @@
   "framework": "flask",
   "main_file": "app.py",
   "wsgi_application": "app:app",
-  "server": "uvicorn",
+  "server": "gunicorn",
   "install_command": "pip install -r requirements.txt",
-  "start_command": "uvicorn app:app --interface wsgi --host 0.0.0.0 --port ${PORT:-8080}",
+  "start_command": "gunicorn app:app --bind 0.0.0.0:${PORT:-8080}",
   "port": 8080,
   "python_version": "3.13",
   "precompile_python": true,
   "python_extra_index_url": "https://pythonindex.wasix.org/simple",
-  "extra_dependencies": ["uvicorn"],
+  "extra_dependencies": ["gunicorn"],
   "uv_version": "0.8.15",
   "notes": "WSGI target corrected to app:app; use .vscode settings for local venv"
 }
