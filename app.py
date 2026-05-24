@@ -11,6 +11,7 @@ from pathlib import Path
 from flask import Flask, jsonify, redirect, render_template, request, session, url_for
 from dotenv import load_dotenv
 from sqlalchemy import Column, ForeignKey, Integer, MetaData, String, Table, Text, UniqueConstraint, create_engine, delete, select
+from sqlalchemy.dialects.mysql import insert as mysql_insert
 from sqlalchemy.dialects.postgresql import insert as postgres_insert
 from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 
@@ -31,7 +32,7 @@ DATABASE_URL = os.environ.get(
     "DATABASE_URL",
     f"sqlite:///{(DATA_DIR / 'evaluation.sqlite3').resolve().as_posix()}",
 )
-engine = create_engine(DATABASE_URL, future=True)
+engine = create_engine(DATABASE_URL, future=True, pool_pre_ping=True)
 metadata = MetaData()
 
 ranking_submissions = Table(
@@ -78,6 +79,16 @@ def initialize_storage():
 
 
 initialize_storage()
+
+
+def build_upsert_statement(table):
+    if engine.dialect.name == "sqlite":
+        return sqlite_insert(table)
+
+    if engine.dialect.name == "mysql":
+        return mysql_insert(table)
+
+    return postgres_insert(table)
 
 
 def compact_text(value, max_length=180):
@@ -344,15 +355,18 @@ def save_ranking_submission(persona, payload):
         "raw_payload_json": raw_payload_json,
     }
 
-    insert_statement = sqlite_insert(ranking_submissions) if engine.dialect.name == "sqlite" else postgres_insert(ranking_submissions)
+    insert_statement = build_upsert_statement(ranking_submissions)
 
     with engine.begin() as connection:
-        connection.execute(
-            insert_statement.values(**submission_values).on_conflict_do_update(
-                index_elements=["session_uuid", "persona_id"],
-                set_=update_values,
+        if engine.dialect.name == "mysql":
+            connection.execute(insert_statement.values(**submission_values).on_duplicate_key_update(**update_values))
+        else:
+            connection.execute(
+                insert_statement.values(**submission_values).on_conflict_do_update(
+                    index_elements=["session_uuid", "persona_id"],
+                    set_=update_values,
+                )
             )
-        )
 
         submission_row = connection.execute(
             select(ranking_submissions.c.id).where(

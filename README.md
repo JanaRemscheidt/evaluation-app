@@ -50,7 +50,7 @@ Wenn du die Werte manuell setzen willst, verwende:
 - Install-Command: `pip install -r requirements.txt`
 - Start-Command: `gunicorn app:app --bind 0.0.0.0:${PORT:-8080}`
 
-Für Wasmer solltest du `DATABASE_URL` auf eine PostgreSQL-Verbindung setzen. Lokal kannst du ohne weitere Konfiguration weiterarbeiten, weil die App automatisch auf SQLite unter `data/evaluation.sqlite3` zurückfällt.
+Für Wasmer solltest du `DATABASE_URL` auf eine MySQL-Verbindung setzen, zum Beispiel `mysql+pymysql://USER:PASSWORT@HOST:3306/DATENBANK`. Lokal kannst du ohne weitere Konfiguration weiterarbeiten, weil die App automatisch auf SQLite unter `data/evaluation.sqlite3` zurückfällt.
 
 Wichtig: das WSGI-Target muss auf `app:app` zeigen, da die Flask-Instanz in `app.py` als `app` definiert ist.
 
@@ -80,7 +80,7 @@ Compose:
 docker compose up --build
 ```
 
-Für ein echtes Deployment ist die robuste Variante eine externe PostgreSQL-Datenbank. Dann setzt du nur `DATABASE_URL` auf den Ziel-String der Plattform oder des DB-Providers und lässt den Container unverändert.
+Für ein echtes Deployment ist die robuste Variante eine externe Datenbank. Dann setzt du nur `DATABASE_URL` auf den Ziel-String der Plattform oder des DB-Providers und lässt den Container unverändert.
 
 Ein typischer Registry-Flow sieht so aus:
 
@@ -101,7 +101,7 @@ Auf der Zielplattform startest du denselben Image-Tag mit den Env-Variablen `SEC
 **Daten & Speicher**
 - Personas werden aus `data/personas.json` geladen.
 - Vorab vorhandene persona-Rankings liegen in `data/persona_rankings/events_persona_XX.json`.
-- Benutzer-Rankings werden über SQLAlchemy gespeichert. Ohne `DATABASE_URL` verwendet die App lokal SQLite unter `data/evaluation.sqlite3`; auf Wasmer ist PostgreSQL über `DATABASE_URL` die empfohlene Variante.
+- Benutzer-Rankings werden über SQLAlchemy gespeichert. Ohne `DATABASE_URL` verwendet die App lokal SQLite unter `data/evaluation.sqlite3`; auf Wasmer ist MySQL über `DATABASE_URL` die empfohlene Variante.
 - Für Docker-Deployments ist `DATABASE_URL` ebenfalls der zentrale Hebel; lokal kann SQLite per Volume gemountet werden.
 
 **Wichtige Routen**
