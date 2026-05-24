@@ -12,8 +12,6 @@ from flask import Flask, jsonify, redirect, render_template, request, session, u
 from dotenv import load_dotenv
 from sqlalchemy import Column, ForeignKey, Integer, MetaData, String, Table, Text, UniqueConstraint, create_engine, delete, select
 from sqlalchemy.dialects.mysql import insert as mysql_insert
-from sqlalchemy.dialects.postgresql import insert as postgres_insert
-from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 
 app = Flask(__name__)
 load_dotenv()
@@ -28,10 +26,28 @@ mimetypes.add_type("text/css", ".css")
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
-DATABASE_URL = os.environ.get(
-    "DATABASE_URL",
-    f"sqlite:///{(DATA_DIR / 'evaluation.sqlite3').resolve().as_posix()}",
-)
+
+
+def resolve_database_url():
+    for env_name in (
+        "DATABASE_URL",
+        "WASMER_DATABASE_URL",
+        "MYSQL_URL",
+        "MYSQL_URI",
+        "MYSQL_CONNECTION_STRING",
+        "DATABASE_CONNECTION_STRING",
+    ):
+        candidate_url = os.environ.get(env_name)
+        if candidate_url:
+            return candidate_url
+
+    raise RuntimeError("A MySQL DATABASE_URL is required")
+
+
+DATABASE_URL = resolve_database_url()
+if not DATABASE_URL.startswith("mysql"):
+    raise RuntimeError("DATABASE_URL must point to the Wasmer MySQL database")
+
 engine = create_engine(DATABASE_URL, future=True, pool_pre_ping=True)
 metadata = MetaData()
 
@@ -49,7 +65,6 @@ ranking_submissions = Table(
     Column("ranking_json", Text, nullable=False),
     Column("raw_payload_json", Text, nullable=False),
     UniqueConstraint("session_uuid", "persona_id", name="uq_ranking_submissions_session_persona"),
-    sqlite_autoincrement=True,
 )
 
 ranking_submission_items = Table(
@@ -80,15 +95,14 @@ def initialize_storage():
 
 initialize_storage()
 
+app.logger.info("Using database backend %s", engine.url.render_as_string(hide_password=True))
+
 
 def build_upsert_statement(table):
-    if engine.dialect.name == "sqlite":
-        return sqlite_insert(table)
-
     if engine.dialect.name == "mysql":
         return mysql_insert(table)
 
-    return postgres_insert(table)
+    raise RuntimeError(f"Unsupported database backend: {engine.dialect.name}")
 
 
 def compact_text(value, max_length=180):

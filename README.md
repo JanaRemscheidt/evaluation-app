@@ -4,7 +4,7 @@ Eine kleine Flask-Anwendung zum Durchführen von Persona-basierten Event-Ranking
 
 **Kurzbeschreibung**
 - Zeigt nacheinander Personas an und präsentiert zu jeder Persona 10 Events.
-- Speichert die abgeschickten Ranglisten in einer SQLite-Datenbank (`data/evaluation.sqlite3`).
+- Speichert die abgeschickten Ranglisten in der externen Wasmer-MySQL-Datenbank.
 
 **Voraussetzungen**
 - Python 3.10+ (oder kompatible 3.x-Version)
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Die App läuft standardmäßig auf `http://0.0.0.0:8080` und akzeptiert optional `HOST`, `PORT`, `SECRET_KEY` und `DATABASE_URL` als Umgebungsvariablen.
+Die App läuft standardmäßig auf `http://0.0.0.0:8080` und benötigt `DATABASE_URL` für die externe Wasmer-MySQL-Datenbank. `HOST`, `PORT` und `SECRET_KEY` bleiben optional.
 
 **Deployment (Wasmer / Wasix)**
 
@@ -50,13 +50,13 @@ Wenn du die Werte manuell setzen willst, verwende:
 - Install-Command: `pip install -r requirements.txt`
 - Start-Command: `gunicorn app:app --bind 0.0.0.0:${PORT:-8080}`
 
-Für Wasmer solltest du `DATABASE_URL` auf eine MySQL-Verbindung setzen, zum Beispiel `mysql+pymysql://USER:PASSWORT@HOST:3306/DATENBANK`. Lokal kannst du ohne weitere Konfiguration weiterarbeiten, weil die App automatisch auf SQLite unter `data/evaluation.sqlite3` zurückfällt.
+Für Wasmer musst du `DATABASE_URL` auf eine MySQL-Verbindung setzen, zum Beispiel `mysql+pymysql://USER:PASSWORT@HOST:3306/DATENBANK`. Ein lokaler Fallback ist nicht mehr vorgesehen.
 
 Wichtig: das WSGI-Target muss auf `app:app` zeigen, da die Flask-Instanz in `app.py` als `app` definiert ist.
 
 **Deployment mit Docker**
 
-Für Container-Deployments ist die App bereits vorbereitet. Sie liest die Konfiguration über Umgebungsvariablen und nutzt entweder eine externe Datenbank über `DATABASE_URL` oder lokal SQLite unter `data/evaluation.sqlite3`.
+Für Container-Deployments ist die App bereits vorbereitet. Sie liest die Konfiguration über Umgebungsvariablen und nutzt ausschließlich die externe Datenbank über `DATABASE_URL`.
 
 Build:
 
@@ -69,8 +69,7 @@ Run:
 ```bash
 docker run --rm -p 8080:8080 \
 	-e SECRET_KEY=change-me \
-	-e DATABASE_URL=sqlite:////app/data/evaluation.sqlite3 \
-	-v "${PWD}/data:/app/data" \
+	-e DATABASE_URL=mysql+pymysql://USER:PASSWORT@HOST:3306/DATENBANK \
 	evaluation-app:latest
 ```
 
@@ -94,15 +93,15 @@ Auf der Zielplattform startest du denselben Image-Tag mit den Env-Variablen `SEC
 **Projektstruktur (Kurzüberblick)**
 - `app.py` – Haupt-Flask-Anwendung und Routen
 - `requirements.txt` – Python-Abhängigkeiten
-- `data/` – enthaltene JSON- und SQLite-Dateien (`personas.json`, `persona_rankings/`, `evaluation.sqlite3`)
+- `data/` – enthaltene JSON-Dateien und Persona-Ranking-Exports (`personas.json`, `persona_rankings/`)
 - `static/` – CSS/JS Dateien
 - `templates/` – Jinja2-Templates (`index.html`, `complete.html`)
 
 **Daten & Speicher**
 - Personas werden aus `data/personas.json` geladen.
 - Vorab vorhandene persona-Rankings liegen in `data/persona_rankings/events_persona_XX.json`.
-- Benutzer-Rankings werden über SQLAlchemy gespeichert. Ohne `DATABASE_URL` verwendet die App lokal SQLite unter `data/evaluation.sqlite3`; auf Wasmer ist MySQL über `DATABASE_URL` die empfohlene Variante.
-- Für Docker-Deployments ist `DATABASE_URL` ebenfalls der zentrale Hebel; lokal kann SQLite per Volume gemountet werden.
+- Benutzer-Rankings werden über SQLAlchemy direkt in der externen Wasmer-MySQL-Datenbank gespeichert.
+- Für Docker-Deployments ist `DATABASE_URL` ebenfalls der zentrale Hebel; ein lokales Volume wird nicht mehr verwendet.
 
 **Wichtige Routen**
 - `/` – Einstieg; leitet zur nächsten offenen Persona weiter

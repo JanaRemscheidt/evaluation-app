@@ -1,0 +1,29 @@
+kind: wasmer.io/App.v0
+name: evaluation-app
+owner: janaremscheidt
+package: .
+app_id: da_2yGI9trUyyoX
+capabilities:
+  database:
+    engine: mysql
+annotations:
+  shipitcli.com/config:
+    commands: {}
+    cross_platform: wasix_wasm32
+    database: mysql
+    extra_dependencies:
+    - uvicorn
+    framework: flask
+    install_requires_all_files: false
+    main_file: app.py
+    port: 8080
+    precompile_python: true
+    python_extra_index_url: https://pythonindex.wasix.org/simple
+    python_version: '3.13'
+    server: uvicorn
+    uses_ffmpeg: false
+    uses_pandoc: false
+    uv_version: 0.8.15
+    wsgi_application: a:app
+  shipitcli.com/provider: python
+  shipitcli.com/version: 0.19.8
