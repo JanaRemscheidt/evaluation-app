@@ -95,23 +95,31 @@ Auf der Zielplattform startest du denselben Image-Tag mit den Env-Variablen `SEC
 - `requirements.txt` – Python-Abhängigkeiten
 - `data/` – enthaltene JSON-Dateien und Persona-Ranking-Exports (`personas.json`, `persona_rankings/`)
 - `static/` – CSS/JS Dateien
-- `templates/` – Jinja2-Templates (`index.html`, `complete.html`)
+- `templates/` – Jinja2-Templates (`start.html`, `index.html`, `complete.html`)
 
 **Daten & Speicher**
 - Personas werden aus `data/personas.json` geladen.
 - Vorab vorhandene persona-Rankings liegen in `data/persona_rankings/events_persona_XX.json`.
-- Benutzer-Rankings werden über SQLAlchemy direkt in der externen Wasmer-MySQL-Datenbank gespeichert.
+- Benutzer-Rankings werden über SQLAlchemy direkt in der externen Wasmer-MySQL-Datenbank als einzelne, unveränderliche Submissions gespeichert.
+- Jede Submission speichert `participant_label`, `session_uuid`, `persona_id`, Zeitstempel und die vollständige Reihenfolge der 10 Events.
+- Die 10 Event-Positionen liegen zusätzlich als einzelne Zeilen in `ranking_submission_items`, damit spätere Auswertungen die Reihenfolge stabil lesen können.
+- Derselbe Participant darf eine Persona pro Session nur einmal finalisieren; ein erneuter POST für dieselbe Persona wird abgewiesen statt überschrieben.
 - Für Docker-Deployments ist `DATABASE_URL` ebenfalls der zentrale Hebel; ein lokales Volume wird nicht mehr verwendet.
 
+**Auswertung**
+- `GET /api/persona/<persona_id>/submissions` liefert alle gespeicherten Rankings für eine Persona als JSON.
+- Die Antwort enthält pro Submission den Participant-Namen, die Persona, den Speicherzeitpunkt und die geordnete Eventliste.
+
 **Wichtige Routen**
-- `/` – Einstieg; leitet zur nächsten offenen Persona weiter
+- `/` – Einstieg; zeigt die Startseite, bis ein Teilnehmername vergeben wurde, danach Weiterleitung zur nächsten offenen Persona
+- `/start` – Startseite zum Setzen des Teilnehmernamens
 - `/persona/<persona_id>` – Seite zur Präsentation einer Persona und ihrer Events
 - `/persona/<persona_id>/complete` – POST-Endpoint zum Speichern einer Rangliste (JSON-Payload)
 - `/complete` – Abschlussseite nachdem alle Personas bearbeitet wurden
 - `/restart` – setzt die Session-Reihenfolge zurück
 
 **Frontend / Nutzung**
-- Öffne die Startseite, bearbeite die Rangliste für die dargestellte Persona und sende ab. Die App verwaltet die Persona-Reihenfolge in der Session.
+- Öffne die Startseite, vergebe einmal deinen Namen oder dein Kürzel und bearbeite dann die Ranglisten für die Personas. Die App verwaltet die Persona-Reihenfolge und den Teilnehmernamen in der Session.
 
 **Entwicklung & Hinweise**
 - Die `SECRET_KEY` sollte in Produktion über die Umgebungsvariable `SECRET_KEY` gesetzt werden.

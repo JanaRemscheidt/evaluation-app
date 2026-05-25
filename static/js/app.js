@@ -9,6 +9,7 @@ const initializeRankingBoard = (board) => {
     const pageShell = board.closest('.page-shell');
     const finalizeButton = pageShell ? pageShell.querySelector('[data-action="finalize"]') : null;
     const completeUrl = pageShell ? pageShell.dataset.completeUrl : '';
+    const participantInput = pageShell ? pageShell.querySelector('[name="participantLabel"]') : null;
     const modal = document.querySelector('[data-event-modal]');
     const modalTitle = modal ? modal.querySelector('[data-event-modal-title]') : null;
     const modalType = modal ? modal.querySelector('[data-event-modal-type]') : null;
@@ -27,6 +28,7 @@ const initializeRankingBoard = (board) => {
     const cardsById = new Map(Array.from(board.querySelectorAll('.event-card')).map((card) => [card.dataset.eventId, card]));
     let draggedCard = null;
     let finalized = false;
+    let participantSaveTimer = null;
 
     const escapeHtml = (value) => String(value)
         .replaceAll('&', '&amp;')
@@ -147,6 +149,7 @@ const initializeRankingBoard = (board) => {
 
     const buildSubmissionPayload = () => {
         const rankedCards = getRankedCards();
+        const participantLabel = participantInput ? participantInput.value.trim() : (pageShell ? pageShell.dataset.participantLabel || '' : '');
 
         return {
             persona: {
@@ -154,6 +157,7 @@ const initializeRankingBoard = (board) => {
                 name: document.querySelector('.page-shell') ? document.querySelector('.page-shell').dataset.personaName : '',
                 bio: board.querySelector('.persona-bio') ? board.querySelector('.persona-bio').textContent : '',
             },
+            participantLabel,
             generatedAt: new Date().toISOString(),
             ranking: rankedCards.map((entry, index) => ({
                 position: index + 1,
@@ -228,10 +232,17 @@ const initializeRankingBoard = (board) => {
     const finalizeBoard = async () => {
         const payload = buildSubmissionPayload();
         const rankedCards = payload.ranking;
+        const participantLabel = payload.participantLabel || '';
 
         if (rankedCards.length !== initialOrder.length) {
             const remaining = initialOrder.length - rankedCards.length;
             if (statusText) statusText.textContent = `Bitte weise zuerst noch ${remaining} Events einer Sterne-Kategorie zu.`;
+            return;
+        }
+
+        if (!participantLabel) {
+            if (statusText) statusText.textContent = 'Bitte gib zuerst deinen Namen oder ein Kürzel an.';
+            if (participantInput) participantInput.focus();
             return;
         }
 
@@ -294,6 +305,49 @@ const initializeRankingBoard = (board) => {
         link.remove();
         URL.revokeObjectURL(url);
     };
+
+    const persistParticipantLabel = async () => {
+        if (!participantInput) {
+            return;
+        }
+
+        const participantLabel = participantInput.value.trim();
+
+        if (!participantLabel) {
+            return;
+        }
+
+        if (pageShell) {
+            pageShell.dataset.participantLabel = participantLabel;
+        }
+
+        try {
+            await fetch('/participant-label', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Requested-With': 'fetch',
+                },
+                body: JSON.stringify({ participantLabel }),
+            });
+        } catch {
+            // Best effort only; the label is also included in the final submission.
+        }
+    };
+
+    if (participantInput) {
+        participantInput.addEventListener('input', () => {
+            window.clearTimeout(participantSaveTimer);
+            participantSaveTimer = window.setTimeout(() => {
+                persistParticipantLabel();
+            }, 300);
+        });
+
+        participantInput.addEventListener('blur', () => {
+            window.clearTimeout(participantSaveTimer);
+            persistParticipantLabel();
+        });
+    }
 
     board.querySelectorAll('.event-card').forEach((card) => {
         const openDetailsButton = card.querySelector('[data-event-action="open-details"]');

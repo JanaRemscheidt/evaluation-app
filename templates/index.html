@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <div class="page-shell" data-persona-id="{{ persona.id }}" data-persona-name="{{ persona.name }}" data-complete-url="{{ complete_url }}">
+    <div class="page-shell" data-persona-id="{{ persona.id }}" data-persona-name="{{ persona.name }}" data-complete-url="{{ complete_url }}" data-participant-label="{{ participant_label or '' }}">
         <main class="evaluation-layout" data-persona-board>
             <section class="panel persona-panel board-subpanel persona-hero-panel">
                 <div class="persona-hero-layout">
@@ -52,6 +52,12 @@
                         <p class="persona-bio hero-bio">
                             {{ persona.bio }}
                         </p>
+
+                        <div class="participant-card">
+                            <p class="participant-label">Teilnehmer</p>
+                            <div class="participant-pill">{{ participant_label }}</div>
+                            <p class="participant-hint">Der Name wird einmal auf der Startseite vergeben und für alle Personas dieser Runde verwendet.</p>
+                        </div>
 
                         {% if persona.motivation %}
                         <div class="persona-motivation-card">

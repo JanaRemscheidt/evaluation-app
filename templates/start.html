@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Start page for the evaluation app.">
+    <title>Evaluation App - Start</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="brand-lockup">
+                <div class="brand-mark">E</div>
+                <div>
+                    <p class="brand-kicker">Evaluation App</p>
+                    <h1>Bevor du startest</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="evaluation-layout">
+            <section class="panel persona-board">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Start</p>
+                        <h2>Vergib einmal deinen Namen oder dein Kürzel</h2>
+                    </div>
+                </div>
+
+                <p class="panel-note">Dieser Name wird für alle 6 Personas dieser Runde verwendet und zusammen mit den Rankings gespeichert.</p>
+
+                {% if error_message %}
+                <p class="panel-note" role="alert">{{ error_message }}</p>
+                {% endif %}
+
+                <form class="participant-card" method="post" action="/start">
+                    <label class="participant-label" for="participant-label">Dein Name oder Kürzel</label>
+                    <input
+                        id="participant-label"
+                        class="participant-input"
+                        type="text"
+                        name="participantLabel"
+                        value="{{ participant_label or '' }}"
+                        placeholder="z. B. Max, Team A oder mueller42"
+                        maxlength="120"
+                        autocomplete="nickname"
+                        spellcheck="false"
+                        required
+                    >
+                    <p class="participant-hint">Bitte verwende einen eindeutigen Namen, damit deine Runde später sauber zugeordnet werden kann.</p>
+                    <div class="board-actions">
+                        <button class="primary-btn" type="submit">Start</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

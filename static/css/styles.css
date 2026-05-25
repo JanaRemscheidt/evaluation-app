@@ -277,6 +277,50 @@ a {
     gap: 1.5rem;
 }
 
+.participant-card {
+    padding: 1rem 1.15rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.14), rgba(255, 255, 255, 0.04));
+}
+
+.participant-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.participant-input {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    background: rgba(6, 12, 22, 0.72);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.participant-input::placeholder {
+    color: rgba(170, 180, 199, 0.68);
+}
+
+.participant-input:focus {
+    border-color: rgba(20, 184, 166, 0.85);
+    box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.16);
+    transform: translateY(-1px);
+}
+
+.participant-hint {
+    margin-top: 0.55rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
 .persona-hero-quote {
     font-size: 2rem;
     line-height: 1.15;
