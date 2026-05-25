@@ -66,6 +66,63 @@ a {
     padding: 28px clamp(16px, 2vw, 32px) 32px;
 }
 
+.start-page .page-shell {
+    padding: 30px clamp(24px, 4vw, 56px) 36px;
+}
+
+.start-page .evaluation-layout {
+    max-width: 1320px;
+}
+
+.start-page .persona-board {
+    padding: 24px clamp(20px, 2.8vw, 34px);
+}
+
+.start-page .section-heading h2 {
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    margin-bottom: 8px;
+}
+
+.start-page .panel-note {
+    max-width: 88ch;
+    font-size: 0.86rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.start-page .participant-label {
+    font-size: 0.72rem;
+}
+
+.start-page .participant-input {
+    font-size: 0.95rem;
+}
+
+.start-page .participant-hint {
+    font-size: 0.75rem;
+}
+
+/* Persona counter in the top-right corner */
+.persona-counter {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 1400;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 0.9rem;
+    backdrop-filter: blur(8px);
+}
+
 .site-header {
     display: flex;
     align-items: flex-start;
@@ -86,11 +143,11 @@ a {
     border-radius: 18px;
     display: grid;
     place-items: center;
-    background: linear-gradient(145deg, rgba(249, 115, 22, 0.95), rgba(20, 184, 166, 0.82));
+    background: linear-gradient(145deg, rgba(96,165,250,0.95), rgba(59,130,246,0.85));
     color: #07111f;
     font-weight: 800;
     font-size: 1.2rem;
-    box-shadow: 0 18px 35px rgba(249, 115, 22, 0.24);
+    box-shadow: 0 18px 35px rgba(96,165,250,0.22);
 }
 
 .brand-kicker,
@@ -99,6 +156,18 @@ a {
     letter-spacing: 0.18em;
     font-size: 0.72rem;
     color: var(--muted);
+}
+
+.start-page .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    padding: 0.22rem 0.85rem 0.24rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    line-height: 1;
 }
 
 .brand-lockup h1 {
@@ -135,7 +204,7 @@ a {
     grid-template-columns: 1fr;
 }
 
-.persona-board {
+        "dna dna";
     padding: 22px;
 }
 
@@ -219,26 +288,50 @@ a {
 }
 
 .persona-hero-panel {
+    position: relative;
     overflow: hidden;
     padding: 2rem;
 }
 
+.persona-corner-label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 30px;
+    margin: 0 0 1rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(12px);
+}
+
 .persona-hero-layout {
     display: grid;
-    grid-template-columns: 260px minmax(420px, 1fr) 320px;
+    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "identity story"
+        "dna dna";
     gap: 2rem;
-    align-items: stretch;
+    align-items: start;
 }
 
 .persona-identity {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    align-self: stretch;
     padding: 2rem;
     border-radius: 28px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
     border: 1px solid rgba(255, 255, 255, 0.08);
+    grid-area: identity;
 }
 
 .persona-avatar-hero {
@@ -275,19 +368,21 @@ a {
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
+    grid-area: story;
+    width: 100%;
 }
 
 .participant-card {
-    padding: 1rem 1.15rem;
-    border-radius: 20px;
+    padding: 0.72rem 0.9rem;
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: linear-gradient(135deg, rgba(20, 184, 166, 0.14), rgba(255, 255, 255, 0.04));
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.10), rgba(255, 255, 255, 0.03));
 }
 
 .participant-label {
     display: block;
-    margin-bottom: 0.6rem;
-    font-size: 0.78rem;
+    margin-bottom: 0.45rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--muted);
@@ -295,14 +390,15 @@ a {
 
 .participant-input {
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 14px;
-    padding: 0.9rem 1rem;
-    background: rgba(6, 12, 22, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 0.6rem 0.75rem;
+    background: rgba(6, 12, 22, 0.74);
     color: var(--text);
     font: inherit;
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+    font-size: 0.95rem;
 }
 
 .participant-input::placeholder {
@@ -321,11 +417,49 @@ a {
     font-size: 0.82rem;
 }
 
+/* Error text shown beneath the participant input */
+.participant-error {
+    margin-top: 0.5rem;
+    color: var(--negative);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Compact instruction styling used on the start page */
+.compact-instructions {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+}
+.compact-instructions ul {
+    list-style: disc inside;
+    color: var(--muted);
+    margin: 0.25rem 0 0.8rem 0;
+    padding-left: 0.2rem;
+}
+
+/* Highlighted participant card to draw attention to the pseudonym input */
+.participant-card.highlighted {
+    border-color: rgba(96,165,250,0.55);
+    box-shadow: 0 12px 30px rgba(96,165,250,0.08);
+    background: linear-gradient(135deg, rgba(96,165,250,0.04), rgba(255,255,255,0.02));
+}
+.participant-card.highlighted .participant-label {
+    color: var(--accent-3);
+    font-weight: 700;
+}
+
+/* add spacing between input and start button inside participant card */
+.participant-card .board-actions {
+    margin-top: 0.5rem;
+}
+
 .persona-hero-quote {
     font-size: 2rem;
     line-height: 1.15;
     font-weight: 700;
-    max-width: 18ch;
+    max-width: none;
+    width: 100%;
 }
 
 .hero-bio {
@@ -362,6 +496,15 @@ a {
 .persona-speech-inline p {
     font-style: italic;
     opacity: 0.9;
+}
+
+.persona-dna-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    align-self: stretch;
+    grid-area: dna;
 }
 
 .persona-dna {
@@ -648,6 +791,25 @@ a {
     background: linear-gradient(135deg, rgba(249, 115, 22, 0.96), rgba(249, 115, 22, 0.72));
     color: #fff7ed;
     box-shadow: 0 16px 30px rgba(249, 115, 22, 0.22);
+}
+
+.primary-btn:disabled,
+.primary-btn.is-loading {
+    cursor: not-allowed;
+    opacity: 0.42;
+    box-shadow: none;
+    transform: none;
+    filter: saturate(0.55);
+}
+
+.primary-btn.is-ready:not(:disabled) {
+    box-shadow: 0 18px 34px rgba(249, 115, 22, 0.3), 0 0 0 1px rgba(255, 247, 237, 0.16) inset;
+}
+
+.primary-btn.is-loading {
+    opacity: 0.78;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 1), rgba(245, 158, 11, 0.9));
+    animation: button-loading-pulse 900ms ease-in-out infinite;
 }
 
 .secondary-btn {
@@ -1011,17 +1173,24 @@ body.has-event-overlay {
 
 .site-footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
+    gap: 12px;
     padding: 18px 4px 0;
     color: var(--muted);
     font-size: 0.92rem;
+    text-align: center;
+}
+
+.site-footer p {
+    max-width: 38rem;
 }
 
 .footer-actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    width: 100%;
 }
 
 .footer-actions .primary-btn {
@@ -1030,6 +1199,17 @@ body.has-event-overlay {
     padding: 0 32px;
     font-size: 1.08rem;
     border-radius: 20px;
+}
+
+@keyframes button-loading-pulse {
+    0%,
+    100% {
+        box-shadow: 0 16px 30px rgba(249, 115, 22, 0.22);
+    }
+
+    50% {
+        box-shadow: 0 18px 36px rgba(249, 115, 22, 0.34);
+    }
 }
 
 body.is-finalized .event-card {
@@ -1085,6 +1265,11 @@ body.is-finalized .event-card {
 
     .persona-hero-layout {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "identity"
+            "story"
+            "dna";
     }
 
     .persona-identity {
@@ -1103,7 +1288,7 @@ body.is-finalized .event-card {
         font-size: 1.5rem;
     }
 
-    .persona-dna {
+    .persona-dna-grid {
         grid-template-columns: 1fr;
     }
 

@@ -8,6 +8,8 @@ const initializeRankingBoard = (board) => {
     const placedCount = board.querySelector('.placed-count');
     const pageShell = board.closest('.page-shell');
     const finalizeButton = pageShell ? pageShell.querySelector('[data-action="finalize"]') : null;
+    const siteFooter = pageShell ? pageShell.querySelector('.site-footer') : null;
+    const footerMessage = siteFooter ? siteFooter.querySelector('p') : null;
     const completeUrl = pageShell ? pageShell.dataset.completeUrl : '';
     const participantInput = pageShell ? pageShell.querySelector('[name="participantLabel"]') : null;
     const modal = document.querySelector('[data-event-modal]');
@@ -29,6 +31,8 @@ const initializeRankingBoard = (board) => {
     let draggedCard = null;
     let finalized = false;
     let participantSaveTimer = null;
+    const finalizeLabel = finalizeButton ? finalizeButton.textContent.trim() : 'Weiter';
+    const fallbackFinalLabel = 'Fertig';
 
     const escapeHtml = (value) => String(value)
         .replaceAll('&', '&amp;')
@@ -177,8 +181,23 @@ const initializeRankingBoard = (board) => {
         const rankedCards = getRankedCards();
         const placed = rankedCards.length;
         const remaining = initialOrder.length - placed;
+        const personaIndex = Number(pageShell ? pageShell.dataset.personaIndex || 0 : 0);
+        const personaCount = Number(pageShell ? pageShell.dataset.personaCount || 0 : 0);
+        const nextPersonaIndex = personaIndex + 1;
+        const isLastPersona = personaIndex > 0 && personaCount > 0 && personaIndex === personaCount;
 
         if (placedCount) placedCount.textContent = String(placed);
+
+        if (footerMessage) {
+            footerMessage.hidden = remaining !== 0;
+            if (isLastPersona) {
+                footerMessage.textContent = 'Wenn du bereit bist, kannst du die letzte Persona abschließen.';
+            } else if (nextPersonaIndex > 0 && personaCount > 0 && nextPersonaIndex <= personaCount) {
+                footerMessage.textContent = `Wenn du bereit bist, geht es mit Persona ${nextPersonaIndex} (von ${personaCount}) weiter.`;
+            } else {
+                footerMessage.textContent = 'Wenn du bereit bist, geht es mit der nächsten Persona weiter.';
+            }
+        }
 
         if (statusText) {
             if (finalized) {
@@ -187,6 +206,17 @@ const initializeRankingBoard = (board) => {
                 statusText.textContent = 'Alle Events sind zugewiesen. Du kannst jetzt das Ergebnis finalisieren.';
             } else {
                 statusText.textContent = `${remaining} Events warten noch auf eine Sterne-Kategorie.`;
+            }
+        }
+
+        if (finalizeButton) {
+            const ready = !finalized && remaining === 0;
+            finalizeButton.disabled = !ready;
+            finalizeButton.setAttribute('aria-disabled', String(!ready));
+            finalizeButton.classList.toggle('is-ready', ready);
+
+            if (!finalizeButton.classList.contains('is-loading')) {
+                finalizeButton.textContent = isLastPersona ? fallbackFinalLabel : finalizeLabel;
             }
         }
 
@@ -217,6 +247,11 @@ const initializeRankingBoard = (board) => {
         finalized = false;
         document.body.classList.remove('is-finalized');
         setCardDraggability(true);
+
+        if (finalizeButton) {
+            finalizeButton.classList.remove('is-loading');
+            finalizeButton.textContent = finalizeLabel;
+        }
 
         initialOrder.forEach((eventId) => {
             const card = cardsById.get(eventId);
@@ -250,7 +285,10 @@ const initializeRankingBoard = (board) => {
         document.body.classList.add('is-finalized');
         setCardDraggability(false);
         if (finalizeButton) {
+            finalizeButton.classList.add('is-loading');
+            finalizeButton.textContent = 'Lädt...';
             finalizeButton.disabled = true;
+            finalizeButton.setAttribute('aria-disabled', 'true');
         }
         renderResults();
         if (statusText) statusText.textContent = 'Abgeschlossen. Weiter zur nächsten Persona...';
@@ -279,7 +317,9 @@ const initializeRankingBoard = (board) => {
             document.body.classList.remove('is-finalized');
             setCardDraggability(true);
             if (finalizeButton) {
+                finalizeButton.classList.remove('is-loading');
                 finalizeButton.disabled = false;
+                finalizeButton.textContent = finalizeLabel;
             }
             if (statusText) statusText.textContent = 'Der Abschluss konnte nicht bestätigt werden. Bitte versuche es erneut.';
         }
@@ -478,5 +518,31 @@ if (document.readyState === 'loading') {
 }
 
 function initializeRankingApp() {
+    // Render persona counter (e.g. "Persona 3/6") if present in the page shell.
+    document.querySelectorAll('.page-shell').forEach((shell) => {
+        const counter = shell.querySelector('.persona-counter');
+        const footerMessage = shell.querySelector('.site-footer p');
+        if (!counter) return;
+
+        const idx = Number(shell.dataset.personaIndex || 0);
+        const total = Number(shell.dataset.personaCount || 0);
+
+        if (idx > 0 && total > 0) {
+            counter.textContent = `Persona ${idx}/${total}`;
+        } else {
+            counter.textContent = '';
+        }
+
+        if (footerMessage && idx > 0 && total > 0) {
+            const nextIdx = idx + 1;
+
+            if (idx === total) {
+                footerMessage.textContent = 'Wenn du bereit bist, kannst du die letzte Persona abschließen.';
+            } else if (nextIdx <= total) {
+                footerMessage.textContent = `Wenn du bereit bist, geht es mit Persona ${nextIdx} (von ${total}) weiter.`;
+            }
+        }
+    });
+
     document.querySelectorAll('[data-persona-board]').forEach(initializeRankingBoard);
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Persona-driven mock dashboard for the evaluation app.">
-    <title>Evaluation App - Fertig</title>
+    <meta name="description" content="Abschlussseite der Evaluation.">
+    <title>Evaluation App - Vielen Dank</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,30 +14,28 @@
     <div class="page-shell">
         <header class="site-header">
             <div class="brand-lockup">
-                <div class="brand-mark">E</div>
+                <div class="brand-mark">✓</div>
                 <div>
-                    <p class="brand-kicker">Evaluation App</p>
-                    <h1>Alle Personas abgeschlossen</h1>
+                    <p class="brand-kicker">Evaluation abgeschlossen</p>
+                    <h1>Vielen Dank für deine Teilnahme</h1>
                 </div>
             </div>
             <div class="header-badge">
                 <span class="badge-dot"></span>
-                <span>{{ total_count }} Personas</span>
+                <span>Abschluss</span>
             </div>
         </header>
 
         <main class="evaluation-layout">
-            <section class="panel persona-board">
+            <section class="panel persona-panel">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">Fertig</p>
-                        <h2>Die letzte Persona wurde abgeschlossen</h2>
+                        <p class="eyebrow">Danke</p>
+                        <h2>Deine Bewertung ist jetzt abgeschlossen.</h2>
                     </div>
                 </div>
-                <p class="panel-note">Die Sequenz ist damit beendet. Du kannst die Runde neu starten, um die Personas erneut in zufälliger Reihenfolge durchzugehen.</p>
-                <div class="board-actions">
-                    <a class="primary-btn" href="{{ url_for('restart') }}">Neu starten</a>
-                </div>
+                <p class="panel-note">Vielen Dank, dass du dir Zeit für meine Evaluation genommen hast.</p>
+                <p class="panel-note">Du kannst den Tab jetzt einfach schließen.</p>
             </section>
         </main>
     </div>

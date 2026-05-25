@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <div class="page-shell" data-persona-id="{{ persona.id }}" data-persona-name="{{ persona.name }}" data-complete-url="{{ complete_url }}" data-participant-label="{{ participant_label or '' }}">
+    <div class="page-shell" data-persona-id="{{ persona.id }}" data-persona-name="{{ persona.name }}" data-persona-index="{{ persona_index }}" data-persona-count="{{ persona_count }}" data-complete-url="{{ complete_url }}" data-participant-label="{{ participant_label or '' }}">
+        <div id="persona-counter" class="persona-counter" aria-hidden="false"></div>
         <main class="evaluation-layout" data-persona-board>
             <section class="panel persona-panel board-subpanel persona-hero-panel">
+                {% if participant_label %}
+                <div class="persona-corner-label">{{ participant_label }}</div>
+                {% endif %}
                 <div class="persona-hero-layout">
 
                     <!-- LEFT: Identity -->
@@ -53,12 +57,6 @@
                             {{ persona.bio }}
                         </p>
 
-                        <div class="participant-card">
-                            <p class="participant-label">Teilnehmer</p>
-                            <div class="participant-pill">{{ participant_label }}</div>
-                            <p class="participant-hint">Der Name wird einmal auf der Startseite vergeben und für alle Personas dieser Runde verwendet.</p>
-                        </div>
-
                         {% if persona.motivation %}
                         <div class="persona-motivation-card">
                             <span class="motivation-label">Motivation</span>
@@ -72,11 +70,10 @@
                             <p>„{{ persona.speech }}“</p>
                         </div>
                         {% endif %}
+
                     </section>
 
-                    <!-- RIGHT: DNA -->
-                    <aside class="persona-dna">
-
+                    <div class="persona-dna-grid">
                         <div class="dna-section">
                             <div class="dna-head positive">
                                 <span>+</span>
@@ -121,8 +118,7 @@
                                 {% endfor %}
                             </div>
                         </div>
-
-                    </aside>
+                    </div>
 
                 </div>
             </section>
@@ -130,7 +126,6 @@
                 <section class="panel pool-panel board-subpanel" aria-labelledby="pool-heading">
                     <div class="section-heading">
                         <div>
-                            <p class="eyebrow">Schritt 1</p>
                             <h2 id="pool-heading">10 Events anordnen</h2>
                         </div>
                     </div>
@@ -155,8 +150,7 @@
                 <section class="panel ranking-panel board-subpanel" aria-labelledby="ranking-heading">
                     <div class="section-heading">
                         <div>
-                            <p class="eyebrow">Schritt 2</p>
-                            <h2 id="ranking-heading">Sterne bewerten</h2>
+                            <h2 id="ranking-heading">Sterne-Kategorien</h2>
                         </div>
                         <span class="section-chip"><span class="placed-count">0</span>/{{ event_count }} platziert</span>
                     </div>
@@ -179,9 +173,15 @@
         </main>
 
         <footer class="site-footer">
-            <p>Wenn du bereit bist, geht es mit der nächsten Persona weiter.</p>
+            {% if persona_index == persona_count %}
+            <p hidden>Wenn du bereit bist, kannst du die letzte Persona abschließen.</p>
+            {% else %}
+            <p hidden>Wenn du bereit bist, geht es mit der nächsten Persona weiter.</p>
+            {% endif %}
             <div class="footer-actions">
-                <button class="primary-btn" type="button" data-action="finalize">Next</button>
+                <button class="primary-btn" type="button" data-action="finalize" disabled aria-disabled="true">
+                    {% if persona_index == persona_count %}Fertig{% else %}Weiter{% endif %}
+                </button>
             </div>
         </footer>
     </div>

@@ -10,35 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body>
+<body class="start-page">
     <div class="page-shell">
         <header class="site-header">
             <div class="brand-lockup">
-                <div class="brand-mark">E</div>
+                <div class="brand-mark">!</div>
                 <div>
-                    <p class="brand-kicker">Evaluation App</p>
                     <h1>Bevor du startest</h1>
                 </div>
             </div>
         </header>
 
         <main class="evaluation-layout">
-            <section class="panel persona-board">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">Start</p>
-                        <h2>Vergib einmal deinen Namen oder dein Kürzel</h2>
-                    </div>
-                </div>
+            <section class="panel-note compact-instructions">
+                <p class="panel-note">In dieser Evaluation bewertest du Veranstaltungen aus Sicht verschiedener Personas.</p>
+                <p class="panel-note">Eine Persona beschreibt eine fiktive Person mit bestimmten Interessen, Vorlieben und Eigenschaften.</p>
+                <p class="panel-note">Zu jeder Persona werden dir 10 Events angezeigt. Deine Aufgabe ist es einzuschätzen, welche Events du dieser Persona am ehesten empfehlen würdest.</p>
+                <p class="panel-note">Ziehe die Events dafür per Drag &amp; Drop in die passenden Sterne-Kategorien:</p>
+                <p class="panel-note">⭐ = eher keine passende Empfehlung<br>⭐⭐⭐⭐⭐ = sehr passende Empfehlung</p>
+                <p class="panel-note">Innerhalb der Kategorien kannst du die Events zusätzlich sortieren, um eine genauere Reihenfolge festzulegen.</p>
+                <p class="panel-note">Bitte versuche, die Entscheidungen möglichst aus Sicht der Persona zu treffen — nicht nach deinen persönlichen Interessen.</p>
 
-                <p class="panel-note">Dieser Name wird für alle 6 Personas dieser Runde verwendet und zusammen mit den Rankings gespeichert.</p>
 
-                {% if error_message %}
-                <p class="panel-note" role="alert">{{ error_message }}</p>
-                {% endif %}
+                {# Error message is rendered under the participant input to keep it visually connected #}
 
-                <form class="participant-card" method="post" action="/start">
-                    <label class="participant-label" for="participant-label">Dein Name oder Kürzel</label>
+                <form class="participant-card highlighted" method="post" action="/start">
+                    <label class="participant-label" for="participant-label">Dein Pseudonym oder Kürzel</label>
+                    <p class="panel-note">Bitte wähle ein eindeutiges Pseudonym oder Kürzel. Damit können deine Bewertungen anonym gespeichert und später eindeutig zugeordnet werden.</p>
                     <input
                         id="participant-label"
                         class="participant-input"
@@ -51,7 +49,9 @@
                         spellcheck="false"
                         required
                     >
-                    <p class="participant-hint">Bitte verwende einen eindeutigen Namen, damit deine Runde später sauber zugeordnet werden kann.</p>
+                    {% if error_message %}
+                    <p class="participant-error" role="alert" aria-live="polite">{{ error_message }}</p>
+                    {% endif %}
                     <div class="board-actions">
                         <button class="primary-btn" type="submit">Start</button>
                     </div>

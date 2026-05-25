@@ -1080,12 +1080,14 @@ def persona_page(persona_id):
         return redirect(url_for("persona_page", persona_id=expected_persona_id))
 
     persona = next(persona for persona in personas if persona["id"] == persona_id)
+    persona_index = persona_order.index(persona_id) + 1
 
     return render_template(
         "index.html",
         persona=persona,
         events=get_events_for_persona(persona),
         persona_count=len(personas),
+        persona_index=persona_index,
         event_count=10,
         complete_url=url_for("complete_persona", persona_id=persona_id),
         participant_label=session.get("participant_label", ""),
