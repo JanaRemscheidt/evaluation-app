@@ -12,15 +12,11 @@ const initializeRankingBoard = (board) => {
     const footerMessage = siteFooter ? siteFooter.querySelector('p') : null;
     const completeUrl = pageShell ? pageShell.dataset.completeUrl : '';
     const participantInput = pageShell ? pageShell.querySelector('[name="participantLabel"]') : null;
-    const modal = document.querySelector('[data-event-modal]');
-    const modalTitle = modal ? modal.querySelector('[data-event-modal-title]') : null;
-    const modalType = modal ? modal.querySelector('[data-event-modal-type]') : null;
-    const modalDate = modal ? modal.querySelector('[data-event-modal-date]') : null;
-    const modalDescription = modal ? modal.querySelector('[data-event-modal-description]') : null;
-    const modalLocation = modal ? modal.querySelector('[data-event-modal-location]') : null;
-    const modalTags = modal ? modal.querySelector('[data-event-modal-tags]') : null;
-    const modalCloseButtons = modal ? Array.from(modal.querySelectorAll('[data-event-action="close-modal"]')) : [];
-
+    const detailPanel = board.querySelector('#event-detail-panel');
+    const detailDescription = detailPanel ? detailPanel.querySelector('[data-event-detail-description]') : null;
+    const detailLocationChip = detailPanel ? detailPanel.querySelector('[data-event-detail-location]') : null;
+    const detailTimeChip = detailPanel ? detailPanel.querySelector('[data-event-detail-time]') : null;
+    const closeDetailsButton = detailPanel ? detailPanel.querySelector('[data-event-action="close-details"]') : null;
     // allow running without the separate result panel (ranking removed)
     if (!pool || bucketZones.length === 0) {
         return;
@@ -28,6 +24,7 @@ const initializeRankingBoard = (board) => {
 
     const initialOrder = Array.from(pool.querySelectorAll('.event-card')).map((card) => card.dataset.eventId);
     const cardsById = new Map(Array.from(board.querySelectorAll('.event-card')).map((card) => [card.dataset.eventId, card]));
+    let openDetailsCard = null;
     let draggedCard = null;
     let finalized = false;
     let participantSaveTimer = null;
@@ -41,39 +38,261 @@ const initializeRankingBoard = (board) => {
         .replaceAll('"', '&quot;')
         .replaceAll("'", '&#39;');
 
-    const closeEventDetails = () => {
-        if (!modal) {
+    const formatDate = (value) => {
+        if (!value) {
+            return '';
+        }
+
+        const parsedDate = new Date(value);
+        const hasTime = /T\d{2}:\d{2}/.test(String(value));
+
+        if (Number.isNaN(parsedDate.getTime())) {
+            return value;
+        }
+
+        return new Intl.DateTimeFormat('de-DE', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            ...(hasTime ? { hour: '2-digit', minute: '2-digit' } : {}),
+        }).format(parsedDate);
+    };
+
+    const formatDateRange = (startValue, endValue) => {
+        const startDate = formatDate(startValue);
+        const endDate = formatDate(endValue);
+
+        if (!startDate && !endDate) {
+            return 'ohne Datum';
+        }
+
+        if (!startDate) {
+            return endDate;
+        }
+
+        if (!endDate || startDate === endDate) {
+            return startDate;
+        }
+
+        return `${startDate} – ${endDate}`;
+    };
+
+    const renderMetaChip = (element, value, fallback = '') => {
+        if (!element) {
             return;
         }
 
-        modal.hidden = true;
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('has-event-modal');
+        const normalizedValue = String(value || '').trim();
+
+        if (!normalizedValue) {
+            element.hidden = true;
+            element.textContent = fallback;
+            return;
+        }
+
+        element.hidden = false;
+        element.textContent = normalizedValue;
+    };
+
+    const buildLocationChipValue = (card) => {
+        if (!card) {
+            return '';
+        }
+
+        const rawParts = [
+            card.dataset.eventLocation,
+            card.dataset.eventVenue,
+            card.dataset.eventCity,
+        ]
+            .map((value) => String(value || '').trim())
+            .filter(Boolean);
+
+        const parts = rawParts.filter((value) => value.toLowerCase() !== 'unbekannter ort' || rawParts.length === 1);
+
+        const uniqueParts = [];
+
+        parts.forEach((part) => {
+            const normalizedPart = part.toLowerCase();
+
+            if (!uniqueParts.some((existing) => existing.toLowerCase() === normalizedPart)) {
+                uniqueParts.push(part);
+            }
+        });
+
+        return `Ort: ${uniqueParts.join(' · ')}`;
+    };
+
+    const buildTimeChipValue = (card) => {
+        if (!card) {
+            return '';
+        }
+
+        const startDate = card.dataset.eventStartDate || '';
+        const endDate = card.dataset.eventEndDate || '';
+
+        if (!startDate && !endDate) {
+            return '';
+        }
+
+        const formattedStart = formatDate(startDate || endDate);
+        const formattedEnd = formatDate(endDate);
+
+        if (!endDate || formattedStart === formattedEnd) {
+            return `Zeit: ${formattedStart}`;
+        }
+
+        return `Zeitraum: ${formattedStart} – ${formattedEnd}`;
+    };
+
+    const updateDetailMeta = (card) => {
+        renderMetaChip(detailLocationChip, buildLocationChipValue(card), '');
+        renderMetaChip(detailTimeChip, buildTimeChipValue(card), '');
+    };
+
+    const normalizeDescription = (value) => String(value || '')
+        .replace(/\r\n/g, '\n')
+        .replace(/[ \t]+\n/g, '\n')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+
+    const renderDescriptionHtml = (value) => {
+        const text = normalizeDescription(String(value || ''));
+
+        // If the description was JSON-encoded in the dataset, attempt to parse it.
+        let raw = '';
+        try {
+            raw = text ? normalizeDescription(JSON.parse(value)) : '';
+        } catch {
+            raw = text;
+        }
+
+        const escaped = escapeHtml(raw);
+
+        // Convert URLs to links
+        const withLinks = escaped.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+
+        // Convert double newlines to paragraphs and single newlines to <br>
+        const paragraphs = withLinks
+            .split(/\n{2,}/)
+            .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+            .join('');
+
+        return paragraphs || '<p class="muted">Keine Beschreibung verfügbar.</p>';
+    };
+
+    const syncSmallEventCardHeights = () => {
+        const cards = Array.from(board.querySelectorAll('.bucket-dropzone .event-card, .event-pool .event-card'));
+
+        cards.forEach((card) => {
+            card.style.height = 'auto';
+        });
+
+        if (!cards.length) {
+            return;
+        }
+
+        const maxHeight = cards.reduce((highest, card) => Math.max(highest, card.scrollHeight), 0);
+
+        cards.forEach((card) => {
+            card.style.height = `${Math.ceil(maxHeight)}px`;
+        });
+    };
+
+    const updateDetailsCardState = (card, isOpen) => {
+        if (!card) {
+            return;
+        }
+
+        const button = card.querySelector('[data-event-action="open-details"]');
+
+        if (button) {
+            button.textContent = isOpen ? 'Schließen' : 'Details';
+            button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        card.classList.toggle('is-details-open', isOpen);
+    };
+
+    const updateDetailPanel = (card) => {
+        if (!detailPanel || !detailDescription || !card) {
+            return;
+        }
+
+        const descriptionValue = card.dataset.eventDescription || '';
+
+        // Render safe HTML for the description: paragraphs, line breaks and links.
+        detailDescription.innerHTML = renderDescriptionHtml(descriptionValue);
+        updateDetailMeta(card);
+
+        detailPanel.hidden = false;
+        detailPanel.classList.add('is-visible');
+    };
+
+    const getEventCardsInPoolOrder = () => Array.from(pool.querySelectorAll('.event-card'));
+
+    const moveDetailPanelAfterRow = (card) => {
+        if (!detailPanel || !card || !pool.contains(detailPanel)) {
+            return;
+        }
+
+        const cards = getEventCardsInPoolOrder();
+        const referenceTop = card.getBoundingClientRect().top;
+        let rowEndCard = card;
+
+        for (const currentCard of cards) {
+            if (Math.abs(currentCard.getBoundingClientRect().top - referenceTop) < 2) {
+                rowEndCard = currentCard;
+            } else if (currentCard.getBoundingClientRect().top > referenceTop) {
+                break;
+            }
+        }
+
+        rowEndCard.insertAdjacentElement('afterend', detailPanel);
+    };
+
+    const hideDetailPanel = () => {
+        if (!detailPanel || !detailDescription) {
+            return;
+        }
+
+        detailDescription.textContent = '';
+        renderMetaChip(detailLocationChip, '', '');
+        renderMetaChip(detailTimeChip, '', '');
+        detailPanel.hidden = true;
+        detailPanel.classList.remove('is-visible');
+    };
+
+    const closeEventDetails = (card = openDetailsCard) => {
+        if (!card) {
+            hideDetailPanel();
+            return;
+        }
+
+        updateDetailsCardState(card, false);
+        hideDetailPanel();
+
+        if (openDetailsCard === card) {
+            openDetailsCard = null;
+        }
     };
 
     const openEventDetails = (card) => {
-        if (!card || finalized || !modal) {
+        if (!card || finalized) {
             return;
         }
 
-        if (modalTitle) modalTitle.textContent = card.dataset.eventName || 'Unbenanntes Event';
-        if (modalType) modalType.textContent = card.dataset.eventType || 'Event';
-        if (modalDate) modalDate.textContent = card.dataset.eventDate || 'ohne Datum';
-        if (modalDescription) {
-            const descriptionValue = card.dataset.eventDescription || '';
-
-            try {
-                modalDescription.textContent = descriptionValue ? JSON.parse(descriptionValue) : '';
-            } catch {
-                modalDescription.textContent = descriptionValue;
-            }
+        if (openDetailsCard && openDetailsCard !== card) {
+            closeEventDetails(openDetailsCard);
         }
-        if (modalLocation) modalLocation.textContent = card.dataset.eventLocation || 'Unbekannter Ort';
-        if (modalTags) modalTags.textContent = (card.dataset.eventTags || '').split(', ').filter(Boolean).slice(0, 3).join(' · ');
 
-        modal.hidden = false;
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('has-event-modal');
+        if (!detailPanel || !detailDescription) {
+            return;
+        }
+
+        updateDetailsCardState(card, true);
+        updateDetailPanel(card);
+        moveDetailPanelAfterRow(card);
+        openDetailsCard = card;
     };
 
     const allDropzones = [pool, ...bucketZones];
@@ -178,6 +397,11 @@ const initializeRankingBoard = (board) => {
     const renderResults = () => {
         updateAllCardStars();
         updateBucketLayoutState();
+
+        if (openDetailsCard && !detailPanel?.hidden) {
+            moveDetailPanelAfterRow(openDetailsCard);
+        }
+
         const rankedCards = getRankedCards();
         const placed = rankedCards.length;
         const remaining = initialOrder.length - placed;
@@ -235,6 +459,8 @@ const initializeRankingBoard = (board) => {
             `;
         }).join('');
         }
+
+        window.requestAnimationFrame(syncSmallEventCardHeights);
     };
 
     const setCardDraggability = (enabled) => {
@@ -244,6 +470,7 @@ const initializeRankingBoard = (board) => {
     };
 
     const resetBoard = () => {
+        closeEventDetails();
         finalized = false;
         document.body.classList.remove('is-finalized');
         setCardDraggability(true);
@@ -265,6 +492,8 @@ const initializeRankingBoard = (board) => {
     };
 
     const finalizeBoard = async () => {
+        closeEventDetails();
+
         const payload = buildSubmissionPayload();
         const rankedCards = payload.ranking;
         const participantLabel = payload.participantLabel || '';
@@ -396,6 +625,11 @@ const initializeRankingBoard = (board) => {
             openDetailsButton.addEventListener('click', (event) => {
                 event.preventDefault();
                 event.stopPropagation();
+                if (openDetailsCard === card) {
+                    closeEventDetails(card);
+                    return;
+                }
+
                 openEventDetails(card);
             });
         }
@@ -426,6 +660,12 @@ const initializeRankingBoard = (board) => {
             renderResults();
         });
     });
+
+    if (closeDetailsButton) {
+        closeDetailsButton.addEventListener('click', () => {
+            closeEventDetails();
+        });
+    }
 
     allDropzones.forEach((zone) => {
         zone.addEventListener('dragover', (event) => {
@@ -483,27 +723,27 @@ const initializeRankingBoard = (board) => {
         downloadButton.addEventListener('click', downloadResult);
     }
 
-    modalCloseButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault();
-            closeEventDetails();
-        });
-    });
+    window.addEventListener('resize', () => {
+        if (openDetailsCard) {
+            window.requestAnimationFrame(() => {
+                moveDetailPanelAfterRow(openDetailsCard);
+            });
+        }
 
-    if (modal) {
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeEventDetails();
-            }
-        });
-    }
+        window.requestAnimationFrame(syncSmallEventCardHeights);
+    });
 
     document.addEventListener('keydown', (event) => {
         if (event.key !== 'Escape') {
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+            window.requestAnimationFrame(syncSmallEventCardHeights);
+        });
+    }
             return;
         }
 
-        if (modal && !modal.hidden) {
+        if (openDetailsCard) {
             closeEventDetails();
         }
     });

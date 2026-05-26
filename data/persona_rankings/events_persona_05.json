@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T20:34:18.956551Z",
+  "generated_at": "2026-05-26T07:09:27.080241Z",
   "source": {
     "personas_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\personas.json",
     "db_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\events.db",
@@ -12,465 +12,21 @@
   "persona_name": "Elena",
   "cluster_count_requested": 5,
   "cluster_count_actual": 5,
-  "clusters": [
+  "events": [
     {
-      "cluster_id": 0,
-      "cluster_label": "passt am besten",
-      "size": 319,
-      "centroid": [
-        0.9393772949593476
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/615113",
-          "event_url": "https://www.remscheid-live.de/615113",
-          "title": "Angry Zeta ( Acoustic - Bluegrass - Punky Beerdrinkers )",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-17T19:00:00",
-          "city": "Wuppertal",
-          "venue": "Alte Schlosserei",
-          "performer": {
-            "@type": "Organization",
-            "name": "Kulturnacht Alte Schlosserei e.V präsentiert"
-          },
-          "keywords": [
-            "Blues, Soul, R&B, Gospel",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nSIE sind wieder da!\n\nANGRY ZETA\n\nDoors:19.00\n\nSUPPORT folgt\n\n\n\n\n\nAngry Zeta wurde 2015 in Buenos Aires (Argentinien) als traditionelle Bluegrass-Country-Hillbilly-Straßenmusikantenband gegründet und war dann ständig in die lokale Punkszene und ihre Clubs integriert, wo sie ihren Punk- und Rock’n’Roll-Crust-Sound fanden. Heute mischen sie alles zu einer Melasse aus Punk-Hillbilly-Folk und roher Straßenmusik zusammen. Sie touren weltweit in Clubs, auf Festivals (Muddy Roots, Billy Rock, San Pedro Country Music Festival, San Antonio Rat Parts Festival, Kids and Billy’s, Open Folk Festival, Rotterdam Bluegrass Festival usw.) und auf der Straße, verstärkt oder voll akustisch flexibel. Sie bieten Ihnen so einen großartigen Folk-Punk, dass Sie nicht immer wissen, wo Sie stehen. Was wir an Angry Zeta am meisten lieben: Sie haben klein angefangen und gehen ihren ganz eigenen Weg an die Spitze des Crust Street Rock’n’Roll Folk Punk-Himmel.\n\nAngry Zeta sind eine ungewöhnliche Mischung aus Punk, Country und Hillbilly-Hoe-Downs aus dem noch ungewöhnlicheren Ort Argentinien! Aber anstatt den üblichen mittelmäßigen, bürgerlichen Ansatz für Folk oder (igitt!) Weltmusik zu verfolgen, legen diese Jungs Wert darauf, ihrer Musik eine echte Haltung und Authentizität zu verleihen, genau so, wie The Pogues irische Musik oder Kultur Shock die Balkankultur angegangen sind. Dies geschieht nicht auf affektierte oder prätentiöse Weise, sondern mit echter Liebe und Freude für die Lieder und ihre Worte (auch wenn man sie nicht ganz ernst nehmen sollte!). Wie die Hickoids vor ihnen ist dies Musik, die man genießen kann. Ich könnte mir vorstellen, dass diese Jungs auf der Bühne einen echten Sturm entfachen, aber ob Sie nun die Chance haben, sie live zu sehen oder nicht, tun Sie Ihr Bestes, um dieses Album zu hören.\n\n- Reverend Beatman – Voodoo Rhythm Records",
-          "rank": 1,
-          "cluster_id": 0,
-          "cluster_label": "passt am besten",
-          "match_score": 0.9807501435162649,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "alternative",
-              "strength": 0.02586111111111111
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.01931111111111111
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.01763333333333333
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/641366",
-          "event_url": "https://www.remscheid-live.de/641366",
-          "title": "Monatliches Beer-Tasting mit Biersommelier",
-          "event_type": "FoodEvent",
-          "startDate": "2026-08-15T18:00:00",
-          "city": "Herdecke",
-          "venue": "The Shakespeare  Pub",
-          "performer": null,
-          "keywords": [
-            "Food, Drinks & Events",
-            "FOOD_DRINK"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nNach über 10 Jahren Tasting-Erfahrung im English Pub und in Herdecke lädt Biersommelier Nathaniel Stott Sie ein, die faszinierende Welt der Biere ganz persönlich zu entdecken. Das Motto jedes Abends: Hier bist DU der Experte für Deinen eigenen Geschmack!\n\n\n\nNATHANIELS (BEER) PHILOSOPHIE: ES GEHT UM DEIN GESCHMACKSERLEBNIS\n\n\n\nVergessen Sie, was „man“ mögen sollte. Im Mittelpunkt steht, was Ihnen schmeckt! Nathaniel Stott vermittelt Ihnen nicht nur fundiertes Wissen, sondern zeigt Ihnen vor allem, wie Geschmack im Mund und Gehirn entsteht und erlebt wird. Ziel ist es, dass Sie am Ende des Abends genau wissen, welche Bierstile und Aromen für DICH persönlich die interessantesten sind.\n\n\n\nWAS SIE BEI JEDEM BIER TASTING ERWARTET:\n\n\n\n- Sensorik-Reise: Lernen Sie, Aromen und Geschmacksrichtungen bewusst wahrzunehmen und präzise zu beschreiben.\n\n- Fakten & Spaß: Eine kurzweilige, unterhaltsame Einführung in die Biergeschichte, den Brauprozess und spannendes Biertrivia.\n\n- Intensive Verkostung: Probieren Sie unter fachkundiger Anleitung fünf verschiedene Biere – sorgfältig ausgewählt, frisch gezapft und aus der Flasche.\n\n- Entdeckung: Wir erforschen gemeinsam die Vielfalt der Bier Stile und finden Ihre ganz persönlichen Favoriten.\n\n\n\nDas Erlebnis ist Bier!",
-          "rank": 319,
-          "cluster_id": 0,
-          "cluster_label": "passt am besten",
-          "match_score": 0.8977892093642841,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.0176
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.016866666666666665
-            },
-            {
-              "group": "style",
-              "feature": "alternative",
-              "strength": 0.010027777777777776
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 1,
-      "cluster_label": "passt gut",
-      "size": 171,
-      "centroid": [
-        0.8527903244749636
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/633377",
-          "event_url": "https://www.remscheid-live.de/633377",
-          "title": "Feierabendmarkt",
-          "event_type": "Event",
-          "startDate": "2026-07-03T17:00:00",
-          "city": "Radevormwald",
-          "venue": "Marktplatz Radevormwald",
-          "performer": null,
-          "keywords": [
-            "Märkte, Messen & Feste",
-            "MARKETS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nDer Feierabendmarkt findet jeden Freitag von 17 bis 21 Uhr statt. Wenn andere größere Veranstaltungen in der Innenstadt anstehen, fällt der Markt aus.\nwirtschaftsfoerderung-radevormwald.de/veranstaltungskalender/",
-          "rank": 320,
-          "cluster_id": 1,
-          "cluster_label": "passt gut",
-          "match_score": 0.8955708917274277,
-          "vector_length": 46,
-          "strongest_feature_group": "audience",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.019555555555555555
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.014055555555555556
-            },
-            {
-              "group": "emotion",
-              "feature": "exciting",
-              "strength": 0.006514285714285714
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/641115",
-          "event_url": "https://www.remscheid-live.de/641115",
-          "title": "Mit allen Sinnen",
-          "event_type": "VisualArtsEvent",
-          "startDate": "2026-07-14T14:30:00",
-          "city": "Bergisch Gladbach",
-          "venue": "Kunstmuseum Villa Zanders",
-          "performer": null,
-          "keywords": [
-            "Vorträge & Führungen",
-            "ART"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nMit allen Sinnen\n\n\nBegegnung mit Kunst für Menschen mit Demenz und deren Angehörige\n\n\n\nMit angepassten und bedürfnisorientierten Angeboten wollen wir den Betroffenen und ihren Angehörigen eine schöne Zeit im Museum ermöglichen. Das Bedürfnis nach Kultur und gesellschaftlicher Teilhabe geht nicht automatisch mit der Erkrankung verloren. Im Gegenteil – Architektur, bildende Kunst und Musik bilden wichtige Schlüssel zur emotionalen Welt der Betroffenen. Aus diesem Grund steht während des Museumsbuches nicht die Vermittlung von kunsthistorischem Wissen, sondern eine gemeinsame schöne Zeit im Vordergrund.\n\n\n\nIn Kleingruppen bis max. acht Personen plus Betreuerinnen und Betreuer schauen wir uns aktuelle Ausstellungen an oder begegnen ausgewählten Kunstwerken unserer Sammlung mit allen Sinnen - dazu gehört auch das gemeinsame Singen. Anschließend genießen wir die besondere Atmosphäre des Hauses bei Kaffee und Kuchen im Grünen Salon. Die Termine sind von kleinen Gruppen sowie Einzelpersonen mit Betreuenden buchbar.\nvilla-zanders.de/booking-fuer-menschen-mit-demenz/\n\n\n\n\nAnmeldung über den jeweiligen Termin im Kalender erforderlich.\nDi 14.7. | 8.9.2026 | 14.30–16.30 Uhr | 9 € inkl. Eintritt\nvilla-zanders.de/besuch/kalender/",
-          "rank": 490,
-          "cluster_id": 1,
-          "cluster_label": "passt gut",
-          "match_score": 0.8061908586787786,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.01073333333333333
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.0088
-            },
-            {
-              "group": "environment",
-              "feature": "historic",
-              "strength": 0.006422222222222223
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 2,
-      "cluster_label": "passt mittel",
-      "size": 128,
-      "centroid": [
-        0.7585390755406876
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/633165",
-          "event_url": "https://www.remscheid-live.de/633165",
-          "title": "Öffentliche Sonntagsführung durch die Begegnungsstätte",
-          "event_type": "Event",
-          "startDate": "2026-07-05T15:00:00",
-          "city": "Wuppertal",
-          "venue": "Begegnungsstätte Alte Synagoge",
-          "performer": null,
-          "keywords": [
-            "Stadtführungen, Erlebnisführungen, Sightseeing",
-            "GUIDED_TOUR"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nDie „Begegnungsstätte Alte Synagoge“ im Zentrum von Wuppertal-Elberfeld ist ein Ort des Gedenkens und des Lernens, an der Stelle, an der sich bis zum November 1938 die Sy- nagoge befand, und sie ist ein Ort der lebendigen Auseinandersetzung über gesellschaftli- che und politische Fragen und über den Antisemitismus.\nMit ihrer modernen und interaktiven Dauerausstellung informiert die Begegnungsstätte über die jüdische Religion und Geschichte im Wuppertal und der Region. Zahlreiche Ob- jekte, Dokumente und Fotografien beleuchten die jüdische Geschichte in der Region seit ihren Anfängen bis in die Gegenwart.\n\nJuden und Jüdinnen haben am Aufstieg der bergischen Städte sichtbar mitgewirkt. Angezogen von den vielversprechenden Perspektiven des Textilzentrums waren sie im Laufe des 19. Jahrhunderts hier heimisch geworden. Sie hatten Teil an der allgemeinen sozialen, politischen und kulturellen Entwicklung, in den Phasen der Prosperität wie in Zeiten der Krisen. Die jüdische Dichterin Else Lasker-Schüler stammt aus dem Wuppertal, und weitere Namen verdienstvoller jüdischer Bürger können genannt werden.\n \n\n\nDer Eintritt ist wie immer frei, und anmelden muss man sich nicht. Das Haus ist schon ab 14 Uhr geöffnet, so dass Sie sich vor der Führung auch schon selbständig umschauen können.",
-          "rank": 491,
-          "cluster_id": 2,
-          "cluster_label": "passt mittel",
-          "match_score": 0.80552679454375,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.021755555555555552
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.01482222222222222
-            },
-            {
-              "group": "environment",
-              "feature": "historic",
-              "strength": 0.009161111111111111
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/411986",
-          "event_url": "https://www.remscheid-live.de/411986",
-          "title": "Tuchmuseum Lennep",
-          "event_type": "Event",
-          "startDate": "2026-05-18T06:00:00",
-          "city": "Remscheid",
-          "venue": "Tuchmuseum Lennep",
-          "performer": null,
-          "keywords": [
-            "Museen",
-            "MUSEUMS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBild © Tuchmuseum Lennep\n\n\nDas Tuchmuseum Lennep hat seinen Ursprung in dem Firmenmuseum der ehemaligen Tuchfabrik Johann Wülfing & Sohn. Als der Textilhersteller in den 1990er Jahren endgültig seine Pforten schließen musste, fand das Museum in der Lenneper Hardtstraße eine neue Heimat und hält dort bis heute die Tuchmacher-Tradition lebendig. \n\n\n\nWelchen Weg nimmt die Wolle vom Schaf bis zum Anzug? Wo badeten die Mitarbeiter der Textilfabrikation? Wieso gibt es heute in Lennep kein einzige Textilunternehmen mehr? Das ist nur ein Teil der Fragen, auf die das Museum Antworten geben kann.\n \n\n\n \nwww.tuchmuseum.de\n\n\n\n\nÖffentliche Führung \n\n\nan jedem ersten Sonntag \n\nim Monat um 15 Uhr\n\n\n\n\n\nÖffnungszeiten\n\n\n\n\nDienstag 12 -16 Uhr\n\nSonntag 14 -17 Uhr\n\nund nach Vereinbarung\n \n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
-          "rank": 618,
-          "cluster_id": 2,
-          "cluster_label": "passt mittel",
-          "match_score": 0.7093206386116143,
-          "vector_length": 46,
-          "strongest_feature_group": "environment",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "industrial",
-              "strength": 0.0162
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.014177777777777775
-            },
-            {
-              "group": "environment",
-              "feature": "historic",
-              "strength": 0.008688888888888888
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 3,
-      "cluster_label": "passt nicht so gut",
-      "size": 117,
-      "centroid": [
-        0.6566037663967899
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/409611",
-          "event_url": "https://www.remscheid-live.de/409611",
-          "title": "Begegnungsstätte Alte Synagoge",
-          "event_type": "Event",
-          "startDate": "2026-05-18T06:00:00",
-          "city": "Wuppertal",
-          "venue": "Begegnungsstätte Alte Synagoge",
-          "performer": null,
-          "keywords": [
-            "Museen",
-            "MUSEUMS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBild © Andrea Hold-Ferneck: Die Begegnungsstätte Alte Synagoge \n\n\nDie Begegnungsstätte befindet sich am authentischen Ort der früheren Elberfelder Synagoge. Sie ist eine Gedenkstätte und zugleich das einzige jüdische Museum im Bergischen Land. Zahlreiche Objekte, Dokumente und Fotografien beleuchten die jüdische Geschichte seit ihren Anfängen im 17. Jahrhundert bis in die Gegenwart. Der schwierige Alltag der Juden in der Zeit vor der rechtlichen Gleichstellung, die Annäherung zwischen Christen und Juden im 19. und 20. Jahrhundert und die nationalsozialistische Judenverfolgung sind die Themen. Wichtig ist bei uns: Es geht hier nicht nur um den Holocaust, sondern auch um die lange Zeit den christlich-jüdischen Zusammenlebens vor dem Nationalsozialismus und um die aktuelle Gegenwart.\n \n\n\nBild © Sammlung Begegnungsstätte Alte Synagoge: Ein Dokument aus der Ausstellung \n\n\nAktuelle Sammlungspräsentationen\n\n\nBesondere Attraktionen der Ausstellung sind die Modelle der vier historischen Bergischen Synagogen im Maßstab 1:50 – die Gotteshäuser in Langenberg, Schwelm, Elberfeld, Solingen und Barmen, aber auch noch vieles andere mehr!\n \n\n\nBild © Ulrike Schrader: Blick in das Model der Elberfelder Synagoge \n\n\n \n\n\nKinder\n\n\nIn der Spielfilmserie „Frida und die beiden Henris“ zeigen drei junge Wuppertaler Jugendliche Objekte der Sammlung. www.alte-synagoge-wuppertal.de und dann unter „Frida und die beiden Henris“. 13 Folgen… Einfach mal reingucken!\n \n\n\nBild © Ulrike Schrader: Jugendliche besuchen die Dauerausstellung \n\n\nInformation und Beratung\n\n\nDie Bibliothek und das Archiv können nach Terminabsprache gern auch in der Corona-Zeit benutzt, Bücher ausgeliehen werden! Schülerinnen und Schüler, Lehrerinne und Lehrer können gern Beratungen in Anspruch nehmen und Material entleihen. Anmeldungen und Terminabsprachen dafür sind aber nötig: E-Mail info@alte-synagoge-wuppertal.de oder Tel. 0202-563.2843\n\n\n\n\n\nOnline-Veranstaltungen\n\n\nÜber online-Veranstaltungen informiert die Internetseite www.alte-synagoge-wuppertal.de. Der Eintritt dazu ist frei. Die Einwahldaten werden auf Anfrage jeweils am Tag der jeweiligen Veranstaltung verschickt.\ninfo@alte-synagoge-wuppertal.de\n\n\n\n\nAktuelle Informationen finden Sie hier:\nalte-synagoge-wuppertal.de/\n\n\n\n\nÖffnungszeiten\n\n\nDienstag bis Freitag\n\nUnd an jedem !. Sonntag im Monat\n\n\n\n14 bis 17 Uhr\n\n\n\nDie Termine für Führungen können auch außerhalb der allgemeinen Öffnungszeiten liegen, also auch vormittags und abends. Eine Anmeldung ist erforderlich.\n \n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
-          "rank": 619,
-          "cluster_id": 3,
-          "cluster_label": "passt nicht so gut",
-          "match_score": 0.7065675945751941,
-          "vector_length": 46,
-          "strongest_feature_group": "audience",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.0176
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.011755555555555554
-            },
-            {
-              "group": "environment",
-              "feature": "historic",
-              "strength": 0.009255555555555557
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/621864",
-          "event_url": "https://www.remscheid-live.de/621864",
-          "title": "Stipendiatenkonzert",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-10T19:00:00",
-          "city": "Haan",
-          "venue": "Forum Dieker Carré",
-          "performer": {
-            "@type": "Organization",
-            "name": "Konzerte der Musikschule Haan"
-          },
-          "keywords": [
-            "Klassik, Neue Musik",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nKonzert mit den StipendiatInnen der Begabtenförderung \nmit Unterstützung der \"Haaner Jugendförderung - Karin & Gerhard Schmitz-Stiftung\"\n \n\n\n\n\n\nEinlass ca. 18:45 Uhr",
-          "rank": 735,
-          "cluster_id": 3,
-          "cluster_label": "passt nicht so gut",
-          "match_score": 0.6109566235454951,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.015844444444444442
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.013444444444444446
-            },
-            {
-              "group": "style",
-              "feature": "minimalist",
-              "strength": 0.00757222222222222
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 4,
-      "cluster_label": "passt gar nicht",
-      "size": 108,
-      "centroid": [
-        0.5624336969680183
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/632942",
-          "event_url": "https://www.remscheid-live.de/632942",
-          "title": "Abschlusskonzert Sommersemester",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-07T20:00:00",
-          "city": "Wuppertal",
-          "venue": "Kulturzentrum Immanuel - Immanuelskirche",
-          "performer": {
-            "@type": "Organization",
-            "name": "Chor und Orchester der Bergischen Universität"
-          },
-          "keywords": [
-            "Chormusik",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBild © Uni Wuppertal\n\n\nAm 7. Juli laden Chor und Orchester der Bergischen Universität Wuppertal um 20 Uhr zu ihrem Semester-Abschlusskonzert in die Immanuelskirche ein. Es erwartet Sie ein Programm voll Magie und voller mitreißender Emotionen. So spielt das UNI Orchester “Eine Nacht auf dem kahlen Berge” von Modest Mussorgsky, ein Stück wie eine moderne Filmmusik, das einen Hexensabbat auf einem russischen Berg beschreibt, dazu ein Medley aus der Harry Potter-Filmreihe und als besonderes Special ein Stück für Stepptänzer und Orchester des deutschen Komponisten Bobbi Fischer, getanzt von Bernd Paffrath. Der UNI Chor nimmt sie mit in die Welt des Musicals mit Stücken aus “Jekyll & Hyde” und “Next to Normal” und präsentiert außerdem “Time after time” von Cindy Lauper, “ATP.” Von Bruno Mars und “Lovely” von Billie Eilish. \n\nAlso Special Guest tritt erneut das Vokalensemble der Fachgruppe Musikpädagogik auf, das schon im vergangenen Januar in den Winterkonzerten für Begeisterung sorgte.\n\nAm Ende verbinden sich alle Ensembles zu einem Klangkörper mit der Friedenshymne “Let there be peace on earth” - leider in diesen Zeiten ein Ruf, der drängender kaum sein könnte.\n\nKarten erhalten Sie wie immer bei \nwww.wuppertal-live.de\n und den bekannten Vorverkaufsstellen.\n\nWir freuen uns auf Sie!\n \n\nEinlass ca. 19:30 Uhr",
-          "rank": 736,
-          "cluster_id": 4,
-          "cluster_label": "passt gar nicht",
-          "match_score": 0.6094894844892172,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.017355555555555555
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.016866666666666665
-            },
-            {
-              "group": "emotion",
-              "feature": "exciting",
-              "strength": 0.013714285714285714
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/573667",
-          "event_url": "https://www.remscheid-live.de/573667",
-          "title": "Mozart Requiem",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-15T19:30:00",
-          "city": "Wuppertal",
-          "venue": "Historische Stadthalle Wuppertal",
-          "performer": null,
-          "keywords": [
-            "Klassik, Neue Musik",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBild © © Holger Talinski\n\n\n WOLFGANG AMADEUS MOZART \n Ouvertüre zu ›Don Giovanni‹ KV 527\n FRANCIS POULENC \n Konzert für Orgel, Streicher und Pauke g-Moll FP93\n WOLFGANG AMADEUS MOZART \n Requiem d-Moll KV 626\n \n Es ist eine spektakuläre Szene, wenn der Frauenheld Don Giovanni als Strafe für seinen ausufernden Lebensstil zur Hölle fährt. In der Oper tut er das zum Klang von drei Posaunen, die sich Wolfang Amadeus Mozart extra für diesen Moment aufgespart hat. Und auch in dessen berühmtem Requiem, das der Komponist wegen seines frühen Todes nicht selbst vollenden konnte, spielt die Posaune eine besondere Rolle: Im ›Dies irae‹ entfesseln sie den Zorn des Jüngsten Gerichts, im anschließenden ›Tuba mirum‹ folgt dann ein prominentes Solo. Neben Mozarts Totenmesse hat auch das klangprächtige Orgelkonzert von Francis Poulenc eine Verbindung zur Sakralmusik, ist es doch eine Hommage an die großen, religiösen Orgelwerke des Barock – in Poulencs eigenem, expressiven Stil samt Solopauke. Das Sinfonieorchester Wuppertal lädt mit diesem Konzertprogramm erstmals die Wuppertaler Kurrende zu einem seiner Chorkonzerte ein und bekommt damit sängerische Unterstützung von einem traditionsreichen Ensemble der Stadt und einem der renommiertesten Knabenchöre des Landes. \nwww.sinfonieorchester-wuppertal.de/konzerte/detailansicht-auffuehrung/mozart-requiem/5385",
-          "rank": 843,
-          "cluster_id": 4,
-          "cluster_label": "passt gar nicht",
-          "match_score": 0.4755181854898648,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.016622222222222222
-            },
-            {
-              "group": "emotion",
-              "feature": "exciting",
-              "strength": 0.009942857142857142
-            },
-            {
-              "group": "emotion",
-              "feature": "dramatic",
-              "strength": 0.00920816326530612
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "selected_events": [
-    {
-      "event_id": "schema:https://www.remscheid-live.de/event/615113",
-      "event_url": "https://www.remscheid-live.de/615113",
+      "id": "schema:https://www.remscheid-live.de/event/615113",
       "title": "Angry Zeta ( Acoustic - Bluegrass - Punky Beerdrinkers )",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-17T19:00:00",
+      "description": "SIE sind wieder da!\n\nANGRY ZETA\n\nDoors:19.00\n\nSUPPORT folgt\n\n\n\n\n\nAngry Zeta wurde 2015 in Buenos Aires (Argentinien) als traditionelle Bluegrass-Country-Hillbilly-Straßenmusikantenband gegründet und war dann ständig in die lokale Punkszene und ihre Clubs integriert, wo sie ihren Punk- und Rock’n’Roll-Crust-Sound fanden. Heute mischen sie alles zu einer Melasse aus Punk-Hillbilly-Folk und roher Straßenmusik zusammen. Sie touren weltweit in Clubs, auf Festivals (Muddy Roots, Billy Rock, San Pedro Country Music Festival, San Antonio Rat Parts Festival, Kids and Billy’s, Open Folk Festival, Rotterdam Bluegrass Festival usw.) und auf der Straße, verstärkt oder voll akustisch flexibel. Sie bieten Ihnen so einen großartigen Folk-Punk, dass Sie nicht immer wissen, wo Sie stehen. Was wir an Angry Zeta am meisten lieben: Sie haben klein angefangen und gehen ihren ganz eigenen Weg an die Spitze des Crust Street Rock’n’Roll Folk Punk-Himmel.\n\nAngry Zeta sind eine ungewöhnliche Mischung aus Punk, Country und Hillbilly-Hoe-Downs aus dem noch ungewöhnlicheren Ort Argentinien! Aber anstatt den üblichen mittelmäßigen, bürgerlichen Ansatz für Folk oder (igitt!) Weltmusik zu verfolgen, legen diese Jungs Wert darauf, ihrer Musik eine echte Haltung und Authentizität zu verleihen, genau so, wie The Pogues irische Musik oder Kultur Shock die Balkankultur angegangen sind. Dies geschieht nicht auf affektierte oder prätentiöse Weise, sondern mit echter Liebe und Freude für die Lieder und ihre Worte (auch wenn man sie nicht ganz ernst nehmen sollte!). Wie die Hickoids vor ihnen ist dies Musik, die man genießen kann. Ich könnte mir vorstellen, dass diese Jungs auf der Bühne einen echten Sturm entfachen, aber ob Sie nun die Chance haben, sie live zu sehen oder nicht, tun Sie Ihr Bestes, um dieses Album zu hören.\n\n- Reverend Beatman – Voodoo Rhythm Records",
+      "start_date": "2026-07-17T19:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Alte Schlosserei",
-      "performer": {
-        "@type": "Organization",
-        "name": "Kulturnacht Alte Schlosserei e.V präsentiert"
-      },
-      "keywords": [
-        "Blues, Soul, R&B, Gospel",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nSIE sind wieder da!\n\nANGRY ZETA\n\nDoors:19.00\n\nSUPPORT folgt\n\n\n\n\n\nAngry Zeta wurde 2015 in Buenos Aires (Argentinien) als traditionelle Bluegrass-Country-Hillbilly-Straßenmusikantenband gegründet und war dann ständig in die lokale Punkszene und ihre Clubs integriert, wo sie ihren Punk- und Rock’n’Roll-Crust-Sound fanden. Heute mischen sie alles zu einer Melasse aus Punk-Hillbilly-Folk und roher Straßenmusik zusammen. Sie touren weltweit in Clubs, auf Festivals (Muddy Roots, Billy Rock, San Pedro Country Music Festival, San Antonio Rat Parts Festival, Kids and Billy’s, Open Folk Festival, Rotterdam Bluegrass Festival usw.) und auf der Straße, verstärkt oder voll akustisch flexibel. Sie bieten Ihnen so einen großartigen Folk-Punk, dass Sie nicht immer wissen, wo Sie stehen. Was wir an Angry Zeta am meisten lieben: Sie haben klein angefangen und gehen ihren ganz eigenen Weg an die Spitze des Crust Street Rock’n’Roll Folk Punk-Himmel.\n\nAngry Zeta sind eine ungewöhnliche Mischung aus Punk, Country und Hillbilly-Hoe-Downs aus dem noch ungewöhnlicheren Ort Argentinien! Aber anstatt den üblichen mittelmäßigen, bürgerlichen Ansatz für Folk oder (igitt!) Weltmusik zu verfolgen, legen diese Jungs Wert darauf, ihrer Musik eine echte Haltung und Authentizität zu verleihen, genau so, wie The Pogues irische Musik oder Kultur Shock die Balkankultur angegangen sind. Dies geschieht nicht auf affektierte oder prätentiöse Weise, sondern mit echter Liebe und Freude für die Lieder und ihre Worte (auch wenn man sie nicht ganz ernst nehmen sollte!). Wie die Hickoids vor ihnen ist dies Musik, die man genießen kann. Ich könnte mir vorstellen, dass diese Jungs auf der Bühne einen echten Sturm entfachen, aber ob Sie nun die Chance haben, sie live zu sehen oder nicht, tun Sie Ihr Bestes, um dieses Album zu hören.\n\n- Reverend Beatman – Voodoo Rhythm Records",
+      "genre": "Blues, Soul, R&B, Gospel",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/615113",
       "rank": 1,
       "cluster_id": 0,
       "cluster_label": "passt am besten",
@@ -496,19 +52,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/641366",
-      "event_url": "https://www.remscheid-live.de/641366",
+      "id": "schema:https://www.remscheid-live.de/event/641366",
       "title": "Monatliches Beer-Tasting mit Biersommelier",
-      "event_type": "FoodEvent",
-      "startDate": "2026-08-15T18:00:00",
+      "description": "Nach über 10 Jahren Tasting-Erfahrung im English Pub und in Herdecke lädt Biersommelier Nathaniel Stott Sie ein, die faszinierende Welt der Biere ganz persönlich zu entdecken. Das Motto jedes Abends: Hier bist DU der Experte für Deinen eigenen Geschmack!\n\n\n\nNATHANIELS (BEER) PHILOSOPHIE: ES GEHT UM DEIN GESCHMACKSERLEBNIS\n\n\n\nVergessen Sie, was „man“ mögen sollte. Im Mittelpunkt steht, was Ihnen schmeckt! Nathaniel Stott vermittelt Ihnen nicht nur fundiertes Wissen, sondern zeigt Ihnen vor allem, wie Geschmack im Mund und Gehirn entsteht und erlebt wird. Ziel ist es, dass Sie am Ende des Abends genau wissen, welche Bierstile und Aromen für DICH persönlich die interessantesten sind.\n\n\n\nWAS SIE BEI JEDEM BIER TASTING ERWARTET:\n\n\n\n- Sensorik-Reise: Lernen Sie, Aromen und Geschmacksrichtungen bewusst wahrzunehmen und präzise zu beschreiben.\n\n- Fakten & Spaß: Eine kurzweilige, unterhaltsame Einführung in die Biergeschichte, den Brauprozess und spannendes Biertrivia.\n\n- Intensive Verkostung: Probieren Sie unter fachkundiger Anleitung fünf verschiedene Biere – sorgfältig ausgewählt, frisch gezapft und aus der Flasche.\n\n- Entdeckung: Wir erforschen gemeinsam die Vielfalt der Bier Stile und finden Ihre ganz persönlichen Favoriten.\n\n\n\nDas Erlebnis ist Bier!",
+      "start_date": "2026-08-15T18:00:00",
+      "end_date": null,
       "city": "Herdecke",
       "venue": "The Shakespeare  Pub",
-      "performer": null,
-      "keywords": [
-        "Food, Drinks & Events",
-        "FOOD_DRINK"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nNach über 10 Jahren Tasting-Erfahrung im English Pub und in Herdecke lädt Biersommelier Nathaniel Stott Sie ein, die faszinierende Welt der Biere ganz persönlich zu entdecken. Das Motto jedes Abends: Hier bist DU der Experte für Deinen eigenen Geschmack!\n\n\n\nNATHANIELS (BEER) PHILOSOPHIE: ES GEHT UM DEIN GESCHMACKSERLEBNIS\n\n\n\nVergessen Sie, was „man“ mögen sollte. Im Mittelpunkt steht, was Ihnen schmeckt! Nathaniel Stott vermittelt Ihnen nicht nur fundiertes Wissen, sondern zeigt Ihnen vor allem, wie Geschmack im Mund und Gehirn entsteht und erlebt wird. Ziel ist es, dass Sie am Ende des Abends genau wissen, welche Bierstile und Aromen für DICH persönlich die interessantesten sind.\n\n\n\nWAS SIE BEI JEDEM BIER TASTING ERWARTET:\n\n\n\n- Sensorik-Reise: Lernen Sie, Aromen und Geschmacksrichtungen bewusst wahrzunehmen und präzise zu beschreiben.\n\n- Fakten & Spaß: Eine kurzweilige, unterhaltsame Einführung in die Biergeschichte, den Brauprozess und spannendes Biertrivia.\n\n- Intensive Verkostung: Probieren Sie unter fachkundiger Anleitung fünf verschiedene Biere – sorgfältig ausgewählt, frisch gezapft und aus der Flasche.\n\n- Entdeckung: Wir erforschen gemeinsam die Vielfalt der Bier Stile und finden Ihre ganz persönlichen Favoriten.\n\n\n\nDas Erlebnis ist Bier!",
+      "genre": "Food, Drinks & Events",
+      "category": null,
+      "schema_type": "FoodEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/641366",
       "rank": 319,
       "cluster_id": 0,
       "cluster_label": "passt am besten",
@@ -534,19 +90,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/633377",
-      "event_url": "https://www.remscheid-live.de/633377",
+      "id": "schema:https://www.remscheid-live.de/event/633377",
       "title": "Feierabendmarkt",
-      "event_type": "Event",
-      "startDate": "2026-07-03T17:00:00",
+      "description": "Der Feierabendmarkt findet jeden Freitag von 17 bis 21 Uhr statt. Wenn andere größere Veranstaltungen in der Innenstadt anstehen, fällt der Markt aus.\nwirtschaftsfoerderung-radevormwald.de/veranstaltungskalender/",
+      "start_date": "2026-07-03T17:00:00",
+      "end_date": null,
       "city": "Radevormwald",
       "venue": "Marktplatz Radevormwald",
-      "performer": null,
-      "keywords": [
-        "Märkte, Messen & Feste",
-        "MARKETS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nDer Feierabendmarkt findet jeden Freitag von 17 bis 21 Uhr statt. Wenn andere größere Veranstaltungen in der Innenstadt anstehen, fällt der Markt aus.\nwirtschaftsfoerderung-radevormwald.de/veranstaltungskalender/",
+      "genre": "Märkte, Messen & Feste",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/633377",
       "rank": 320,
       "cluster_id": 1,
       "cluster_label": "passt gut",
@@ -572,19 +128,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/641115",
-      "event_url": "https://www.remscheid-live.de/641115",
+      "id": "schema:https://www.remscheid-live.de/event/641115",
       "title": "Mit allen Sinnen",
-      "event_type": "VisualArtsEvent",
-      "startDate": "2026-07-14T14:30:00",
+      "description": "Mit allen Sinnen\n\n\nBegegnung mit Kunst für Menschen mit Demenz und deren Angehörige\n\n\n\nMit angepassten und bedürfnisorientierten Angeboten wollen wir den Betroffenen und ihren Angehörigen eine schöne Zeit im Museum ermöglichen. Das Bedürfnis nach Kultur und gesellschaftlicher Teilhabe geht nicht automatisch mit der Erkrankung verloren. Im Gegenteil – Architektur, bildende Kunst und Musik bilden wichtige Schlüssel zur emotionalen Welt der Betroffenen. Aus diesem Grund steht während des Museumsbuches nicht die Vermittlung von kunsthistorischem Wissen, sondern eine gemeinsame schöne Zeit im Vordergrund.\n\n\n\nIn Kleingruppen bis max. acht Personen plus Betreuerinnen und Betreuer schauen wir uns aktuelle Ausstellungen an oder begegnen ausgewählten Kunstwerken unserer Sammlung mit allen Sinnen - dazu gehört auch das gemeinsame Singen. Anschließend genießen wir die besondere Atmosphäre des Hauses bei Kaffee und Kuchen im Grünen Salon. Die Termine sind von kleinen Gruppen sowie Einzelpersonen mit Betreuenden buchbar.\nvilla-zanders.de/booking-fuer-menschen-mit-demenz/\n\n\n\n\nAnmeldung über den jeweiligen Termin im Kalender erforderlich.\nDi 14.7. | 8.9.2026 | 14.30–16.30 Uhr | 9 € inkl. Eintritt\nvilla-zanders.de/besuch/kalender/",
+      "start_date": "2026-07-14T14:30:00",
+      "end_date": null,
       "city": "Bergisch Gladbach",
       "venue": "Kunstmuseum Villa Zanders",
-      "performer": null,
-      "keywords": [
-        "Vorträge & Führungen",
-        "ART"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nMit allen Sinnen\n\n\nBegegnung mit Kunst für Menschen mit Demenz und deren Angehörige\n\n\n\nMit angepassten und bedürfnisorientierten Angeboten wollen wir den Betroffenen und ihren Angehörigen eine schöne Zeit im Museum ermöglichen. Das Bedürfnis nach Kultur und gesellschaftlicher Teilhabe geht nicht automatisch mit der Erkrankung verloren. Im Gegenteil – Architektur, bildende Kunst und Musik bilden wichtige Schlüssel zur emotionalen Welt der Betroffenen. Aus diesem Grund steht während des Museumsbuches nicht die Vermittlung von kunsthistorischem Wissen, sondern eine gemeinsame schöne Zeit im Vordergrund.\n\n\n\nIn Kleingruppen bis max. acht Personen plus Betreuerinnen und Betreuer schauen wir uns aktuelle Ausstellungen an oder begegnen ausgewählten Kunstwerken unserer Sammlung mit allen Sinnen - dazu gehört auch das gemeinsame Singen. Anschließend genießen wir die besondere Atmosphäre des Hauses bei Kaffee und Kuchen im Grünen Salon. Die Termine sind von kleinen Gruppen sowie Einzelpersonen mit Betreuenden buchbar.\nvilla-zanders.de/booking-fuer-menschen-mit-demenz/\n\n\n\n\nAnmeldung über den jeweiligen Termin im Kalender erforderlich.\nDi 14.7. | 8.9.2026 | 14.30–16.30 Uhr | 9 € inkl. Eintritt\nvilla-zanders.de/besuch/kalender/",
+      "genre": "Vorträge & Führungen",
+      "category": null,
+      "schema_type": "VisualArtsEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/641115",
       "rank": 490,
       "cluster_id": 1,
       "cluster_label": "passt gut",
@@ -610,19 +166,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/633165",
-      "event_url": "https://www.remscheid-live.de/633165",
+      "id": "schema:https://www.remscheid-live.de/event/633165",
       "title": "Öffentliche Sonntagsführung durch die Begegnungsstätte",
-      "event_type": "Event",
-      "startDate": "2026-07-05T15:00:00",
+      "description": "Die „Begegnungsstätte Alte Synagoge“ im Zentrum von Wuppertal-Elberfeld ist ein Ort des Gedenkens und des Lernens, an der Stelle, an der sich bis zum November 1938 die Sy- nagoge befand, und sie ist ein Ort der lebendigen Auseinandersetzung über gesellschaftli- che und politische Fragen und über den Antisemitismus.\nMit ihrer modernen und interaktiven Dauerausstellung informiert die Begegnungsstätte über die jüdische Religion und Geschichte im Wuppertal und der Region. Zahlreiche Ob- jekte, Dokumente und Fotografien beleuchten die jüdische Geschichte in der Region seit ihren Anfängen bis in die Gegenwart.\n\nJuden und Jüdinnen haben am Aufstieg der bergischen Städte sichtbar mitgewirkt. Angezogen von den vielversprechenden Perspektiven des Textilzentrums waren sie im Laufe des 19. Jahrhunderts hier heimisch geworden. Sie hatten Teil an der allgemeinen sozialen, politischen und kulturellen Entwicklung, in den Phasen der Prosperität wie in Zeiten der Krisen. Die jüdische Dichterin Else Lasker-Schüler stammt aus dem Wuppertal, und weitere Namen verdienstvoller jüdischer Bürger können genannt werden.\n \n\n\nDer Eintritt ist wie immer frei, und anmelden muss man sich nicht. Das Haus ist schon ab 14 Uhr geöffnet, so dass Sie sich vor der Führung auch schon selbständig umschauen können.",
+      "start_date": "2026-07-05T15:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Begegnungsstätte Alte Synagoge",
-      "performer": null,
-      "keywords": [
-        "Stadtführungen, Erlebnisführungen, Sightseeing",
-        "GUIDED_TOUR"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nDie „Begegnungsstätte Alte Synagoge“ im Zentrum von Wuppertal-Elberfeld ist ein Ort des Gedenkens und des Lernens, an der Stelle, an der sich bis zum November 1938 die Sy- nagoge befand, und sie ist ein Ort der lebendigen Auseinandersetzung über gesellschaftli- che und politische Fragen und über den Antisemitismus.\nMit ihrer modernen und interaktiven Dauerausstellung informiert die Begegnungsstätte über die jüdische Religion und Geschichte im Wuppertal und der Region. Zahlreiche Ob- jekte, Dokumente und Fotografien beleuchten die jüdische Geschichte in der Region seit ihren Anfängen bis in die Gegenwart.\n\nJuden und Jüdinnen haben am Aufstieg der bergischen Städte sichtbar mitgewirkt. Angezogen von den vielversprechenden Perspektiven des Textilzentrums waren sie im Laufe des 19. Jahrhunderts hier heimisch geworden. Sie hatten Teil an der allgemeinen sozialen, politischen und kulturellen Entwicklung, in den Phasen der Prosperität wie in Zeiten der Krisen. Die jüdische Dichterin Else Lasker-Schüler stammt aus dem Wuppertal, und weitere Namen verdienstvoller jüdischer Bürger können genannt werden.\n \n\n\nDer Eintritt ist wie immer frei, und anmelden muss man sich nicht. Das Haus ist schon ab 14 Uhr geöffnet, so dass Sie sich vor der Führung auch schon selbständig umschauen können.",
+      "genre": "Stadtführungen, Erlebnisführungen, Sightseeing",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/633165",
       "rank": 491,
       "cluster_id": 2,
       "cluster_label": "passt mittel",
@@ -648,19 +204,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/411986",
-      "event_url": "https://www.remscheid-live.de/411986",
+      "id": "schema:https://www.remscheid-live.de/event/411986",
       "title": "Tuchmuseum Lennep",
-      "event_type": "Event",
-      "startDate": "2026-05-18T06:00:00",
+      "description": "Das Tuchmuseum Lennep hat seinen Ursprung in dem Firmenmuseum der ehemaligen Tuchfabrik Johann Wülfing & Sohn. Als der Textilhersteller in den 1990er Jahren endgültig seine Pforten schließen musste, fand das Museum in der Lenneper Hardtstraße eine neue Heimat und hält dort bis heute die Tuchmacher-Tradition lebendig. \n\n\n\nWelchen Weg nimmt die Wolle vom Schaf bis zum Anzug? Wo badeten die Mitarbeiter der Textilfabrikation? Wieso gibt es heute in Lennep kein einzige Textilunternehmen mehr? Das ist nur ein Teil der Fragen, auf die das Museum Antworten geben kann.\n \n\n\n \nwww.tuchmuseum.de\n\n\n\n\nÖffentliche Führung \n\n\nan jedem ersten Sonntag \n\nim Monat um 15 Uhr\n\n\n\n\n\nÖffnungszeiten\n\n\n\n\nDienstag 12 -16 Uhr\n\nSonntag 14 -17 Uhr\n\nund nach Vereinbarung\n \n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "start_date": "2026-05-18T06:00:00",
+      "end_date": null,
       "city": "Remscheid",
       "venue": "Tuchmuseum Lennep",
-      "performer": null,
-      "keywords": [
-        "Museen",
-        "MUSEUMS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBild © Tuchmuseum Lennep\n\n\nDas Tuchmuseum Lennep hat seinen Ursprung in dem Firmenmuseum der ehemaligen Tuchfabrik Johann Wülfing & Sohn. Als der Textilhersteller in den 1990er Jahren endgültig seine Pforten schließen musste, fand das Museum in der Lenneper Hardtstraße eine neue Heimat und hält dort bis heute die Tuchmacher-Tradition lebendig. \n\n\n\nWelchen Weg nimmt die Wolle vom Schaf bis zum Anzug? Wo badeten die Mitarbeiter der Textilfabrikation? Wieso gibt es heute in Lennep kein einzige Textilunternehmen mehr? Das ist nur ein Teil der Fragen, auf die das Museum Antworten geben kann.\n \n\n\n \nwww.tuchmuseum.de\n\n\n\n\nÖffentliche Führung \n\n\nan jedem ersten Sonntag \n\nim Monat um 15 Uhr\n\n\n\n\n\nÖffnungszeiten\n\n\n\n\nDienstag 12 -16 Uhr\n\nSonntag 14 -17 Uhr\n\nund nach Vereinbarung\n \n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "genre": "Museen",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/411986",
       "rank": 618,
       "cluster_id": 2,
       "cluster_label": "passt mittel",
@@ -686,19 +242,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/409611",
-      "event_url": "https://www.remscheid-live.de/409611",
+      "id": "schema:https://www.remscheid-live.de/event/409611",
       "title": "Begegnungsstätte Alte Synagoge",
-      "event_type": "Event",
-      "startDate": "2026-05-18T06:00:00",
+      "description": "Die Begegnungsstätte befindet sich am authentischen Ort der früheren Elberfelder Synagoge. Sie ist eine Gedenkstätte und zugleich das einzige jüdische Museum im Bergischen Land. Zahlreiche Objekte, Dokumente und Fotografien beleuchten die jüdische Geschichte seit ihren Anfängen im 17. Jahrhundert bis in die Gegenwart. Der schwierige Alltag der Juden in der Zeit vor der rechtlichen Gleichstellung, die Annäherung zwischen Christen und Juden im 19. und 20. Jahrhundert und die nationalsozialistische Judenverfolgung sind die Themen. Wichtig ist bei uns: Es geht hier nicht nur um den Holocaust, sondern auch um die lange Zeit den christlich-jüdischen Zusammenlebens vor dem Nationalsozialismus und um die aktuelle Gegenwart.\n \n\n\nBild © Sammlung Begegnungsstätte Alte Synagoge: Ein Dokument aus der Ausstellung \n\n\nAktuelle Sammlungspräsentationen\n\n\nBesondere Attraktionen der Ausstellung sind die Modelle der vier historischen Bergischen Synagogen im Maßstab 1:50 – die Gotteshäuser in Langenberg, Schwelm, Elberfeld, Solingen und Barmen, aber auch noch vieles andere mehr!\n \n\n\nBild © Ulrike Schrader: Blick in das Model der Elberfelder Synagoge \n\n\n \n\n\nKinder\n\n\nIn der Spielfilmserie „Frida und die beiden Henris“ zeigen drei junge Wuppertaler Jugendliche Objekte der Sammlung. www.alte-synagoge-wuppertal.de und dann unter „Frida und die beiden Henris“. 13 Folgen… Einfach mal reingucken!\n \n\n\nBild © Ulrike Schrader: Jugendliche besuchen die Dauerausstellung \n\n\nInformation und Beratung\n\n\nDie Bibliothek und das Archiv können nach Terminabsprache gern auch in der Corona-Zeit benutzt, Bücher ausgeliehen werden! Schülerinnen und Schüler, Lehrerinne und Lehrer können gern Beratungen in Anspruch nehmen und Material entleihen. Anmeldungen und Terminabsprachen dafür sind aber nötig: E-Mail info@alte-synagoge-wuppertal.de oder Tel. 0202-563.2843\n\n\n\n\n\nOnline-Veranstaltungen\n\n\nÜber online-Veranstaltungen informiert die Internetseite www.alte-synagoge-wuppertal.de. Der Eintritt dazu ist frei. Die Einwahldaten werden auf Anfrage jeweils am Tag der jeweiligen Veranstaltung verschickt.\ninfo@alte-synagoge-wuppertal.de\n\n\n\n\nAktuelle Informationen finden Sie hier:\nalte-synagoge-wuppertal.de/\n\n\n\n\nÖffnungszeiten\n\n\nDienstag bis Freitag\n\nUnd an jedem !. Sonntag im Monat\n\n\n\n14 bis 17 Uhr\n\n\n\nDie Termine für Führungen können auch außerhalb der allgemeinen Öffnungszeiten liegen, also auch vormittags und abends. Eine Anmeldung ist erforderlich.\n \n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "start_date": "2026-05-18T06:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Begegnungsstätte Alte Synagoge",
-      "performer": null,
-      "keywords": [
-        "Museen",
-        "MUSEUMS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBild © Andrea Hold-Ferneck: Die Begegnungsstätte Alte Synagoge \n\n\nDie Begegnungsstätte befindet sich am authentischen Ort der früheren Elberfelder Synagoge. Sie ist eine Gedenkstätte und zugleich das einzige jüdische Museum im Bergischen Land. Zahlreiche Objekte, Dokumente und Fotografien beleuchten die jüdische Geschichte seit ihren Anfängen im 17. Jahrhundert bis in die Gegenwart. Der schwierige Alltag der Juden in der Zeit vor der rechtlichen Gleichstellung, die Annäherung zwischen Christen und Juden im 19. und 20. Jahrhundert und die nationalsozialistische Judenverfolgung sind die Themen. Wichtig ist bei uns: Es geht hier nicht nur um den Holocaust, sondern auch um die lange Zeit den christlich-jüdischen Zusammenlebens vor dem Nationalsozialismus und um die aktuelle Gegenwart.\n \n\n\nBild © Sammlung Begegnungsstätte Alte Synagoge: Ein Dokument aus der Ausstellung \n\n\nAktuelle Sammlungspräsentationen\n\n\nBesondere Attraktionen der Ausstellung sind die Modelle der vier historischen Bergischen Synagogen im Maßstab 1:50 – die Gotteshäuser in Langenberg, Schwelm, Elberfeld, Solingen und Barmen, aber auch noch vieles andere mehr!\n \n\n\nBild © Ulrike Schrader: Blick in das Model der Elberfelder Synagoge \n\n\n \n\n\nKinder\n\n\nIn der Spielfilmserie „Frida und die beiden Henris“ zeigen drei junge Wuppertaler Jugendliche Objekte der Sammlung. www.alte-synagoge-wuppertal.de und dann unter „Frida und die beiden Henris“. 13 Folgen… Einfach mal reingucken!\n \n\n\nBild © Ulrike Schrader: Jugendliche besuchen die Dauerausstellung \n\n\nInformation und Beratung\n\n\nDie Bibliothek und das Archiv können nach Terminabsprache gern auch in der Corona-Zeit benutzt, Bücher ausgeliehen werden! Schülerinnen und Schüler, Lehrerinne und Lehrer können gern Beratungen in Anspruch nehmen und Material entleihen. Anmeldungen und Terminabsprachen dafür sind aber nötig: E-Mail info@alte-synagoge-wuppertal.de oder Tel. 0202-563.2843\n\n\n\n\n\nOnline-Veranstaltungen\n\n\nÜber online-Veranstaltungen informiert die Internetseite www.alte-synagoge-wuppertal.de. Der Eintritt dazu ist frei. Die Einwahldaten werden auf Anfrage jeweils am Tag der jeweiligen Veranstaltung verschickt.\ninfo@alte-synagoge-wuppertal.de\n\n\n\n\nAktuelle Informationen finden Sie hier:\nalte-synagoge-wuppertal.de/\n\n\n\n\nÖffnungszeiten\n\n\nDienstag bis Freitag\n\nUnd an jedem !. Sonntag im Monat\n\n\n\n14 bis 17 Uhr\n\n\n\nDie Termine für Führungen können auch außerhalb der allgemeinen Öffnungszeiten liegen, also auch vormittags und abends. Eine Anmeldung ist erforderlich.\n \n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "genre": "Museen",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/409611",
       "rank": 619,
       "cluster_id": 3,
       "cluster_label": "passt nicht so gut",
@@ -724,22 +280,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/621864",
-      "event_url": "https://www.remscheid-live.de/621864",
+      "id": "schema:https://www.remscheid-live.de/event/621864",
       "title": "Stipendiatenkonzert",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-10T19:00:00",
+      "description": "Konzert mit den StipendiatInnen der Begabtenförderung \nmit Unterstützung der \"Haaner Jugendförderung - Karin & Gerhard Schmitz-Stiftung\"\n \n\n\n\n\n\nEinlass ca. 18:45 Uhr",
+      "start_date": "2026-07-10T19:00:00",
+      "end_date": null,
       "city": "Haan",
       "venue": "Forum Dieker Carré",
-      "performer": {
-        "@type": "Organization",
-        "name": "Konzerte der Musikschule Haan"
-      },
-      "keywords": [
-        "Klassik, Neue Musik",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nKonzert mit den StipendiatInnen der Begabtenförderung \nmit Unterstützung der \"Haaner Jugendförderung - Karin & Gerhard Schmitz-Stiftung\"\n \n\n\n\n\n\nEinlass ca. 18:45 Uhr",
+      "genre": "Klassik, Neue Musik",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/621864",
       "rank": 735,
       "cluster_id": 3,
       "cluster_label": "passt nicht so gut",
@@ -765,22 +318,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/632942",
-      "event_url": "https://www.remscheid-live.de/632942",
+      "id": "schema:https://www.remscheid-live.de/event/632942",
       "title": "Abschlusskonzert Sommersemester",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-07T20:00:00",
+      "description": "Am 7. Juli laden Chor und Orchester der Bergischen Universität Wuppertal um 20 Uhr zu ihrem Semester-Abschlusskonzert in die Immanuelskirche ein. Es erwartet Sie ein Programm voll Magie und voller mitreißender Emotionen. So spielt das UNI Orchester “Eine Nacht auf dem kahlen Berge” von Modest Mussorgsky, ein Stück wie eine moderne Filmmusik, das einen Hexensabbat auf einem russischen Berg beschreibt, dazu ein Medley aus der Harry Potter-Filmreihe und als besonderes Special ein Stück für Stepptänzer und Orchester des deutschen Komponisten Bobbi Fischer, getanzt von Bernd Paffrath. Der UNI Chor nimmt sie mit in die Welt des Musicals mit Stücken aus “Jekyll & Hyde” und “Next to Normal” und präsentiert außerdem “Time after time” von Cindy Lauper, “ATP.” Von Bruno Mars und “Lovely” von Billie Eilish. \n\nAlso Special Guest tritt erneut das Vokalensemble der Fachgruppe Musikpädagogik auf, das schon im vergangenen Januar in den Winterkonzerten für Begeisterung sorgte.\n\nAm Ende verbinden sich alle Ensembles zu einem Klangkörper mit der Friedenshymne “Let there be peace on earth” - leider in diesen Zeiten ein Ruf, der drängender kaum sein könnte.\n\nKarten erhalten Sie wie immer bei \nwww.wuppertal-live.de\n und den bekannten Vorverkaufsstellen.\n\nWir freuen uns auf Sie!\n \n\nEinlass ca. 19:30 Uhr",
+      "start_date": "2026-07-07T20:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Kulturzentrum Immanuel - Immanuelskirche",
-      "performer": {
-        "@type": "Organization",
-        "name": "Chor und Orchester der Bergischen Universität"
-      },
-      "keywords": [
-        "Chormusik",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBild © Uni Wuppertal\n\n\nAm 7. Juli laden Chor und Orchester der Bergischen Universität Wuppertal um 20 Uhr zu ihrem Semester-Abschlusskonzert in die Immanuelskirche ein. Es erwartet Sie ein Programm voll Magie und voller mitreißender Emotionen. So spielt das UNI Orchester “Eine Nacht auf dem kahlen Berge” von Modest Mussorgsky, ein Stück wie eine moderne Filmmusik, das einen Hexensabbat auf einem russischen Berg beschreibt, dazu ein Medley aus der Harry Potter-Filmreihe und als besonderes Special ein Stück für Stepptänzer und Orchester des deutschen Komponisten Bobbi Fischer, getanzt von Bernd Paffrath. Der UNI Chor nimmt sie mit in die Welt des Musicals mit Stücken aus “Jekyll & Hyde” und “Next to Normal” und präsentiert außerdem “Time after time” von Cindy Lauper, “ATP.” Von Bruno Mars und “Lovely” von Billie Eilish. \n\nAlso Special Guest tritt erneut das Vokalensemble der Fachgruppe Musikpädagogik auf, das schon im vergangenen Januar in den Winterkonzerten für Begeisterung sorgte.\n\nAm Ende verbinden sich alle Ensembles zu einem Klangkörper mit der Friedenshymne “Let there be peace on earth” - leider in diesen Zeiten ein Ruf, der drängender kaum sein könnte.\n\nKarten erhalten Sie wie immer bei \nwww.wuppertal-live.de\n und den bekannten Vorverkaufsstellen.\n\nWir freuen uns auf Sie!\n \n\nEinlass ca. 19:30 Uhr",
+      "genre": "Chormusik",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/632942",
       "rank": 736,
       "cluster_id": 4,
       "cluster_label": "passt gar nicht",
@@ -806,19 +356,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/573667",
-      "event_url": "https://www.remscheid-live.de/573667",
+      "id": "schema:https://www.remscheid-live.de/event/573667",
       "title": "Mozart Requiem",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-15T19:30:00",
+      "description": "WOLFGANG AMADEUS MOZART \n Ouvertüre zu ›Don Giovanni‹ KV 527\n FRANCIS POULENC \n Konzert für Orgel, Streicher und Pauke g-Moll FP93\n WOLFGANG AMADEUS MOZART \n Requiem d-Moll KV 626\n \n Es ist eine spektakuläre Szene, wenn der Frauenheld Don Giovanni als Strafe für seinen ausufernden Lebensstil zur Hölle fährt. In der Oper tut er das zum Klang von drei Posaunen, die sich Wolfang Amadeus Mozart extra für diesen Moment aufgespart hat. Und auch in dessen berühmtem Requiem, das der Komponist wegen seines frühen Todes nicht selbst vollenden konnte, spielt die Posaune eine besondere Rolle: Im ›Dies irae‹ entfesseln sie den Zorn des Jüngsten Gerichts, im anschließenden ›Tuba mirum‹ folgt dann ein prominentes Solo. Neben Mozarts Totenmesse hat auch das klangprächtige Orgelkonzert von Francis Poulenc eine Verbindung zur Sakralmusik, ist es doch eine Hommage an die großen, religiösen Orgelwerke des Barock – in Poulencs eigenem, expressiven Stil samt Solopauke. Das Sinfonieorchester Wuppertal lädt mit diesem Konzertprogramm erstmals die Wuppertaler Kurrende zu einem seiner Chorkonzerte ein und bekommt damit sängerische Unterstützung von einem traditionsreichen Ensemble der Stadt und einem der renommiertesten Knabenchöre des Landes. \nwww.sinfonieorchester-wuppertal.de/konzerte/detailansicht-auffuehrung/mozart-requiem/5385",
+      "start_date": "2026-07-15T19:30:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Historische Stadthalle Wuppertal",
-      "performer": null,
-      "keywords": [
-        "Klassik, Neue Musik",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBild © © Holger Talinski\n\n\n WOLFGANG AMADEUS MOZART \n Ouvertüre zu ›Don Giovanni‹ KV 527\n FRANCIS POULENC \n Konzert für Orgel, Streicher und Pauke g-Moll FP93\n WOLFGANG AMADEUS MOZART \n Requiem d-Moll KV 626\n \n Es ist eine spektakuläre Szene, wenn der Frauenheld Don Giovanni als Strafe für seinen ausufernden Lebensstil zur Hölle fährt. In der Oper tut er das zum Klang von drei Posaunen, die sich Wolfang Amadeus Mozart extra für diesen Moment aufgespart hat. Und auch in dessen berühmtem Requiem, das der Komponist wegen seines frühen Todes nicht selbst vollenden konnte, spielt die Posaune eine besondere Rolle: Im ›Dies irae‹ entfesseln sie den Zorn des Jüngsten Gerichts, im anschließenden ›Tuba mirum‹ folgt dann ein prominentes Solo. Neben Mozarts Totenmesse hat auch das klangprächtige Orgelkonzert von Francis Poulenc eine Verbindung zur Sakralmusik, ist es doch eine Hommage an die großen, religiösen Orgelwerke des Barock – in Poulencs eigenem, expressiven Stil samt Solopauke. Das Sinfonieorchester Wuppertal lädt mit diesem Konzertprogramm erstmals die Wuppertaler Kurrende zu einem seiner Chorkonzerte ein und bekommt damit sängerische Unterstützung von einem traditionsreichen Ensemble der Stadt und einem der renommiertesten Knabenchöre des Landes. \nwww.sinfonieorchester-wuppertal.de/konzerte/detailansicht-auffuehrung/mozart-requiem/5385",
+      "genre": "Klassik, Neue Musik",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/573667",
       "rank": 843,
       "cluster_id": 4,
       "cluster_label": "passt gar nicht",
@@ -843,5 +393,79 @@
         }
       ]
     }
+  ],
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "cluster_label": "passt am besten",
+      "size": 319,
+      "centroid": [
+        0.9393772949593476
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/615113",
+        "schema:https://www.remscheid-live.de/event/641366"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "cluster_label": "passt gut",
+      "size": 171,
+      "centroid": [
+        0.8527903244749636
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/633377",
+        "schema:https://www.remscheid-live.de/event/641115"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_label": "passt mittel",
+      "size": 128,
+      "centroid": [
+        0.7585390755406876
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/633165",
+        "schema:https://www.remscheid-live.de/event/411986"
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_label": "passt nicht so gut",
+      "size": 117,
+      "centroid": [
+        0.6566037663967899
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/409611",
+        "schema:https://www.remscheid-live.de/event/621864"
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_label": "passt gar nicht",
+      "size": 108,
+      "centroid": [
+        0.5624336969680183
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/632942",
+        "schema:https://www.remscheid-live.de/event/573667"
+      ]
+    }
+  ],
+  "selected_event_ids": [
+    "schema:https://www.remscheid-live.de/event/615113",
+    "schema:https://www.remscheid-live.de/event/641366",
+    "schema:https://www.remscheid-live.de/event/633377",
+    "schema:https://www.remscheid-live.de/event/641115",
+    "schema:https://www.remscheid-live.de/event/633165",
+    "schema:https://www.remscheid-live.de/event/411986",
+    "schema:https://www.remscheid-live.de/event/409611",
+    "schema:https://www.remscheid-live.de/event/621864",
+    "schema:https://www.remscheid-live.de/event/632942",
+    "schema:https://www.remscheid-live.de/event/573667"
   ]
 }

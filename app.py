@@ -922,12 +922,22 @@ def build_persona_ranking_record(event):
 
         description_text = " · ".join(description_parts)
 
+    schema_type = event.get("schema_type")
+
+    if not schema_type and isinstance(event.get("schema"), dict):
+        schema_type = event["schema"].get("@type") or event["schema"].get("schema_type")
+
     return {
         "id": event.get("event_id", event.get("event_url", event.get("title", "event"))),
         "name": event.get("title", "Unbenanntes Event"),
         "type": event.get("cluster_label", "Event"),
         "description": description_text,
         "url": event.get("event_url"),
+        "title": event.get("title", "Unbenanntes Event"),
+        "venue": event.get("venue"),
+        "genre": event.get("genre"),
+        "category": event.get("category"),
+        "schema_type": schema_type,
         "start_date": event.get("start_date"),
         "end_date": event.get("end_date"),
         "location_name": event.get("venue") or event.get("city") or "Unbekannter Ort",
@@ -945,6 +955,11 @@ def build_persona_ranking_record(event):
 
 def extract_ranked_events(ranking_data):
     ranked_events = []
+
+    top_level_events = ranking_data.get("events") or []
+
+    for event in top_level_events:
+        ranked_events.append(build_persona_ranking_record(event))
 
     for cluster in ranking_data.get("clusters", []):
         for event in cluster.get("selected_events", []):

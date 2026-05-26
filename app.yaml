@@ -26,4 +26,4 @@ annotations:
     uv_version: 0.8.15
     wsgi_application: a:app
   shipitcli.com/provider: python
-  shipitcli.com/version: 0.19.8
+  shipitcli.com/version: 0.19.9

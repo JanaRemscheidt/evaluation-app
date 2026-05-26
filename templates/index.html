@@ -131,19 +131,32 @@
                     </div>
 
                     <p class="panel-note">Ziehe die Karten aus dem Startbereich in eine Sterne-Kategorie. Innerhalb der Kategorie kannst du die Reihenfolge weiter sortieren.</p>
-                    <p class="panel-note">Klicke auf "Details", um die Beschreibung groß zu lesen.</p>
+                    <p class="panel-note">Klicke auf "Details", um die Beschreibung unter der Event-Reihe im Vollbreiten-Bereich zu öffnen.</p>
 
                     <div class="event-pool dropzone" data-dropzone="pool" aria-label="Unbewertete Events für {{ persona.name }}">
                         {% for event in events %}
-                        <article class="event-card" draggable="true" data-event-id="{{ event.id }}" data-event-name="{{ event.name }}" data-event-date="{{ event.start_date or '' }}" data-event-location="{{ event.location_name }}" data-event-tags="{{ event.keywords | join(', ') }}" data-event-type="{{ event.type }}" data-event-description='{{ event.description | tojson }}' data-source-order="{{ loop.index0 }}">
+                        <article class="event-card" draggable="true" data-event-id="{{ event.id }}" data-event-name="{{ event.name }}" data-event-title="{{ event.title }}" data-event-start-date="{{ event.start_date or '' }}" data-event-end-date="{{ event.end_date or '' }}" data-event-date="{{ event.start_date or '' }}" data-event-location="{{ event.location_name }}" data-event-city="{{ event.city or '' }}" data-event-venue="{{ event.venue or '' }}" data-event-genre="{{ event.genre or '' }}" data-event-category="{{ event.category or '' }}" data-event-schema-type="{{ event.schema_type or '' }}" data-event-tags="{{ event.keywords | join(', ') }}" data-event-type="{{ event.type }}" data-event-description='{{ event.description | tojson }}' data-source-order="{{ loop.index0 }}">
                             <div class="event-card-preview">
                                 <div class="event-card-title-wrap">
                                     <h3>{{ event.name }}</h3>
-                                    <button class="event-card-toggle" type="button" draggable="false" data-event-action="open-details">Details</button>
+                                    {% if event.genre %}
+                                    <p class="event-card-genre" data-event-modal-genre>{{ event.genre }}</p>
+                                    {% endif %}
+                                    <button class="event-card-toggle" type="button" draggable="false" data-event-action="open-details" aria-expanded="false" aria-controls="event-detail-panel">Details</button>
                                 </div>
                             </div>
                         </article>
                         {% endfor %}
+                        <section class="event-detail-panel panel" id="event-detail-panel" aria-live="polite" hidden>
+                            <div class="event-detail-panel-header">
+                                <span class="event-detail-panel-label">Beschreibung</span>
+                                <div>
+                                    <span class="event-detail-panel-chip" data-event-detail-location hidden></span>
+                                    <span class="event-detail-panel-chip" data-event-detail-time hidden></span>
+                                </div>
+                            </div>
+                            <div class="event-detail-panel-description" data-event-detail-description></div>
+                        </section>
                     </div>
                 </section>
 
@@ -184,26 +197,6 @@
                 </button>
             </div>
         </footer>
-    </div>
-
-    <div class="event-modal" data-event-modal hidden aria-hidden="true">
-        <div class="event-modal-backdrop" data-event-action="close-modal"></div>
-        <div class="event-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="event-modal-title">
-            <div class="event-modal-header">
-                <div>
-                    <p class="eyebrow">Event-Details</p>
-                    <h2 id="event-modal-title" data-event-modal-title>Details</h2>
-                </div>
-                <button class="event-modal-close" type="button" data-event-action="close-modal">Schließen</button>
-            </div>
-            <p class="event-modal-summary event-summary" data-event-modal-description></p>
-            <div class="event-facts event-modal-facts">
-                <div>
-                    <span>Ort</span>
-                    <strong data-event-modal-location></strong>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script type="module" src="/static/js/app.js"></script>

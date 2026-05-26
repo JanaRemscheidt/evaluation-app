@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T20:34:19.236704Z",
+  "generated_at": "2026-05-26T07:09:27.435637Z",
   "source": {
     "personas_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\personas.json",
     "db_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\events.db",
@@ -12,471 +12,21 @@
   "persona_name": "Stefan",
   "cluster_count_requested": 5,
   "cluster_count_actual": 5,
-  "clusters": [
+  "events": [
     {
-      "cluster_id": 0,
-      "cluster_label": "passt am besten",
-      "size": 167,
-      "centroid": [
-        0.9563362176011071
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/613087",
-          "event_url": "https://www.remscheid-live.de/613087",
-          "title": "10. Ronsdorfer Weinfest 2026",
-          "event_type": "Event",
-          "startDate": "2026-08-21T17:00:00",
-          "city": "Wuppertal",
-          "venue": "Bandwirkerplatz",
-          "performer": {
-            "@type": "Organization",
-            "name": "Der Förderverein Bandwirker-Bad und der Ronsdorfer Heimat- und Bürgerverein laden ein!"
-          },
-          "keywords": [
-            "Märkte, Messen & Feste",
-            "MARKETS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nDer Förderverein Bandwirker-Bad und der Ronsdorfer Heimat- und Bürgerverein laden ein!\n\n\n\nAus dem Angebot: Live Acts und Tombola",
-          "rank": 1,
-          "cluster_id": 0,
-          "cluster_label": "passt am besten",
-          "match_score": 0.9848018940387817,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.020055555555555552
-            },
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.015428571428571427
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.01521111111111111
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/613576",
-          "event_url": "https://www.remscheid-live.de/613576",
-          "title": "Imkertag",
-          "event_type": "Event",
-          "startDate": "2026-08-09T11:00:00",
-          "city": "Solingen",
-          "venue": "Botanischer Garten Solingen",
-          "performer": {
-            "@type": "Organization",
-            "name": "Die Welt der Bienen entdecken"
-          },
-          "keywords": [
-            "Natur, Gärten, Parks, Umwelt",
-            "NATURE"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBild © Stiftung Botanischer Garten Solingen e.V.\n\n\nBeim Imkertag dreht sich alles um die faszinierende Welt der Bienen und der Imkerei. Der Imkerverein Solingen gibt anschauliche Einblicke in seine Arbeit und stellt typische Imkereiprodukte vor. Anhand eines Bienenvolks hinter Glas sowie praktischer Vorführungen werden die einzelnen Schritte der Honiggewinnung verständlich erklärt. Für das leibliche Wohl ist ebenfalls gesorgt, unter anderem mit frisch gegrillten Würstchen.\n\n\n\nDer Gartenkiosk ist für Sie geöffnet. Freuen Sie sich auf Kaffee, Kuchen und feine Kleinigkeiten.\nwww.bogasg.de\n\n\n\n\n \nwww.instagram.com/botanischer.garten.solingen.ev/",
-          "rank": 167,
-          "cluster_id": 0,
-          "cluster_label": "passt am besten",
-          "match_score": 0.9383187279180473,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.019527777777777776
-            },
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.013224489795918363
-            },
-            {
-              "group": "emotion",
-              "feature": "relaxing",
-              "strength": 0.013028571428571428
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 1,
-      "cluster_label": "passt gut",
-      "size": 235,
-      "centroid": [
-        0.9199041160488011
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/619057",
-          "event_url": "https://www.remscheid-live.de/619057",
-          "title": "Öffentliche Führung \"Überblick\" durch den Skulpturenpark Waldfrieden",
-          "event_type": "VisualArtsEvent",
-          "startDate": "2026-07-04T15:00:00",
-          "city": "Wuppertal",
-          "venue": "Skulpturenpark Waldfrieden",
-          "performer": null,
-          "keywords": [
-            "Vorträge & Führungen",
-            "ART"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBild © Tony Cragg, Industrial Nature, 2020 © VG Bild-Kunst Bonn 2025, Tony Cragg, Foto: Michael Richter\n\n\nDer Rundgang bietet grundlegende Informationen rund um den Skulpturenpark und ist insbesondere für Personen, die den Park zum ersten Mal besuchen, geeignet. Erfahren Sie im Rahmen der Überblicksführung Wissenswertes zur Geschichte des Skulpturenparks, der Kunst Tony Craggs, der Architektur der Villa Waldfrieden und unseren aktuellen Wechselausstellungen.\n\n\n\n\n\nDauer: 90 Minuten\n\nTreffpunkt: Kassengebäude\n\nKosten: 5 € pro Person zzgl. Eintritt\n\n\n\nAnmeldung unter mail@skulpturenpark-waldfrieden.de\n\nTel. 0202 47898120 oder online\nskulpturenpark-waldfrieden.de/vermittlung/termine",
-          "rank": 168,
-          "cluster_id": 1,
-          "cluster_label": "passt gut",
-          "match_score": 0.9378896574948419,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "emotion",
-              "feature": "relaxing",
-              "strength": 0.01234285714285714
-            },
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.011083333333333332
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.010755555555555556
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/634567",
-          "event_url": "https://www.remscheid-live.de/634567",
-          "title": "Digitaler Kunstabend",
-          "event_type": "EducationEvent",
-          "startDate": "2026-07-08T19:00:00",
-          "city": "Wuppertal",
-          "venue": "Von der Heydt-Museum",
-          "performer": {
-            "@type": "Organization",
-            "name": "Digitale Führung"
-          },
-          "keywords": [
-            "Online-Veranstaltungen",
-            "DIGITAL"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nJeden Monat werden neue Aspekte der aktuellen Ausstellungen beleuchtet und wissenswerte Informationen zur Geschichte des Museums und der Sammlung gegeben.\n\nDie Teilnahme ist kostenfrei!\n\nDie Zoom-Zugangsdaten gelten für alle Termine.\n\nMeeting-ID:688 9325 7748.\n\nKenncode: 913889.\n\nZoom-Führung direkt beitreten:\nwuppertal-de.zoom.us/j/68893257748?pwd=KRs7TX3sya5PtQbedVfnv4SpRt1mNs.1",
-          "rank": 402,
-          "cluster_id": 1,
-          "cluster_label": "passt gut",
-          "match_score": 0.9019743144703096,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.01521111111111111
-            },
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.013194444444444443
-            },
-            {
-              "group": "emotion",
-              "feature": "relaxing",
-              "strength": 0.011657142857142857
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 2,
-      "cluster_label": "passt mittel",
-      "size": 283,
-      "centroid": [
-        0.8833835428662008
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/633952",
-          "event_url": "https://www.remscheid-live.de/633952",
-          "title": "Kunstausstellung \"Gegenüberstellung\"",
-          "event_type": "ExhibitionEvent",
-          "startDate": "2026-07-01T00:01:00",
-          "city": "Wuppertal",
-          "venue": "Also-Hotel an der Hardt",
-          "performer": null,
-          "keywords": [
-            "Ausstellung",
-            "EXHIBITION"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nAm 8. Mai 2026 um 19:00 Uhr eröffnet im also-Hotel in Wuppertal die Ausstellung „Gegenüberstellung“ von Holger-Maria Fritsch.\n\n\n\nDie als Treppenhausausstellung konzipierte Präsentation zeigt Werke im Foyer und über mehrere Etagen hinweg. Kunstwerke treten dabei in einen spannungsvollen Dialog und eröffnen neue Perspektiven.\n\n\n\nDie Vernissage wird musikalisch begleitet von Pianist Christoph Neher.\n \n\n\n\n\n\n\n\n\n\n\n\n\nwww.instagram.com/holger_maria_fritsch\n\n\n\n\nAusstellungsdauer:\n\n08.05 - 14.06.2026\n\n\n\nÖffnungszeiten\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
-          "rank": 403,
-          "cluster_id": 2,
-          "cluster_label": "passt mittel",
-          "match_score": 0.9014833911687887,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.012949999999999998
-            },
-            {
-              "group": "emotion",
-              "feature": "relaxing",
-              "strength": 0.011657142857142857
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.009777777777777778
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/638065",
-          "event_url": "https://www.remscheid-live.de/638065",
-          "title": "Kammermusikabend",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-10T19:30:00",
-          "city": "Wuppertal",
-          "venue": "Hochschule für Musik und Tanz",
-          "performer": null,
-          "keywords": [
-            "Klassik, Neue Musik",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nKammermusikabend\n\n\nFr., 10.07.26\n\n19:30 Uhr, Konzertsaal, Musikhochschule Wuppertal\n\nStudierende aller Instrumentalklassen präsentieren ausgewählte Werke der Kammermusik. Der Abend ist das Ergebnis der Arbeit eines Semesters und bietet einen interessanten Einblick in verschiedene Epochen.\n\nLeitung: Kerstin Dill\n\nEintritt frei",
-          "rank": 685,
-          "cluster_id": 2,
-          "cluster_label": "passt mittel",
-          "match_score": 0.8589725015310293,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.014594444444444441
-            },
-            {
-              "group": "style",
-              "feature": "classic",
-              "strength": 0.014
-            },
-            {
-              "group": "emotion",
-              "feature": "relaxing",
-              "strength": 0.011657142857142857
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 3,
-      "cluster_label": "passt nicht so gut",
-      "size": 104,
-      "centroid": [
-        0.8323647498274861
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/617504",
-          "event_url": "https://www.remscheid-live.de/617504",
-          "title": "Ennepetal Karibisch",
-          "event_type": "Event",
-          "startDate": "2026-07-17T18:00:00",
-          "city": "Ennepetal",
-          "venue": "Kirmesplatz Ennepetal",
-          "performer": null,
-          "keywords": [
-            "Märkte, Messen & Feste",
-            "MARKETS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nDas Warten hat ein Ende – Ennepetal Karibisch ist wieder zurück! Das ganze Wochenende, vom 17.07.2026 bis zum 19.07.2026, gibt es Sand, Palmen, Cocktails und vieles mehr – direkt vor der eigenen Haustür!\n\n\nWie immer dürfen die exotischen Drinks und kulinarischen Köstlichkeiten nicht fehlen: von der klassischen Bratwurst, über ausgefallene Spezialitäten bis hin zu erfrischenden Cocktail-Kreationen ist wirklich für jeden was dabei. Zur Eröffnung kann sich wie jedes Jahr wieder zum traditionellen Rumtasting angemeldet werden – neue und altbekannte Sorten direkt aus der Karibik warten darauf, in Begleitung vom geschultem Rum-Sommelier getestet zu werden. ( Anmeldungen unter info@beach-festivals.de)\n\n\n\nDas Gefühl von Urlaub direkt vor der Haustür wird durch den Urlaubsstrand mitten auf dem Platz perfekt ergänzt. Bis zu 50 Tonnen Sand, Palmen, Liegestühle und das angenehme Sommerwetter versetzen jeden Besucher sofort in karibische Stimmung. Dazu gibt es täglich Live-Musik auf der Bühne am Sandstrand. Alle Gäste sind herzlich eingeladen, beim Tanzen mitzumachen oder einfach entspannt die Atmosphäre zu genießen.\n\n\n\nEin weiteres Highlight von Ennepetal Karibisch ist das Beachvolleyballturnier am Samstagvormittag: Hier verwandelt sich der Strand in einen Beachvolleyballcourt bei dem in 2er Teams gegeneinander angetreten wird. Ob Profi- oder Hobbyspieler – jeder ist herzlich willkommen! (kostenfrei, Anmeldungen unter info@beach-festivals.de)\n\n\n\nAuch die kleinsten Gäste der Karibik kommen am Wochenende nicht zu kurz: am Familiensonntag steht das Wohlergehen der Kinder ganz besonders im Fokus: Sandburgen bauen, sich zum waschechten Piraten, einer Fee oder einem Superhelden schminken lassen – alles ist möglich und der Fantasie sind keine Grenzen gesetzt!\n\nUm 13 Uhr können sich alle interessierten Kinder mit auf die geheime karibische Schatzsuche begeben, während die Eltern im Liegestuhl mit einem leckeren Cocktail in der Hand den Sonntag genießen können.\n\n\n\nNatürlich wie immer, freier Eintritt!\nbeach-projekt.de/#xl_start",
-          "rank": 686,
-          "cluster_id": 3,
-          "cluster_label": "passt nicht so gut",
-          "match_score": 0.8577129032122554,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.023486111111111107
-            },
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.017632653061224485
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.01521111111111111
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/635504",
-          "event_url": "https://www.remscheid-live.de/635504",
-          "title": "Konzertabend",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-23T19:00:00",
-          "city": "Lindlar",
-          "venue": "Kulturzentrum Lindlar",
-          "performer": null,
-          "keywords": [
-            "Klassik, Neue Musik",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nWeitere Infos:\nwww.klavierfestival-lindlar.de/events/konzertabend-6/",
-          "rank": 789,
-          "cluster_id": 3,
-          "cluster_label": "passt nicht so gut",
-          "match_score": 0.7833914251874965,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "classic",
-              "strength": 0.014466666666666668
-            },
-            {
-              "group": "emotion",
-              "feature": "relaxing",
-              "strength": 0.010628571428571428
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.008311111111111111
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 4,
-      "cluster_label": "passt gar nicht",
-      "size": 54,
-      "centroid": [
-        0.7292185230486374
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/614877",
-          "event_url": "https://www.remscheid-live.de/614877",
-          "title": "Stoner & Fuzz Night",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-04T19:00:00",
-          "city": "Wuppertal",
-          "venue": "Alte Schlosserei",
-          "performer": {
-            "@type": "Organization",
-            "name": "Kulturnacht Alte Schlosserei e.V präsentiert"
-          },
-          "keywords": [
-            "Rock",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nStarGO mit neuem Album im Gepäck.\n\nDas in Dortmund ansässige Trio „Stargo“ bietet euch eine einzigartige Mischung aus Stoner Metal, die zwischen roher Kraft, purer Emotion und kosmischen Klängen changiert. Mit unvergleichlicher Vielseitigkeit kreiert Stargo einen Sound, der sich nicht mit bloßen Standards zufrieden gibt.\n\n\n\nTFNRSH\n\nSchwerer, progressiver Psychedelic Rock aus Tübingen.\n\nSpielfreude, Kopfnicker, Warpantrieb gesteuerter Ausflug ins All.\n\nTFNRSH sind schon länger kein Geheimtipp mehr!\n\n\n\nGebt euch dieses Band Duo, ihr werdet es nicht bereuen!\n \n\nEinlass ca. 18:30 Uhr",
-          "rank": 790,
-          "cluster_id": 4,
-          "cluster_label": "passt gar nicht",
-          "match_score": 0.7790431496839605,
-          "vector_length": 46,
-          "strongest_feature_group": "audience",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.014799999999999999
-            },
-            {
-              "group": "emotion",
-              "feature": "exciting",
-              "strength": 0.010653061224489795
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.0099
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/640566",
-          "event_url": "https://www.remscheid-live.de/640566",
-          "title": "Vier minus drei",
-          "event_type": "ScreeningEvent",
-          "startDate": "2026-07-02T19:00:00",
-          "city": "Solingen",
-          "venue": "Cobra",
-          "performer": {
-            "@type": "Organization",
-            "name": "Do. 02.07. - Mi. 15.07.. (Di 19h, Mi 20h, Do-Sa 19h & So 17:30h)"
-          },
-          "keywords": [
-            "Film",
-            "FILM"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBarbara (Valerie Pachner) und ihr Partner Heli (Robert Stadlober) führen mit ihren beiden Kindern Fini und Thimo ein glückliches und liebevolles Familienleben. Als professionelle Clowns nehmen sie das Leben nicht zu ernst und wissen, dass man auch über das lachen kann, was misslingt. Als Barbara wie aus dem Nichts durch einen Unfall ihre Familie verliert, bricht eine Welt für sie zusammen. Der Verlust lässt sie am Clownsein und dem eigenen Lebenssinn zweifeln. Doch Barbara stellt sich ihrem Schicksal. Mutig und unkonventionell findet sie ihren Weg, mit der Trauer umzugehen. Schritt für Schritt erkennt sie, dass das Leben trotz allem weitergeht, wenn man es nur wagt, ihm neu zu begegnen.\n\n\n\nMit ihrer gleichnamigen Autobiografie landete Barbara Pachl-Eberhart 2010 einen Bestseller: Eindringlich und mit viel Stärke beschreibt sie darin, wie es ihr nach dem tragischen Tod ihrer Familie gelang, sich dem Leben neu zu stellen. Nun hat der für seine sehr persönlichen Filmarbeiten gefeierte Regisseur Adrian Goiginger – unter anderem ausgezeichnet mit einer Lola in Silber für DER FUCHS – diese bewegende Lebensgeschichte verfilmt. Sensibel und mit feinem Gespür für seine Charaktere, inszeniert er in VIER MINUS DREI die lebendige, hoffnungsvolle Geschichte einer Frau, die nicht aufgibt. In einer schauspielerischen Ausnahmeleistung glänzt Valerie Pachner (EIN VERBORGENES LEBEN) in der Hauptrolle der Barbara, unterstützt von Robert Stadlober (FÜHRER UND VERFÜHRER). In den weiteren starken Rollen sind Stefanie Reinsperger, Hanno Koffler und Ronald Zehrfeld zu sehen. Das Drehbuch stammt von Senad Halilbašić\nwww.youtube.com/watch?v=Gaa2PWipOLA\n\n\n\nDonnerstag\n, 02.07.\n: 19:00 Uhr | 19:00 Uhr | 19:00 Uhr\nFreitag\n, 03.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 04.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 05.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 07.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 08.07.\n: 20:00 Uhr | 20:00 Uhr\nDonnerstag\n, 09.07.\n: 19:00 Uhr | 19:00 Uhr\nFreitag\n, 10.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 11.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 12.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 14.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 15.07.\n: 20:00 Uhr | 20:00 Uhr",
-          "rank": 843,
-          "cluster_id": 4,
-          "cluster_label": "passt gar nicht",
-          "match_score": 0.5734960268570374,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.012949999999999998
-            },
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.012930555555555555
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.010266666666666665
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "selected_events": [
-    {
-      "event_id": "schema:https://www.remscheid-live.de/event/613087",
-      "event_url": "https://www.remscheid-live.de/613087",
+      "id": "schema:https://www.remscheid-live.de/event/613087",
       "title": "10. Ronsdorfer Weinfest 2026",
-      "event_type": "Event",
-      "startDate": "2026-08-21T17:00:00",
+      "description": "Der Förderverein Bandwirker-Bad und der Ronsdorfer Heimat- und Bürgerverein laden ein!\n\n\n\nAus dem Angebot: Live Acts und Tombola",
+      "start_date": "2026-08-21T17:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Bandwirkerplatz",
-      "performer": {
-        "@type": "Organization",
-        "name": "Der Förderverein Bandwirker-Bad und der Ronsdorfer Heimat- und Bürgerverein laden ein!"
-      },
-      "keywords": [
-        "Märkte, Messen & Feste",
-        "MARKETS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nDer Förderverein Bandwirker-Bad und der Ronsdorfer Heimat- und Bürgerverein laden ein!\n\n\n\nAus dem Angebot: Live Acts und Tombola",
+      "genre": "Märkte, Messen & Feste",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/613087",
       "rank": 1,
       "cluster_id": 0,
       "cluster_label": "passt am besten",
@@ -502,22 +52,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/613576",
-      "event_url": "https://www.remscheid-live.de/613576",
+      "id": "schema:https://www.remscheid-live.de/event/613576",
       "title": "Imkertag",
-      "event_type": "Event",
-      "startDate": "2026-08-09T11:00:00",
+      "description": "Beim Imkertag dreht sich alles um die faszinierende Welt der Bienen und der Imkerei. Der Imkerverein Solingen gibt anschauliche Einblicke in seine Arbeit und stellt typische Imkereiprodukte vor. Anhand eines Bienenvolks hinter Glas sowie praktischer Vorführungen werden die einzelnen Schritte der Honiggewinnung verständlich erklärt. Für das leibliche Wohl ist ebenfalls gesorgt, unter anderem mit frisch gegrillten Würstchen.\n\n\n\nDer Gartenkiosk ist für Sie geöffnet. Freuen Sie sich auf Kaffee, Kuchen und feine Kleinigkeiten.\nwww.bogasg.de\n\n\n\n\n \nwww.instagram.com/botanischer.garten.solingen.ev/",
+      "start_date": "2026-08-09T11:00:00",
+      "end_date": null,
       "city": "Solingen",
       "venue": "Botanischer Garten Solingen",
-      "performer": {
-        "@type": "Organization",
-        "name": "Die Welt der Bienen entdecken"
-      },
-      "keywords": [
-        "Natur, Gärten, Parks, Umwelt",
-        "NATURE"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBild © Stiftung Botanischer Garten Solingen e.V.\n\n\nBeim Imkertag dreht sich alles um die faszinierende Welt der Bienen und der Imkerei. Der Imkerverein Solingen gibt anschauliche Einblicke in seine Arbeit und stellt typische Imkereiprodukte vor. Anhand eines Bienenvolks hinter Glas sowie praktischer Vorführungen werden die einzelnen Schritte der Honiggewinnung verständlich erklärt. Für das leibliche Wohl ist ebenfalls gesorgt, unter anderem mit frisch gegrillten Würstchen.\n\n\n\nDer Gartenkiosk ist für Sie geöffnet. Freuen Sie sich auf Kaffee, Kuchen und feine Kleinigkeiten.\nwww.bogasg.de\n\n\n\n\n \nwww.instagram.com/botanischer.garten.solingen.ev/",
+      "genre": "Natur, Gärten, Parks, Umwelt",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/613576",
       "rank": 167,
       "cluster_id": 0,
       "cluster_label": "passt am besten",
@@ -543,19 +90,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/619057",
-      "event_url": "https://www.remscheid-live.de/619057",
+      "id": "schema:https://www.remscheid-live.de/event/619057",
       "title": "Öffentliche Führung \"Überblick\" durch den Skulpturenpark Waldfrieden",
-      "event_type": "VisualArtsEvent",
-      "startDate": "2026-07-04T15:00:00",
+      "description": "Der Rundgang bietet grundlegende Informationen rund um den Skulpturenpark und ist insbesondere für Personen, die den Park zum ersten Mal besuchen, geeignet. Erfahren Sie im Rahmen der Überblicksführung Wissenswertes zur Geschichte des Skulpturenparks, der Kunst Tony Craggs, der Architektur der Villa Waldfrieden und unseren aktuellen Wechselausstellungen.\n\n\n\n\n\nDauer: 90 Minuten\n\nTreffpunkt: Kassengebäude\n\nKosten: 5 € pro Person zzgl. Eintritt\n\n\n\nAnmeldung unter mail@skulpturenpark-waldfrieden.de\n\nTel. 0202 47898120 oder online\nskulpturenpark-waldfrieden.de/vermittlung/termine",
+      "start_date": "2026-07-04T15:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Skulpturenpark Waldfrieden",
-      "performer": null,
-      "keywords": [
-        "Vorträge & Führungen",
-        "ART"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBild © Tony Cragg, Industrial Nature, 2020 © VG Bild-Kunst Bonn 2025, Tony Cragg, Foto: Michael Richter\n\n\nDer Rundgang bietet grundlegende Informationen rund um den Skulpturenpark und ist insbesondere für Personen, die den Park zum ersten Mal besuchen, geeignet. Erfahren Sie im Rahmen der Überblicksführung Wissenswertes zur Geschichte des Skulpturenparks, der Kunst Tony Craggs, der Architektur der Villa Waldfrieden und unseren aktuellen Wechselausstellungen.\n\n\n\n\n\nDauer: 90 Minuten\n\nTreffpunkt: Kassengebäude\n\nKosten: 5 € pro Person zzgl. Eintritt\n\n\n\nAnmeldung unter mail@skulpturenpark-waldfrieden.de\n\nTel. 0202 47898120 oder online\nskulpturenpark-waldfrieden.de/vermittlung/termine",
+      "genre": "Vorträge & Führungen",
+      "category": null,
+      "schema_type": "VisualArtsEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/619057",
       "rank": 168,
       "cluster_id": 1,
       "cluster_label": "passt gut",
@@ -581,22 +128,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/634567",
-      "event_url": "https://www.remscheid-live.de/634567",
+      "id": "schema:https://www.remscheid-live.de/event/634567",
       "title": "Digitaler Kunstabend",
-      "event_type": "EducationEvent",
-      "startDate": "2026-07-08T19:00:00",
+      "description": "Jeden Monat werden neue Aspekte der aktuellen Ausstellungen beleuchtet und wissenswerte Informationen zur Geschichte des Museums und der Sammlung gegeben.\n\nDie Teilnahme ist kostenfrei!\n\nDie Zoom-Zugangsdaten gelten für alle Termine.\n\nMeeting-ID:688 9325 7748.\n\nKenncode: 913889.\n\nZoom-Führung direkt beitreten:\nwuppertal-de.zoom.us/j/68893257748?pwd=KRs7TX3sya5PtQbedVfnv4SpRt1mNs.1",
+      "start_date": "2026-07-08T19:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Von der Heydt-Museum",
-      "performer": {
-        "@type": "Organization",
-        "name": "Digitale Führung"
-      },
-      "keywords": [
-        "Online-Veranstaltungen",
-        "DIGITAL"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nJeden Monat werden neue Aspekte der aktuellen Ausstellungen beleuchtet und wissenswerte Informationen zur Geschichte des Museums und der Sammlung gegeben.\n\nDie Teilnahme ist kostenfrei!\n\nDie Zoom-Zugangsdaten gelten für alle Termine.\n\nMeeting-ID:688 9325 7748.\n\nKenncode: 913889.\n\nZoom-Führung direkt beitreten:\nwuppertal-de.zoom.us/j/68893257748?pwd=KRs7TX3sya5PtQbedVfnv4SpRt1mNs.1",
+      "genre": "Online-Veranstaltungen",
+      "category": null,
+      "schema_type": "EducationEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/634567",
       "rank": 402,
       "cluster_id": 1,
       "cluster_label": "passt gut",
@@ -622,19 +166,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/633952",
-      "event_url": "https://www.remscheid-live.de/633952",
+      "id": "schema:https://www.remscheid-live.de/event/633952",
       "title": "Kunstausstellung \"Gegenüberstellung\"",
-      "event_type": "ExhibitionEvent",
-      "startDate": "2026-07-01T00:01:00",
+      "description": "Am 8. Mai 2026 um 19:00 Uhr eröffnet im also-Hotel in Wuppertal die Ausstellung „Gegenüberstellung“ von Holger-Maria Fritsch.\n\n\n\nDie als Treppenhausausstellung konzipierte Präsentation zeigt Werke im Foyer und über mehrere Etagen hinweg. Kunstwerke treten dabei in einen spannungsvollen Dialog und eröffnen neue Perspektiven.\n\n\n\nDie Vernissage wird musikalisch begleitet von Pianist Christoph Neher.\n \n\n\n\n\n\n\n\n\n\n\n\n\nwww.instagram.com/holger_maria_fritsch\n\n\n\n\nAusstellungsdauer:\n\n08.05 - 14.06.2026\n\n\n\nÖffnungszeiten\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "start_date": "2026-07-01T00:01:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Also-Hotel an der Hardt",
-      "performer": null,
-      "keywords": [
-        "Ausstellung",
-        "EXHIBITION"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nAm 8. Mai 2026 um 19:00 Uhr eröffnet im also-Hotel in Wuppertal die Ausstellung „Gegenüberstellung“ von Holger-Maria Fritsch.\n\n\n\nDie als Treppenhausausstellung konzipierte Präsentation zeigt Werke im Foyer und über mehrere Etagen hinweg. Kunstwerke treten dabei in einen spannungsvollen Dialog und eröffnen neue Perspektiven.\n\n\n\nDie Vernissage wird musikalisch begleitet von Pianist Christoph Neher.\n \n\n\n\n\n\n\n\n\n\n\n\n\nwww.instagram.com/holger_maria_fritsch\n\n\n\n\nAusstellungsdauer:\n\n08.05 - 14.06.2026\n\n\n\nÖffnungszeiten\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "genre": "Ausstellung",
+      "category": null,
+      "schema_type": "ExhibitionEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/633952",
       "rank": 403,
       "cluster_id": 2,
       "cluster_label": "passt mittel",
@@ -660,19 +204,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/638065",
-      "event_url": "https://www.remscheid-live.de/638065",
+      "id": "schema:https://www.remscheid-live.de/event/638065",
       "title": "Kammermusikabend",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-10T19:30:00",
+      "description": "Kammermusikabend\n\n\nFr., 10.07.26\n\n19:30 Uhr, Konzertsaal, Musikhochschule Wuppertal\n\nStudierende aller Instrumentalklassen präsentieren ausgewählte Werke der Kammermusik. Der Abend ist das Ergebnis der Arbeit eines Semesters und bietet einen interessanten Einblick in verschiedene Epochen.\n\nLeitung: Kerstin Dill\n\nEintritt frei",
+      "start_date": "2026-07-10T19:30:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Hochschule für Musik und Tanz",
-      "performer": null,
-      "keywords": [
-        "Klassik, Neue Musik",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nKammermusikabend\n\n\nFr., 10.07.26\n\n19:30 Uhr, Konzertsaal, Musikhochschule Wuppertal\n\nStudierende aller Instrumentalklassen präsentieren ausgewählte Werke der Kammermusik. Der Abend ist das Ergebnis der Arbeit eines Semesters und bietet einen interessanten Einblick in verschiedene Epochen.\n\nLeitung: Kerstin Dill\n\nEintritt frei",
+      "genre": "Klassik, Neue Musik",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/638065",
       "rank": 685,
       "cluster_id": 2,
       "cluster_label": "passt mittel",
@@ -698,19 +242,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/617504",
-      "event_url": "https://www.remscheid-live.de/617504",
+      "id": "schema:https://www.remscheid-live.de/event/617504",
       "title": "Ennepetal Karibisch",
-      "event_type": "Event",
-      "startDate": "2026-07-17T18:00:00",
+      "description": "Das Warten hat ein Ende – Ennepetal Karibisch ist wieder zurück! Das ganze Wochenende, vom 17.07.2026 bis zum 19.07.2026, gibt es Sand, Palmen, Cocktails und vieles mehr – direkt vor der eigenen Haustür!\n\n\nWie immer dürfen die exotischen Drinks und kulinarischen Köstlichkeiten nicht fehlen: von der klassischen Bratwurst, über ausgefallene Spezialitäten bis hin zu erfrischenden Cocktail-Kreationen ist wirklich für jeden was dabei. Zur Eröffnung kann sich wie jedes Jahr wieder zum traditionellen Rumtasting angemeldet werden – neue und altbekannte Sorten direkt aus der Karibik warten darauf, in Begleitung vom geschultem Rum-Sommelier getestet zu werden. ( Anmeldungen unter info@beach-festivals.de)\n\n\n\nDas Gefühl von Urlaub direkt vor der Haustür wird durch den Urlaubsstrand mitten auf dem Platz perfekt ergänzt. Bis zu 50 Tonnen Sand, Palmen, Liegestühle und das angenehme Sommerwetter versetzen jeden Besucher sofort in karibische Stimmung. Dazu gibt es täglich Live-Musik auf der Bühne am Sandstrand. Alle Gäste sind herzlich eingeladen, beim Tanzen mitzumachen oder einfach entspannt die Atmosphäre zu genießen.\n\n\n\nEin weiteres Highlight von Ennepetal Karibisch ist das Beachvolleyballturnier am Samstagvormittag: Hier verwandelt sich der Strand in einen Beachvolleyballcourt bei dem in 2er Teams gegeneinander angetreten wird. Ob Profi- oder Hobbyspieler – jeder ist herzlich willkommen! (kostenfrei, Anmeldungen unter info@beach-festivals.de)\n\n\n\nAuch die kleinsten Gäste der Karibik kommen am Wochenende nicht zu kurz: am Familiensonntag steht das Wohlergehen der Kinder ganz besonders im Fokus: Sandburgen bauen, sich zum waschechten Piraten, einer Fee oder einem Superhelden schminken lassen – alles ist möglich und der Fantasie sind keine Grenzen gesetzt!\n\nUm 13 Uhr können sich alle interessierten Kinder mit auf die geheime karibische Schatzsuche begeben, während die Eltern im Liegestuhl mit einem leckeren Cocktail in der Hand den Sonntag genießen können.\n\n\n\nNatürlich wie immer, freier Eintritt!\nbeach-projekt.de/#xl_start",
+      "start_date": "2026-07-17T18:00:00",
+      "end_date": null,
       "city": "Ennepetal",
       "venue": "Kirmesplatz Ennepetal",
-      "performer": null,
-      "keywords": [
-        "Märkte, Messen & Feste",
-        "MARKETS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nDas Warten hat ein Ende – Ennepetal Karibisch ist wieder zurück! Das ganze Wochenende, vom 17.07.2026 bis zum 19.07.2026, gibt es Sand, Palmen, Cocktails und vieles mehr – direkt vor der eigenen Haustür!\n\n\nWie immer dürfen die exotischen Drinks und kulinarischen Köstlichkeiten nicht fehlen: von der klassischen Bratwurst, über ausgefallene Spezialitäten bis hin zu erfrischenden Cocktail-Kreationen ist wirklich für jeden was dabei. Zur Eröffnung kann sich wie jedes Jahr wieder zum traditionellen Rumtasting angemeldet werden – neue und altbekannte Sorten direkt aus der Karibik warten darauf, in Begleitung vom geschultem Rum-Sommelier getestet zu werden. ( Anmeldungen unter info@beach-festivals.de)\n\n\n\nDas Gefühl von Urlaub direkt vor der Haustür wird durch den Urlaubsstrand mitten auf dem Platz perfekt ergänzt. Bis zu 50 Tonnen Sand, Palmen, Liegestühle und das angenehme Sommerwetter versetzen jeden Besucher sofort in karibische Stimmung. Dazu gibt es täglich Live-Musik auf der Bühne am Sandstrand. Alle Gäste sind herzlich eingeladen, beim Tanzen mitzumachen oder einfach entspannt die Atmosphäre zu genießen.\n\n\n\nEin weiteres Highlight von Ennepetal Karibisch ist das Beachvolleyballturnier am Samstagvormittag: Hier verwandelt sich der Strand in einen Beachvolleyballcourt bei dem in 2er Teams gegeneinander angetreten wird. Ob Profi- oder Hobbyspieler – jeder ist herzlich willkommen! (kostenfrei, Anmeldungen unter info@beach-festivals.de)\n\n\n\nAuch die kleinsten Gäste der Karibik kommen am Wochenende nicht zu kurz: am Familiensonntag steht das Wohlergehen der Kinder ganz besonders im Fokus: Sandburgen bauen, sich zum waschechten Piraten, einer Fee oder einem Superhelden schminken lassen – alles ist möglich und der Fantasie sind keine Grenzen gesetzt!\n\nUm 13 Uhr können sich alle interessierten Kinder mit auf die geheime karibische Schatzsuche begeben, während die Eltern im Liegestuhl mit einem leckeren Cocktail in der Hand den Sonntag genießen können.\n\n\n\nNatürlich wie immer, freier Eintritt!\nbeach-projekt.de/#xl_start",
+      "genre": "Märkte, Messen & Feste",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/617504",
       "rank": 686,
       "cluster_id": 3,
       "cluster_label": "passt nicht so gut",
@@ -736,19 +280,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/635504",
-      "event_url": "https://www.remscheid-live.de/635504",
+      "id": "schema:https://www.remscheid-live.de/event/635504",
       "title": "Konzertabend",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-23T19:00:00",
+      "description": "Weitere Infos:\nwww.klavierfestival-lindlar.de/events/konzertabend-6/",
+      "start_date": "2026-07-23T19:00:00",
+      "end_date": null,
       "city": "Lindlar",
       "venue": "Kulturzentrum Lindlar",
-      "performer": null,
-      "keywords": [
-        "Klassik, Neue Musik",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nWeitere Infos:\nwww.klavierfestival-lindlar.de/events/konzertabend-6/",
+      "genre": "Klassik, Neue Musik",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/635504",
       "rank": 789,
       "cluster_id": 3,
       "cluster_label": "passt nicht so gut",
@@ -774,22 +318,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/614877",
-      "event_url": "https://www.remscheid-live.de/614877",
+      "id": "schema:https://www.remscheid-live.de/event/614877",
       "title": "Stoner & Fuzz Night",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-04T19:00:00",
+      "description": "StarGO mit neuem Album im Gepäck.\n\nDas in Dortmund ansässige Trio „Stargo“ bietet euch eine einzigartige Mischung aus Stoner Metal, die zwischen roher Kraft, purer Emotion und kosmischen Klängen changiert. Mit unvergleichlicher Vielseitigkeit kreiert Stargo einen Sound, der sich nicht mit bloßen Standards zufrieden gibt.\n\n\n\nTFNRSH\n\nSchwerer, progressiver Psychedelic Rock aus Tübingen.\n\nSpielfreude, Kopfnicker, Warpantrieb gesteuerter Ausflug ins All.\n\nTFNRSH sind schon länger kein Geheimtipp mehr!\n\n\n\nGebt euch dieses Band Duo, ihr werdet es nicht bereuen!\n \n\nEinlass ca. 18:30 Uhr",
+      "start_date": "2026-07-04T19:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Alte Schlosserei",
-      "performer": {
-        "@type": "Organization",
-        "name": "Kulturnacht Alte Schlosserei e.V präsentiert"
-      },
-      "keywords": [
-        "Rock",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nStarGO mit neuem Album im Gepäck.\n\nDas in Dortmund ansässige Trio „Stargo“ bietet euch eine einzigartige Mischung aus Stoner Metal, die zwischen roher Kraft, purer Emotion und kosmischen Klängen changiert. Mit unvergleichlicher Vielseitigkeit kreiert Stargo einen Sound, der sich nicht mit bloßen Standards zufrieden gibt.\n\n\n\nTFNRSH\n\nSchwerer, progressiver Psychedelic Rock aus Tübingen.\n\nSpielfreude, Kopfnicker, Warpantrieb gesteuerter Ausflug ins All.\n\nTFNRSH sind schon länger kein Geheimtipp mehr!\n\n\n\nGebt euch dieses Band Duo, ihr werdet es nicht bereuen!\n \n\nEinlass ca. 18:30 Uhr",
+      "genre": "Rock",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/614877",
       "rank": 790,
       "cluster_id": 4,
       "cluster_label": "passt gar nicht",
@@ -815,22 +356,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/640566",
-      "event_url": "https://www.remscheid-live.de/640566",
+      "id": "schema:https://www.remscheid-live.de/event/640566",
       "title": "Vier minus drei",
-      "event_type": "ScreeningEvent",
-      "startDate": "2026-07-02T19:00:00",
+      "description": "Barbara (Valerie Pachner) und ihr Partner Heli (Robert Stadlober) führen mit ihren beiden Kindern Fini und Thimo ein glückliches und liebevolles Familienleben. Als professionelle Clowns nehmen sie das Leben nicht zu ernst und wissen, dass man auch über das lachen kann, was misslingt. Als Barbara wie aus dem Nichts durch einen Unfall ihre Familie verliert, bricht eine Welt für sie zusammen. Der Verlust lässt sie am Clownsein und dem eigenen Lebenssinn zweifeln. Doch Barbara stellt sich ihrem Schicksal. Mutig und unkonventionell findet sie ihren Weg, mit der Trauer umzugehen. Schritt für Schritt erkennt sie, dass das Leben trotz allem weitergeht, wenn man es nur wagt, ihm neu zu begegnen.\n\n\n\nMit ihrer gleichnamigen Autobiografie landete Barbara Pachl-Eberhart 2010 einen Bestseller: Eindringlich und mit viel Stärke beschreibt sie darin, wie es ihr nach dem tragischen Tod ihrer Familie gelang, sich dem Leben neu zu stellen. Nun hat der für seine sehr persönlichen Filmarbeiten gefeierte Regisseur Adrian Goiginger – unter anderem ausgezeichnet mit einer Lola in Silber für DER FUCHS – diese bewegende Lebensgeschichte verfilmt. Sensibel und mit feinem Gespür für seine Charaktere, inszeniert er in VIER MINUS DREI die lebendige, hoffnungsvolle Geschichte einer Frau, die nicht aufgibt. In einer schauspielerischen Ausnahmeleistung glänzt Valerie Pachner (EIN VERBORGENES LEBEN) in der Hauptrolle der Barbara, unterstützt von Robert Stadlober (FÜHRER UND VERFÜHRER). In den weiteren starken Rollen sind Stefanie Reinsperger, Hanno Koffler und Ronald Zehrfeld zu sehen. Das Drehbuch stammt von Senad Halilbašić\nwww.youtube.com/watch?v=Gaa2PWipOLA\n\n\n\nDonnerstag\n, 02.07.\n: 19:00 Uhr | 19:00 Uhr | 19:00 Uhr\nFreitag\n, 03.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 04.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 05.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 07.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 08.07.\n: 20:00 Uhr | 20:00 Uhr\nDonnerstag\n, 09.07.\n: 19:00 Uhr | 19:00 Uhr\nFreitag\n, 10.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 11.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 12.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 14.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 15.07.\n: 20:00 Uhr | 20:00 Uhr",
+      "start_date": "2026-07-02T19:00:00",
+      "end_date": null,
       "city": "Solingen",
       "venue": "Cobra",
-      "performer": {
-        "@type": "Organization",
-        "name": "Do. 02.07. - Mi. 15.07.. (Di 19h, Mi 20h, Do-Sa 19h & So 17:30h)"
-      },
-      "keywords": [
-        "Film",
-        "FILM"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBarbara (Valerie Pachner) und ihr Partner Heli (Robert Stadlober) führen mit ihren beiden Kindern Fini und Thimo ein glückliches und liebevolles Familienleben. Als professionelle Clowns nehmen sie das Leben nicht zu ernst und wissen, dass man auch über das lachen kann, was misslingt. Als Barbara wie aus dem Nichts durch einen Unfall ihre Familie verliert, bricht eine Welt für sie zusammen. Der Verlust lässt sie am Clownsein und dem eigenen Lebenssinn zweifeln. Doch Barbara stellt sich ihrem Schicksal. Mutig und unkonventionell findet sie ihren Weg, mit der Trauer umzugehen. Schritt für Schritt erkennt sie, dass das Leben trotz allem weitergeht, wenn man es nur wagt, ihm neu zu begegnen.\n\n\n\nMit ihrer gleichnamigen Autobiografie landete Barbara Pachl-Eberhart 2010 einen Bestseller: Eindringlich und mit viel Stärke beschreibt sie darin, wie es ihr nach dem tragischen Tod ihrer Familie gelang, sich dem Leben neu zu stellen. Nun hat der für seine sehr persönlichen Filmarbeiten gefeierte Regisseur Adrian Goiginger – unter anderem ausgezeichnet mit einer Lola in Silber für DER FUCHS – diese bewegende Lebensgeschichte verfilmt. Sensibel und mit feinem Gespür für seine Charaktere, inszeniert er in VIER MINUS DREI die lebendige, hoffnungsvolle Geschichte einer Frau, die nicht aufgibt. In einer schauspielerischen Ausnahmeleistung glänzt Valerie Pachner (EIN VERBORGENES LEBEN) in der Hauptrolle der Barbara, unterstützt von Robert Stadlober (FÜHRER UND VERFÜHRER). In den weiteren starken Rollen sind Stefanie Reinsperger, Hanno Koffler und Ronald Zehrfeld zu sehen. Das Drehbuch stammt von Senad Halilbašić\nwww.youtube.com/watch?v=Gaa2PWipOLA\n\n\n\nDonnerstag\n, 02.07.\n: 19:00 Uhr | 19:00 Uhr | 19:00 Uhr\nFreitag\n, 03.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 04.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 05.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 07.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 08.07.\n: 20:00 Uhr | 20:00 Uhr\nDonnerstag\n, 09.07.\n: 19:00 Uhr | 19:00 Uhr\nFreitag\n, 10.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 11.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 12.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 14.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 15.07.\n: 20:00 Uhr | 20:00 Uhr",
+      "genre": "Film",
+      "category": null,
+      "schema_type": "ScreeningEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/640566",
       "rank": 843,
       "cluster_id": 4,
       "cluster_label": "passt gar nicht",
@@ -855,5 +393,79 @@
         }
       ]
     }
+  ],
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "cluster_label": "passt am besten",
+      "size": 167,
+      "centroid": [
+        0.9563362176011071
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/613087",
+        "schema:https://www.remscheid-live.de/event/613576"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "cluster_label": "passt gut",
+      "size": 235,
+      "centroid": [
+        0.9199041160488011
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/619057",
+        "schema:https://www.remscheid-live.de/event/634567"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_label": "passt mittel",
+      "size": 283,
+      "centroid": [
+        0.8833835428662008
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/633952",
+        "schema:https://www.remscheid-live.de/event/638065"
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_label": "passt nicht so gut",
+      "size": 104,
+      "centroid": [
+        0.8323647498274861
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/617504",
+        "schema:https://www.remscheid-live.de/event/635504"
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_label": "passt gar nicht",
+      "size": 54,
+      "centroid": [
+        0.7292185230486374
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/614877",
+        "schema:https://www.remscheid-live.de/event/640566"
+      ]
+    }
+  ],
+  "selected_event_ids": [
+    "schema:https://www.remscheid-live.de/event/613087",
+    "schema:https://www.remscheid-live.de/event/613576",
+    "schema:https://www.remscheid-live.de/event/619057",
+    "schema:https://www.remscheid-live.de/event/634567",
+    "schema:https://www.remscheid-live.de/event/633952",
+    "schema:https://www.remscheid-live.de/event/638065",
+    "schema:https://www.remscheid-live.de/event/617504",
+    "schema:https://www.remscheid-live.de/event/635504",
+    "schema:https://www.remscheid-live.de/event/614877",
+    "schema:https://www.remscheid-live.de/event/640566"
   ]
 }

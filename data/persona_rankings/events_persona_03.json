@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T20:34:18.403317Z",
+  "generated_at": "2026-05-26T07:09:26.367467Z",
   "source": {
     "personas_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\personas.json",
     "db_path": "C:\\Users\\JanaR\\Desktop\\remscheid\\events.db",
@@ -12,459 +12,21 @@
   "persona_name": "Nadia",
   "cluster_count_requested": 5,
   "cluster_count_actual": 5,
-  "clusters": [
+  "events": [
     {
-      "cluster_id": 0,
-      "cluster_label": "passt am besten",
-      "size": 368,
-      "centroid": [
-        0.9603062494800093
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/639389",
-          "event_url": "https://www.remscheid-live.de/639389",
-          "title": "Sommerfest",
-          "event_type": "Event",
-          "startDate": "2026-07-10T17:00:00",
-          "city": "Solingen",
-          "venue": "Freiwiliige Feuerwehr - Löscheinheit 3",
-          "performer": null,
-          "keywords": [
-            "Märkte, Messen & Feste",
-            "MARKETS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nNeben heißem Essen und coolen Cocktails wird mit Musik und Show für Unterhaltung gesorgt. Kinderschminken sowie eine Hüpfburg sorgen für ein abgerundetes Gesamtpaket. Außerdem erwartet Euch Feuerwehrtechnik zum Anfassen. Live-Musik erwartet euch in diesem Jahr sowohl am Freitagabend als auch am Samstagabend\n \n\n\n10.07. - 12.07.2026\nFreitag: 17:00 - 00:00 Uhr\n\nSamstag: 11:00 - 00:00 Uhr\n\nSonntag: 11:00 - 16:00 Uhr\n\n\n\nFreitagabend „Maike and the Waiters“\n\nSamstagabend „Juicy Souls“",
-          "rank": 1,
-          "cluster_id": 0,
-          "cluster_label": "passt am besten",
-          "match_score": 0.9875306273068819,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.020305555555555552
-            },
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.01803061224489796
-            },
-            {
-              "group": "emotion",
-              "feature": "exciting",
-              "strength": 0.011326530612244897
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/410215",
-          "event_url": "https://www.remscheid-live.de/410215",
-          "title": "Haus Bürgel - Römisches Museum",
-          "event_type": "Event",
-          "startDate": "2026-05-18T06:00:00",
-          "city": "Monheim am Rhein",
-          "venue": "Haus Bürgel - Römisches Museum",
-          "performer": null,
-          "keywords": [
-            "Museen",
-            "MUSEUMS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n„Haus Bürgel“ befindet sich auf dem Gebiet eines ehemaligen römischen Kastells am Niedergermanischen Limes. Heute ist es Standort eines archäologische Museums sowie der Biologischen Station des Kreises Mettmann und der Stadt Düsseldorf. Die Ausstellung des römischen Museums befindet sich in den Räumen des denkmalgeschützten Herrenhauses. Im Innenhof des Museums ist der Nachbau eines originalen, römischen Steinbackofens zu besichtigen. \nAuf dem gesamten Museumsgelände macht ein archäologischer Pfad die Lage des ehemaligen Kastells sichtbar. Mittels verschiedener Stationen führt der Weg die Besucher entlang der historischen Kastellmauern und zeichnet mittels Pflasterungen eindrucksvoll die Lage des Osttors, mehrerer der ehemals zwölf Rundtürme und des einstigen Kastellbades ab.\nhausbuergel.de/roemisches-museum\n\n\n\n\nÖffnungszeiten\n\n\n\n\nDas Museum ist samstags, sonntags und feiertags von 10 bis 18 Uhr geöffnet.\n\n\n\nZwischen dem 1. Dezember und dem 31. Januar ist eine zweimonatige Winterpause.\n\n\n\nFührungen sowie Programme für Schulklassen und Kindergruppen sind auch abseits der Öffnungszeiten auf Anfrage möglich.\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
-          "rank": 368,
-          "cluster_id": 0,
-          "cluster_label": "passt am besten",
-          "match_score": 0.9323548271331787,
-          "vector_length": 46,
-          "strongest_feature_group": "audience",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.013694444444444441
-            },
-            {
-              "group": "environment",
-              "feature": "historic",
-              "strength": 0.012499999999999999
-            },
-            {
-              "group": "style",
-              "feature": "classic",
-              "strength": 0.011
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 1,
-      "cluster_label": "passt gut",
-      "size": 173,
-      "centroid": [
-        0.9033356068307126
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/639720",
-          "event_url": "https://www.remscheid-live.de/639720",
-          "title": "Bingo Baby",
-          "event_type": "TheaterEvent",
-          "startDate": "2026-07-04T19:00:00",
-          "city": "Wuppertal",
-          "venue": "Escape Center - Out of the Box",
-          "performer": null,
-          "keywords": [
-            "Show",
-            "SHOW"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nAm 04. Juli um 19:00\n\nDer beinahe legendäre Bingo-Abend –\n\nTickets gibt es hier \nhttps://gstoo.de/BINGO726\n\n\n\n\nLust auf ein bisschen britischen Wahnsinn? Dann seid dabei, wenn wir unser Bar/Café in eine ausgelassene Bingo-Arena verwandeln! Inspiriert vom aktuellen Bingo-Trend in England, wo junge Leute mit einem Drink in der Hand laut „BINGO!“ rufen, feiern wir einen Abend voller Spaß, Spannung und – natürlich – alkoholischer Begleitung. Es wird gelacht, gejubelt, geprostet und vielleicht auch mal ein bisschen geflirtet. Denn Bingo ist schon lange kein Senioren-Sport mehr – es ist Party mit Zahlen, Getränken und jeder Menge guter Laune! Zu gewinnen gibt es bemerkenswerte Preise – passend zum Motto des Abends – britisch-stilvoll, flüssig oder unbezahlbar. Abgerundet durch unser jetzt schon traditionelles Song-Quiz!\n\nAch so: weil wir wissen, dass zum Glück auch etwas Flüssiges dazugehört, haben wir ein Getränke-Special für euch: Der „Lucky Number Spritz“ – ein spritziger Mix aus Prosecco, Holunderblüte, einem Hauch Limette und einem geheimen Schuss Glück. Erfrischend, verspielt und garantiert bingo-tauglich!\n\nWir spielen 4 Runden, jeweils um 19.00 Uhr, 20.00 Uhr und 21.00 Uhr. Also kommt vorbei, denn: Wer nicht spielt, hat schon verloren!\n\nTickets für unseren Bingo-Abend kosten im Vorverkauf 9 EUR und Ihr erhaltet für jede Runde eine Bingo-Karte. Und wenn Ihr Eure Chance in neue Umlaufbahnen schießen wollt, könnt Ihr natürlich am Abend weitere Karten für jeweils 3 EUR kaufen.\nescape-center.plus/event/bingo-baby-im-mai/",
-          "rank": 369,
-          "cluster_id": 1,
-          "cluster_label": "passt gut",
-          "match_score": 0.931763966231636,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.01880612244897959
-            },
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.016999999999999998
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.016444444444444442
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/410108",
-          "event_url": "https://www.remscheid-live.de/410108",
-          "title": "Laurel & Hardy Museum",
-          "event_type": "Event",
-          "startDate": "2026-05-18T06:00:00",
-          "city": "Solingen",
-          "venue": "Laurel & Hardy-Museum",
-          "performer": null,
-          "keywords": [
-            "Museen",
-            "MUSEUMS"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nDas Laurel & Hardy Museum ist eines von weltweit nur dreien, die sich mit dem Werk des Komikerduos „Dick & Doof“ befassen. \n\n\nAus aller Welt haben Vera und Wolfgang Günther die Ausstellungsstücke für ihr Museum zusammengetragen. Die beiden Solinger sind Experten in Sachen Stan & Olli und haben  aus ihrer Leidenschaft zum amerikanischen Slapstick der Stummfilm- und frühen Tonfilmzeit ein Museum gemacht. \n\n\n\nDas Herzstück der Sammlung sind die zahlreichen Filme des Komiker-Duos, aus denen sich die Besucher ihr eigenes Programm zusammenstellen und dann anschauen können. Daneben gibt es auch eine Vielzahl an Exponaten rund um das Werk der beiden Künstler zu sehen: Filmplakate, Fotos, Programme, Presseartikel, Plastiken sowie verschiedene private Dokumente zum Staunen und Schmunzeln. \n \n\n\nÖffnungszeiten\n\n\nDas Museum ist an jedem letzten Wochenende im Monat geöffnet:\n\nSamstag: 12.00 Uhr bis 17.00 Uhr \n\nSonntag:  11.00 Uhr bis 17.00 Uhr\n\n\n\nBesuche außerhalb dieser Öffnungszeiten und Gruppenbesuche nach Absprache.\n\n\n\n\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.\nwww.laurel-hardy-museum.de",
-          "rank": 541,
-          "cluster_id": 1,
-          "cluster_label": "passt gut",
-          "match_score": 0.8699956008845238,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "emotion",
-              "feature": "humorous",
-              "strength": 0.015999999999999997
-            },
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.015897959183673465
-            },
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.01345833333333333
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 2,
-      "cluster_label": "passt mittel",
-      "size": 141,
-      "centroid": [
-        0.8348023015790383
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/640156",
-          "event_url": "https://www.remscheid-live.de/640156",
-          "title": "Fingerspiele",
-          "event_type": "TheaterEvent",
-          "startDate": "2026-07-03T20:00:00",
-          "city": "Wuppertal",
-          "venue": "Zaubertheater Wiepen",
-          "performer": null,
-          "keywords": [
-            "Zauber & Magie",
-            "SHOW"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nSo nah an der Zauberkunst waren Sie noch nie! Erleben Sie die Meisterwerke der Magie hautnah. Diese Show vereint die magischen Highlights und Raritäten – neu und humorvoll interpretiert.\n \n\nAltersempfehlung: ab 12 \n\n\n\n\n\nWeiter Infos:\nzaubertheater-wuppertal.de",
-          "rank": 542,
-          "cluster_id": 2,
-          "cluster_label": "passt mittel",
-          "match_score": 0.8687393866806226,
-          "vector_length": 46,
-          "strongest_feature_group": "emotion",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.01794444444444444
-            },
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.015122448979591837
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.013999999999999999
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/637595",
-          "event_url": "https://www.remscheid-live.de/637595",
-          "title": "Gedichte für Kinder - und Erwachsene",
-          "event_type": "LiteraryEvent",
-          "startDate": "2026-07-05T15:00:00",
-          "city": "Schwelm",
-          "venue": "Brauerei Schwelm",
-          "performer": null,
-          "keywords": [
-            "Literatur, Lesung, Hörspiel",
-            "READING"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nZu diesem Termin liegen uns leider keine weiteren Informationen vor.\nEinlass ca. 14:30 Uhr",
-          "rank": 682,
-          "cluster_id": 2,
-          "cluster_label": "passt mittel",
-          "match_score": 0.7950977418184564,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.01345833333333333
-            },
-            {
-              "group": "emotion",
-              "feature": "joyful",
-              "strength": 0.011244897959183672
-            },
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.010888888888888889
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 3,
-      "cluster_label": "passt nicht so gut",
-      "size": 121,
-      "centroid": [
-        0.7504591910707449
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/410124",
-          "event_url": "https://www.remscheid-live.de/410124",
-          "title": "Von der Heydt-Museum",
-          "event_type": "Event",
-          "startDate": "2026-05-18T06:00:00",
-          "city": "Wuppertal",
-          "venue": "Von der Heydt-Museum",
-          "performer": null,
-          "keywords": [
-            "Stadtführungen, Erlebnisführungen, Sightseeing",
-            "GUIDED_TOUR"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\n\n\nMit weltbekannten Werken der niederländischen Malerei und des 19. Jahrhunderts, mit Gemälden von Claude Monet, Franz Marc, Ernst Ludwig Kirchner und Otto Dix, Pablo Picasso und Francis Bacon gehört das Von der Heydt-Museum zu den international renommierten Kunstorten Deutschlands. Über 2000 Gemälde, 500 Skulpturen und 30.000 grafische Blätter gehören zum Bestand, der in wechselnden großen Ausstellungen präsentiert wird.\n \n\n\nÖffnungszeiten\n\n\n\n\nDi-Fr 11-18 Uhr\n\nDo 11-20 Uhr\n\nSa + So 11-18 Uhr\n\nMo geschlossen\n\n\n\n\n\nWeitere Infos zu Öffnungszeiten an Feiertagen:\nwww.von-der-heydt-museum.de/oeffnungszeiten.html\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.\nvon-der-heydt-museum.de/",
-          "rank": 683,
-          "cluster_id": 3,
-          "cluster_label": "passt nicht so gut",
-          "match_score": 0.7925243596370308,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.018666666666666665
-            },
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.014638888888888889
-            },
-            {
-              "group": "style",
-              "feature": "classic",
-              "strength": 0.011499999999999998
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/635514",
-          "event_url": "https://www.remscheid-live.de/635514",
-          "title": "Kirchenkonzert",
-          "event_type": "MusicEvent",
-          "startDate": "2026-07-26T17:00:00",
-          "city": "Lindlar",
-          "venue": "St. Severin",
-          "performer": null,
-          "keywords": [
-            "Klassik, Neue Musik",
-            "CONCERT"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nWeitere Infos:\nwww.klavierfestival-lindlar.de/\n\n\n\n\n \nwww.klavierfestival-lindlar.de/events/kirchenkonzert-6/",
-          "rank": 803,
-          "cluster_id": 3,
-          "cluster_label": "passt nicht so gut",
-          "match_score": 0.6977462655202107,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "historic",
-              "strength": 0.011375
-            },
-            {
-              "group": "style",
-              "feature": "classic",
-              "strength": 0.01125
-            },
-            {
-              "group": "emotion",
-              "feature": "relaxing",
-              "strength": 0.009816326530612244
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cluster_id": 4,
-      "cluster_label": "passt gar nicht",
-      "size": 40,
-      "centroid": [
-        0.6305774106180927
-      ],
-      "selected_events": [
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/639020",
-          "event_url": "https://www.remscheid-live.de/639020",
-          "title": "THERE | WHERE // KOLLEKTIV | ELEVEN",
-          "event_type": "DanceEvent",
-          "startDate": "2026-07-02T19:30:00",
-          "city": "Wuppertal",
-          "venue": "INSEL",
-          "performer": {
-            "@type": "Organization",
-            "name": "INSEL"
-          },
-          "keywords": [
-            "Tanz & Tanztheater",
-            "DANCE"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBild © André Symann\n\n\nINSEL\n\nTHERE | WHERE // KOLLEKTIV | ELEVEN \n\nINSEL Tanztheater\n\nDonnerstag / 02. Juli 2026 / 19:30 Uhr (Einlass: 19 Uhr)\n\nEintritt: 14/8 (VVK inkl. Gebühren) und 16/9 (AK)\n\n\n\nFür Besucher*innen unter 21 Jahren ist der Eintritt frei. Bitte sendet uns bei Interesse eine kurze Nachricht an post@insel.news.\n\n\n\nHINWEIS: Die Inszenierung ist für Kinder unter 10 Jahren nicht geeignet.\n\n\n\n\"In THERE | WHERE setzen wir unsere Trilogie über den Limbus fort – einen Zwischenraum der Ungewissheit, geprägt von Schwebezuständen und existenziellen Entscheidungen. Inspiriert von La sociedad de la nieve reflektieren wir das Verharren an einem unwirtlichen Ort, an dem Leben, Hoffnung und Moral in fragiler Balance stehen. Diese abendfüllende Tanztheater-Performance untersucht den Raum zwischen Sein und Werden, zwischen Passivität und Widerstand – einem Ort, an dem Zeit und Richtung verschwimmen. So möchten wir eine Reflexion unserer kollektiven Realität eröffnen, in der Ungewissheit, Verlust und Entscheidung als Teil des menschlichen Daseins erfahrbar werden. THERE | WHERE lädt das Publikum dazu ein, diese Grenzerfahrung zu betreten und sich zu fragen: Wohin führt der nächste Schritt?\"\n\n\n\nKOLLEKTIV | ELEVEN vereint Künstler*innen aus Tanz, Musik, Dramaturgie und Lichtdesign und hat seinen Sitz im Ruhrgebiet und im Bergischen Land. Lara Pilloni, Julia Monschau, Frederico Mendes Teixeira, Álvaro Severino und Julio Ernesto Escobar Mellado entwickeln gemeinsam interdisziplinäre Arbeiten, in denen Bewegung, Klang und Raum aufeinandertreffen. Unterschiedliche kulturelle Hintergründe prägen den kollaborativen künstlerischen Prozess.\n\n\n\nTanz | Choreografie | Konzept | Lara Pilloni, Julia Monschau\n\nMusik | Sounddesign | Álvaro Severino\n\nDramaturgie | Projektassistenz | Frederico Mendes Teixeira\n\nLichtdesign | Julio Ernesto Escobar Mellado\n\nText | Nefeli Papanastasopoulou\n\nFotos | André Symann\n\nDauer | 45 Minuten\n\nGefördert durch | Kulturamt Essen | Bergischer Kulturfonds | Stiftung Kalkwerke Oetelshofen\n\nEine Kooperation von INSEL | IG Tanz Essen | .dott – Dortmunder Tanz- und Theaterszene.\n\n___\n \n\n\n \nwww.insel.news\n\n\n\nEinlass ca. 19:00 Uhr",
-          "rank": 804,
-          "cluster_id": 4,
-          "cluster_label": "passt gar nicht",
-          "match_score": 0.6895977073354623,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.016444444444444442
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.014666666666666666
-            },
-            {
-              "group": "emotion",
-              "feature": "exciting",
-              "strength": 0.010408163265306122
-            }
-          ]
-        },
-        {
-          "event_id": "schema:https://www.remscheid-live.de/event/640566",
-          "event_url": "https://www.remscheid-live.de/640566",
-          "title": "Vier minus drei",
-          "event_type": "ScreeningEvent",
-          "startDate": "2026-07-02T19:00:00",
-          "city": "Solingen",
-          "venue": "Cobra",
-          "performer": {
-            "@type": "Organization",
-            "name": "Do. 02.07. - Mi. 15.07.. (Di 19h, Mi 20h, Do-Sa 19h & So 17:30h)"
-          },
-          "keywords": [
-            "Film",
-            "FILM"
-          ],
-          "description": "Infos\n\t\t\t\t\n\n\nBarbara (Valerie Pachner) und ihr Partner Heli (Robert Stadlober) führen mit ihren beiden Kindern Fini und Thimo ein glückliches und liebevolles Familienleben. Als professionelle Clowns nehmen sie das Leben nicht zu ernst und wissen, dass man auch über das lachen kann, was misslingt. Als Barbara wie aus dem Nichts durch einen Unfall ihre Familie verliert, bricht eine Welt für sie zusammen. Der Verlust lässt sie am Clownsein und dem eigenen Lebenssinn zweifeln. Doch Barbara stellt sich ihrem Schicksal. Mutig und unkonventionell findet sie ihren Weg, mit der Trauer umzugehen. Schritt für Schritt erkennt sie, dass das Leben trotz allem weitergeht, wenn man es nur wagt, ihm neu zu begegnen.\n\n\n\nMit ihrer gleichnamigen Autobiografie landete Barbara Pachl-Eberhart 2010 einen Bestseller: Eindringlich und mit viel Stärke beschreibt sie darin, wie es ihr nach dem tragischen Tod ihrer Familie gelang, sich dem Leben neu zu stellen. Nun hat der für seine sehr persönlichen Filmarbeiten gefeierte Regisseur Adrian Goiginger – unter anderem ausgezeichnet mit einer Lola in Silber für DER FUCHS – diese bewegende Lebensgeschichte verfilmt. Sensibel und mit feinem Gespür für seine Charaktere, inszeniert er in VIER MINUS DREI die lebendige, hoffnungsvolle Geschichte einer Frau, die nicht aufgibt. In einer schauspielerischen Ausnahmeleistung glänzt Valerie Pachner (EIN VERBORGENES LEBEN) in der Hauptrolle der Barbara, unterstützt von Robert Stadlober (FÜHRER UND VERFÜHRER). In den weiteren starken Rollen sind Stefanie Reinsperger, Hanno Koffler und Ronald Zehrfeld zu sehen. Das Drehbuch stammt von Senad Halilbašić\nwww.youtube.com/watch?v=Gaa2PWipOLA\n\n\n\nDonnerstag\n, 02.07.\n: 19:00 Uhr | 19:00 Uhr | 19:00 Uhr\nFreitag\n, 03.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 04.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 05.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 07.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 08.07.\n: 20:00 Uhr | 20:00 Uhr\nDonnerstag\n, 09.07.\n: 19:00 Uhr | 19:00 Uhr\nFreitag\n, 10.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 11.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 12.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 14.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 15.07.\n: 20:00 Uhr | 20:00 Uhr",
-          "rank": 843,
-          "cluster_id": 4,
-          "cluster_label": "passt gar nicht",
-          "match_score": 0.4986891453457875,
-          "vector_length": 46,
-          "strongest_feature_group": "style",
-          "top_shared_features": [
-            {
-              "group": "environment",
-              "feature": "urban",
-              "strength": 0.013999999999999999
-            },
-            {
-              "group": "style",
-              "feature": "contemporary",
-              "strength": 0.012833333333333334
-            },
-            {
-              "group": "style",
-              "feature": "mainstream",
-              "strength": 0.011569444444444445
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "selected_events": [
-    {
-      "event_id": "schema:https://www.remscheid-live.de/event/639389",
-      "event_url": "https://www.remscheid-live.de/639389",
+      "id": "schema:https://www.remscheid-live.de/event/639389",
       "title": "Sommerfest",
-      "event_type": "Event",
-      "startDate": "2026-07-10T17:00:00",
+      "description": "Neben heißem Essen und coolen Cocktails wird mit Musik und Show für Unterhaltung gesorgt. Kinderschminken sowie eine Hüpfburg sorgen für ein abgerundetes Gesamtpaket. Außerdem erwartet Euch Feuerwehrtechnik zum Anfassen. Live-Musik erwartet euch in diesem Jahr sowohl am Freitagabend als auch am Samstagabend\n10.07. - 12.07.2026\nFreitag: 17:00 - 00:00 Uhr\nSamstag: 11:00 - 00:00 Uhr\nSonntag: 11:00 - 16:00 Uhr\nFreitagabend „Maike and the Waiters“\nSamstagabend „Juicy Souls“",
+      "start_date": "2026-07-10T17:00:00",
+      "end_date": null,
       "city": "Solingen",
       "venue": "Freiwiliige Feuerwehr - Löscheinheit 3",
-      "performer": null,
-      "keywords": [
-        "Märkte, Messen & Feste",
-        "MARKETS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nNeben heißem Essen und coolen Cocktails wird mit Musik und Show für Unterhaltung gesorgt. Kinderschminken sowie eine Hüpfburg sorgen für ein abgerundetes Gesamtpaket. Außerdem erwartet Euch Feuerwehrtechnik zum Anfassen. Live-Musik erwartet euch in diesem Jahr sowohl am Freitagabend als auch am Samstagabend\n \n\n\n10.07. - 12.07.2026\nFreitag: 17:00 - 00:00 Uhr\n\nSamstag: 11:00 - 00:00 Uhr\n\nSonntag: 11:00 - 16:00 Uhr\n\n\n\nFreitagabend „Maike and the Waiters“\n\nSamstagabend „Juicy Souls“",
+      "genre": "Märkte, Messen & Feste",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/639389",
       "rank": 1,
       "cluster_id": 0,
       "cluster_label": "passt am besten",
@@ -490,19 +52,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/410215",
-      "event_url": "https://www.remscheid-live.de/410215",
+      "id": "schema:https://www.remscheid-live.de/event/410215",
       "title": "Haus Bürgel - Römisches Museum",
-      "event_type": "Event",
-      "startDate": "2026-05-18T06:00:00",
+      "description": "„Haus Bürgel“ befindet sich auf dem Gebiet eines ehemaligen römischen Kastells am Niedergermanischen Limes. Heute ist es Standort eines archäologische Museums sowie der Biologischen Station des Kreises Mettmann und der Stadt Düsseldorf. Die Ausstellung des römischen Museums befindet sich in den Räumen des denkmalgeschützten Herrenhauses. Im Innenhof des Museums ist der Nachbau eines originalen, römischen Steinbackofens zu besichtigen.\nAuf dem gesamten Museumsgelände macht ein archäologischer Pfad die Lage des ehemaligen Kastells sichtbar. Mittels verschiedener Stationen führt der Weg die Besucher entlang der historischen Kastellmauern und zeichnet mittels Pflasterungen eindrucksvoll die Lage des Osttors, mehrerer der ehemals zwölf Rundtürme und des einstigen Kastellbades ab.\nhausbuergel.de/roemisches-museum\nÖffnungszeiten\nDas Museum ist samstags, sonntags und feiertags von 10 bis 18 Uhr geöffnet.\nZwischen dem 1. Dezember und dem 31. Januar ist eine zweimonatige Winterpause.\nFührungen sowie Programme für Schulklassen und Kindergruppen sind auch abseits der Öffnungszeiten auf Anfrage möglich.\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "start_date": "2026-05-18T06:00:00",
+      "end_date": null,
       "city": "Monheim am Rhein",
       "venue": "Haus Bürgel - Römisches Museum",
-      "performer": null,
-      "keywords": [
-        "Museen",
-        "MUSEUMS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n„Haus Bürgel“ befindet sich auf dem Gebiet eines ehemaligen römischen Kastells am Niedergermanischen Limes. Heute ist es Standort eines archäologische Museums sowie der Biologischen Station des Kreises Mettmann und der Stadt Düsseldorf. Die Ausstellung des römischen Museums befindet sich in den Räumen des denkmalgeschützten Herrenhauses. Im Innenhof des Museums ist der Nachbau eines originalen, römischen Steinbackofens zu besichtigen. \nAuf dem gesamten Museumsgelände macht ein archäologischer Pfad die Lage des ehemaligen Kastells sichtbar. Mittels verschiedener Stationen führt der Weg die Besucher entlang der historischen Kastellmauern und zeichnet mittels Pflasterungen eindrucksvoll die Lage des Osttors, mehrerer der ehemals zwölf Rundtürme und des einstigen Kastellbades ab.\nhausbuergel.de/roemisches-museum\n\n\n\n\nÖffnungszeiten\n\n\n\n\nDas Museum ist samstags, sonntags und feiertags von 10 bis 18 Uhr geöffnet.\n\n\n\nZwischen dem 1. Dezember und dem 31. Januar ist eine zweimonatige Winterpause.\n\n\n\nFührungen sowie Programme für Schulklassen und Kindergruppen sind auch abseits der Öffnungszeiten auf Anfrage möglich.\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.",
+      "genre": "Museen",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/410215",
       "rank": 368,
       "cluster_id": 0,
       "cluster_label": "passt am besten",
@@ -528,19 +90,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/639720",
-      "event_url": "https://www.remscheid-live.de/639720",
+      "id": "schema:https://www.remscheid-live.de/event/639720",
       "title": "Bingo Baby",
-      "event_type": "TheaterEvent",
-      "startDate": "2026-07-04T19:00:00",
+      "description": "Am 04. Juli um 19:00\nDer beinahe legendäre Bingo-Abend –\nTickets gibt es hier \nhttps://gstoo.de/BINGO726\nLust auf ein bisschen britischen Wahnsinn? Dann seid dabei, wenn wir unser Bar/Café in eine ausgelassene Bingo-Arena verwandeln! Inspiriert vom aktuellen Bingo-Trend in England, wo junge Leute mit einem Drink in der Hand laut „BINGO!“ rufen, feiern wir einen Abend voller Spaß, Spannung und – natürlich – alkoholischer Begleitung. Es wird gelacht, gejubelt, geprostet und vielleicht auch mal ein bisschen geflirtet. Denn Bingo ist schon lange kein Senioren-Sport mehr – es ist Party mit Zahlen, Getränken und jeder Menge guter Laune! Zu gewinnen gibt es bemerkenswerte Preise – passend zum Motto des Abends – britisch-stilvoll, flüssig oder unbezahlbar. Abgerundet durch unser jetzt schon traditionelles Song-Quiz!\nAch so: weil wir wissen, dass zum Glück auch etwas Flüssiges dazugehört, haben wir ein Getränke-Special für euch: Der „Lucky Number Spritz“ – ein spritziger Mix aus Prosecco, Holunderblüte, einem Hauch Limette und einem geheimen Schuss Glück. Erfrischend, verspielt und garantiert bingo-tauglich!\nWir spielen 4 Runden, jeweils um 19.00 Uhr, 20.00 Uhr und 21.00 Uhr. Also kommt vorbei, denn: Wer nicht spielt, hat schon verloren!\nTickets für unseren Bingo-Abend kosten im Vorverkauf 9 EUR und Ihr erhaltet für jede Runde eine Bingo-Karte. Und wenn Ihr Eure Chance in neue Umlaufbahnen schießen wollt, könnt Ihr natürlich am Abend weitere Karten für jeweils 3 EUR kaufen.\nescape-center.plus/event/bingo-baby-im-mai/",
+      "start_date": "2026-07-04T19:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Escape Center - Out of the Box",
-      "performer": null,
-      "keywords": [
-        "Show",
-        "SHOW"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nAm 04. Juli um 19:00\n\nDer beinahe legendäre Bingo-Abend –\n\nTickets gibt es hier \nhttps://gstoo.de/BINGO726\n\n\n\n\nLust auf ein bisschen britischen Wahnsinn? Dann seid dabei, wenn wir unser Bar/Café in eine ausgelassene Bingo-Arena verwandeln! Inspiriert vom aktuellen Bingo-Trend in England, wo junge Leute mit einem Drink in der Hand laut „BINGO!“ rufen, feiern wir einen Abend voller Spaß, Spannung und – natürlich – alkoholischer Begleitung. Es wird gelacht, gejubelt, geprostet und vielleicht auch mal ein bisschen geflirtet. Denn Bingo ist schon lange kein Senioren-Sport mehr – es ist Party mit Zahlen, Getränken und jeder Menge guter Laune! Zu gewinnen gibt es bemerkenswerte Preise – passend zum Motto des Abends – britisch-stilvoll, flüssig oder unbezahlbar. Abgerundet durch unser jetzt schon traditionelles Song-Quiz!\n\nAch so: weil wir wissen, dass zum Glück auch etwas Flüssiges dazugehört, haben wir ein Getränke-Special für euch: Der „Lucky Number Spritz“ – ein spritziger Mix aus Prosecco, Holunderblüte, einem Hauch Limette und einem geheimen Schuss Glück. Erfrischend, verspielt und garantiert bingo-tauglich!\n\nWir spielen 4 Runden, jeweils um 19.00 Uhr, 20.00 Uhr und 21.00 Uhr. Also kommt vorbei, denn: Wer nicht spielt, hat schon verloren!\n\nTickets für unseren Bingo-Abend kosten im Vorverkauf 9 EUR und Ihr erhaltet für jede Runde eine Bingo-Karte. Und wenn Ihr Eure Chance in neue Umlaufbahnen schießen wollt, könnt Ihr natürlich am Abend weitere Karten für jeweils 3 EUR kaufen.\nescape-center.plus/event/bingo-baby-im-mai/",
+      "genre": "Show",
+      "category": null,
+      "schema_type": "TheaterEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/639720",
       "rank": 369,
       "cluster_id": 1,
       "cluster_label": "passt gut",
@@ -566,19 +128,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/410108",
-      "event_url": "https://www.remscheid-live.de/410108",
+      "id": "schema:https://www.remscheid-live.de/event/410108",
       "title": "Laurel & Hardy Museum",
-      "event_type": "Event",
-      "startDate": "2026-05-18T06:00:00",
+      "description": "Das Laurel & Hardy Museum ist eines von weltweit nur dreien, die sich mit dem Werk des Komikerduos „Dick & Doof“ befassen.\nAus aller Welt haben Vera und Wolfgang Günther die Ausstellungsstücke für ihr Museum zusammengetragen. Die beiden Solinger sind Experten in Sachen Stan & Olli und haben  aus ihrer Leidenschaft zum amerikanischen Slapstick der Stummfilm- und frühen Tonfilmzeit ein Museum gemacht.\nDas Herzstück der Sammlung sind die zahlreichen Filme des Komiker-Duos, aus denen sich die Besucher ihr eigenes Programm zusammenstellen und dann anschauen können. Daneben gibt es auch eine Vielzahl an Exponaten rund um das Werk der beiden Künstler zu sehen: Filmplakate, Fotos, Programme, Presseartikel, Plastiken sowie verschiedene private Dokumente zum Staunen und Schmunzeln.\nÖffnungszeiten\nDas Museum ist an jedem letzten Wochenende im Monat geöffnet:\nSamstag: 12.00 Uhr bis 17.00 Uhr\nSonntag:  11.00 Uhr bis 17.00 Uhr\nBesuche außerhalb dieser Öffnungszeiten und Gruppenbesuche nach Absprache.\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten\nwww.laurel-hardy-museum.de",
+      "start_date": "2026-05-18T06:00:00",
+      "end_date": null,
       "city": "Solingen",
       "venue": "Laurel & Hardy-Museum",
-      "performer": null,
-      "keywords": [
-        "Museen",
-        "MUSEUMS"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nDas Laurel & Hardy Museum ist eines von weltweit nur dreien, die sich mit dem Werk des Komikerduos „Dick & Doof“ befassen. \n\n\nAus aller Welt haben Vera und Wolfgang Günther die Ausstellungsstücke für ihr Museum zusammengetragen. Die beiden Solinger sind Experten in Sachen Stan & Olli und haben  aus ihrer Leidenschaft zum amerikanischen Slapstick der Stummfilm- und frühen Tonfilmzeit ein Museum gemacht. \n\n\n\nDas Herzstück der Sammlung sind die zahlreichen Filme des Komiker-Duos, aus denen sich die Besucher ihr eigenes Programm zusammenstellen und dann anschauen können. Daneben gibt es auch eine Vielzahl an Exponaten rund um das Werk der beiden Künstler zu sehen: Filmplakate, Fotos, Programme, Presseartikel, Plastiken sowie verschiedene private Dokumente zum Staunen und Schmunzeln. \n \n\n\nÖffnungszeiten\n\n\nDas Museum ist an jedem letzten Wochenende im Monat geöffnet:\n\nSamstag: 12.00 Uhr bis 17.00 Uhr \n\nSonntag:  11.00 Uhr bis 17.00 Uhr\n\n\n\nBesuche außerhalb dieser Öffnungszeiten und Gruppenbesuche nach Absprache.\n\n\n\n\n\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.\nwww.laurel-hardy-museum.de",
+      "genre": "Museen",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/410108",
       "rank": 541,
       "cluster_id": 1,
       "cluster_label": "passt gut",
@@ -604,19 +166,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/640156",
-      "event_url": "https://www.remscheid-live.de/640156",
+      "id": "schema:https://www.remscheid-live.de/event/640156",
       "title": "Fingerspiele",
-      "event_type": "TheaterEvent",
-      "startDate": "2026-07-03T20:00:00",
+      "description": "So nah an der Zauberkunst waren Sie noch nie! Erleben Sie die Meisterwerke der Magie hautnah. Diese Show vereint die magischen Highlights und Raritäten – neu und humorvoll interpretiert.\nAltersempfehlung: ab 12\nWeiter Infos:\nzaubertheater-wuppertal.de",
+      "start_date": "2026-07-03T20:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Zaubertheater Wiepen",
-      "performer": null,
-      "keywords": [
-        "Zauber & Magie",
-        "SHOW"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nSo nah an der Zauberkunst waren Sie noch nie! Erleben Sie die Meisterwerke der Magie hautnah. Diese Show vereint die magischen Highlights und Raritäten – neu und humorvoll interpretiert.\n \n\nAltersempfehlung: ab 12 \n\n\n\n\n\nWeiter Infos:\nzaubertheater-wuppertal.de",
+      "genre": "Zauber & Magie",
+      "category": null,
+      "schema_type": "TheaterEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/640156",
       "rank": 542,
       "cluster_id": 2,
       "cluster_label": "passt mittel",
@@ -642,19 +204,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/637595",
-      "event_url": "https://www.remscheid-live.de/637595",
+      "id": "schema:https://www.remscheid-live.de/event/637595",
       "title": "Gedichte für Kinder - und Erwachsene",
-      "event_type": "LiteraryEvent",
-      "startDate": "2026-07-05T15:00:00",
+      "description": "Zu diesem Termin liegen uns leider keine weiteren Informationen vor.\nEinlass ca. 14:30 Uhr",
+      "start_date": "2026-07-05T15:00:00",
+      "end_date": null,
       "city": "Schwelm",
       "venue": "Brauerei Schwelm",
-      "performer": null,
-      "keywords": [
-        "Literatur, Lesung, Hörspiel",
-        "READING"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nZu diesem Termin liegen uns leider keine weiteren Informationen vor.\nEinlass ca. 14:30 Uhr",
+      "genre": "Literatur, Lesung, Hörspiel",
+      "category": null,
+      "schema_type": "LiteraryEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/637595",
       "rank": 682,
       "cluster_id": 2,
       "cluster_label": "passt mittel",
@@ -680,19 +242,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/410124",
-      "event_url": "https://www.remscheid-live.de/410124",
+      "id": "schema:https://www.remscheid-live.de/event/410124",
       "title": "Von der Heydt-Museum",
-      "event_type": "Event",
-      "startDate": "2026-05-18T06:00:00",
+      "description": "Mit weltbekannten Werken der niederländischen Malerei und des 19. Jahrhunderts, mit Gemälden von Claude Monet, Franz Marc, Ernst Ludwig Kirchner und Otto Dix, Pablo Picasso und Francis Bacon gehört das Von der Heydt-Museum zu den international renommierten Kunstorten Deutschlands. Über 2000 Gemälde, 500 Skulpturen und 30.000 grafische Blätter gehören zum Bestand, der in wechselnden großen Ausstellungen präsentiert wird.\nÖffnungszeiten\nDi-Fr 11-18 Uhr\nDo 11-20 Uhr\nSa + So 11-18 Uhr\nMo geschlossen\nWeitere Infos zu Öffnungszeiten an Feiertagen:\nwww.von-der-heydt-museum.de/oeffnungszeiten.html\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.\nvon-der-heydt-museum.de/",
+      "start_date": "2026-05-18T06:00:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "Von der Heydt-Museum",
-      "performer": null,
-      "keywords": [
-        "Stadtführungen, Erlebnisführungen, Sightseeing",
-        "GUIDED_TOUR"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\n\n\nMit weltbekannten Werken der niederländischen Malerei und des 19. Jahrhunderts, mit Gemälden von Claude Monet, Franz Marc, Ernst Ludwig Kirchner und Otto Dix, Pablo Picasso und Francis Bacon gehört das Von der Heydt-Museum zu den international renommierten Kunstorten Deutschlands. Über 2000 Gemälde, 500 Skulpturen und 30.000 grafische Blätter gehören zum Bestand, der in wechselnden großen Ausstellungen präsentiert wird.\n \n\n\nÖffnungszeiten\n\n\n\n\nDi-Fr 11-18 Uhr\n\nDo 11-20 Uhr\n\nSa + So 11-18 Uhr\n\nMo geschlossen\n\n\n\n\n\nWeitere Infos zu Öffnungszeiten an Feiertagen:\nwww.von-der-heydt-museum.de/oeffnungszeiten.html\n\n\n\n\nBitte beachten Sie, dass die tatsächlichen Zeiten aufgrund von kurzfristigen Änderungen, an Feiertagen oder in den Schulferien abweichen können. Bitte informieren Sie sich vor Ihrem Besuch über die aktuell geltenden Öffnungszeiten.\nvon-der-heydt-museum.de/",
+      "genre": "Stadtführungen, Erlebnisführungen, Sightseeing",
+      "category": null,
+      "schema_type": "Event",
+      "opening_hours": null,
+      "opening_hours_spec": "{\"@type\": \"OpeningHoursSpecification\", \"opens\": \"11:00\", \"closes\": \"18:00\"}",
+      "url": "https://www.remscheid-live.de/410124",
       "rank": 683,
       "cluster_id": 3,
       "cluster_label": "passt nicht so gut",
@@ -718,19 +280,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/635514",
-      "event_url": "https://www.remscheid-live.de/635514",
+      "id": "schema:https://www.remscheid-live.de/event/635514",
       "title": "Kirchenkonzert",
-      "event_type": "MusicEvent",
-      "startDate": "2026-07-26T17:00:00",
+      "description": "Weitere Infos:\nwww.klavierfestival-lindlar.de/\nwww.klavierfestival-lindlar.de/events/kirchenkonzert-6/",
+      "start_date": "2026-07-26T17:00:00",
+      "end_date": null,
       "city": "Lindlar",
       "venue": "St. Severin",
-      "performer": null,
-      "keywords": [
-        "Klassik, Neue Musik",
-        "CONCERT"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nWeitere Infos:\nwww.klavierfestival-lindlar.de/\n\n\n\n\n \nwww.klavierfestival-lindlar.de/events/kirchenkonzert-6/",
+      "genre": "Klassik, Neue Musik",
+      "category": null,
+      "schema_type": "MusicEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/635514",
       "rank": 803,
       "cluster_id": 3,
       "cluster_label": "passt nicht so gut",
@@ -756,22 +318,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/639020",
-      "event_url": "https://www.remscheid-live.de/639020",
+      "id": "schema:https://www.remscheid-live.de/event/639020",
       "title": "THERE | WHERE // KOLLEKTIV | ELEVEN",
-      "event_type": "DanceEvent",
-      "startDate": "2026-07-02T19:30:00",
+      "description": "INSEL\nTHERE | WHERE // KOLLEKTIV | ELEVEN \nINSEL Tanztheater\nDonnerstag / 02. Juli 2026 / 19:30 Uhr (Einlass: 19 Uhr)\nEintritt: 14/8 (VVK inkl. Gebühren) und 16/9 (AK)\nFür Besucher*innen unter 21 Jahren ist der Eintritt frei. Bitte sendet uns bei Interesse eine kurze Nachricht an post@insel.news.\nHINWEIS: Die Inszenierung ist für Kinder unter 10 Jahren nicht geeignet.\n\"In THERE | WHERE setzen wir unsere Trilogie über den Limbus fort – einen Zwischenraum der Ungewissheit, geprägt von Schwebezuständen und existenziellen Entscheidungen. Inspiriert von La sociedad de la nieve reflektieren wir das Verharren an einem unwirtlichen Ort, an dem Leben, Hoffnung und Moral in fragiler Balance stehen. Diese abendfüllende Tanztheater-Performance untersucht den Raum zwischen Sein und Werden, zwischen Passivität und Widerstand – einem Ort, an dem Zeit und Richtung verschwimmen. So möchten wir eine Reflexion unserer kollektiven Realität eröffnen, in der Ungewissheit, Verlust und Entscheidung als Teil des menschlichen Daseins erfahrbar werden. THERE | WHERE lädt das Publikum dazu ein, diese Grenzerfahrung zu betreten und sich zu fragen: Wohin führt der nächste Schritt?\"\nKOLLEKTIV | ELEVEN vereint Künstler*innen aus Tanz, Musik, Dramaturgie und Lichtdesign und hat seinen Sitz im Ruhrgebiet und im Bergischen Land. Lara Pilloni, Julia Monschau, Frederico Mendes Teixeira, Álvaro Severino und Julio Ernesto Escobar Mellado entwickeln gemeinsam interdisziplinäre Arbeiten, in denen Bewegung, Klang und Raum aufeinandertreffen. Unterschiedliche kulturelle Hintergründe prägen den kollaborativen künstlerischen Prozess.\nTanz | Choreografie | Konzept | Lara Pilloni, Julia Monschau\nMusik | Sounddesign | Álvaro Severino\nDramaturgie | Projektassistenz | Frederico Mendes Teixeira\nLichtdesign | Julio Ernesto Escobar Mellado\nText | Nefeli Papanastasopoulou\nFotos | André Symann\nDauer | 45 Minuten\nGefördert durch | Kulturamt Essen | Bergischer Kulturfonds | Stiftung Kalkwerke Oetelshofen\nEine Kooperation von INSEL | IG Tanz Essen | .dott – Dortmunder Tanz- und Theaterszene.\n___\nwww.insel.news\nEinlass ca. 19:00 Uhr",
+      "start_date": "2026-07-02T19:30:00",
+      "end_date": null,
       "city": "Wuppertal",
       "venue": "INSEL",
-      "performer": {
-        "@type": "Organization",
-        "name": "INSEL"
-      },
-      "keywords": [
-        "Tanz & Tanztheater",
-        "DANCE"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBild © André Symann\n\n\nINSEL\n\nTHERE | WHERE // KOLLEKTIV | ELEVEN \n\nINSEL Tanztheater\n\nDonnerstag / 02. Juli 2026 / 19:30 Uhr (Einlass: 19 Uhr)\n\nEintritt: 14/8 (VVK inkl. Gebühren) und 16/9 (AK)\n\n\n\nFür Besucher*innen unter 21 Jahren ist der Eintritt frei. Bitte sendet uns bei Interesse eine kurze Nachricht an post@insel.news.\n\n\n\nHINWEIS: Die Inszenierung ist für Kinder unter 10 Jahren nicht geeignet.\n\n\n\n\"In THERE | WHERE setzen wir unsere Trilogie über den Limbus fort – einen Zwischenraum der Ungewissheit, geprägt von Schwebezuständen und existenziellen Entscheidungen. Inspiriert von La sociedad de la nieve reflektieren wir das Verharren an einem unwirtlichen Ort, an dem Leben, Hoffnung und Moral in fragiler Balance stehen. Diese abendfüllende Tanztheater-Performance untersucht den Raum zwischen Sein und Werden, zwischen Passivität und Widerstand – einem Ort, an dem Zeit und Richtung verschwimmen. So möchten wir eine Reflexion unserer kollektiven Realität eröffnen, in der Ungewissheit, Verlust und Entscheidung als Teil des menschlichen Daseins erfahrbar werden. THERE | WHERE lädt das Publikum dazu ein, diese Grenzerfahrung zu betreten und sich zu fragen: Wohin führt der nächste Schritt?\"\n\n\n\nKOLLEKTIV | ELEVEN vereint Künstler*innen aus Tanz, Musik, Dramaturgie und Lichtdesign und hat seinen Sitz im Ruhrgebiet und im Bergischen Land. Lara Pilloni, Julia Monschau, Frederico Mendes Teixeira, Álvaro Severino und Julio Ernesto Escobar Mellado entwickeln gemeinsam interdisziplinäre Arbeiten, in denen Bewegung, Klang und Raum aufeinandertreffen. Unterschiedliche kulturelle Hintergründe prägen den kollaborativen künstlerischen Prozess.\n\n\n\nTanz | Choreografie | Konzept | Lara Pilloni, Julia Monschau\n\nMusik | Sounddesign | Álvaro Severino\n\nDramaturgie | Projektassistenz | Frederico Mendes Teixeira\n\nLichtdesign | Julio Ernesto Escobar Mellado\n\nText | Nefeli Papanastasopoulou\n\nFotos | André Symann\n\nDauer | 45 Minuten\n\nGefördert durch | Kulturamt Essen | Bergischer Kulturfonds | Stiftung Kalkwerke Oetelshofen\n\nEine Kooperation von INSEL | IG Tanz Essen | .dott – Dortmunder Tanz- und Theaterszene.\n\n___\n \n\n\n \nwww.insel.news\n\n\n\nEinlass ca. 19:00 Uhr",
+      "genre": "Tanz & Tanztheater",
+      "category": null,
+      "schema_type": "DanceEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/639020",
       "rank": 804,
       "cluster_id": 4,
       "cluster_label": "passt gar nicht",
@@ -797,22 +356,19 @@
       ]
     },
     {
-      "event_id": "schema:https://www.remscheid-live.de/event/640566",
-      "event_url": "https://www.remscheid-live.de/640566",
+      "id": "schema:https://www.remscheid-live.de/event/640566",
       "title": "Vier minus drei",
-      "event_type": "ScreeningEvent",
-      "startDate": "2026-07-02T19:00:00",
+      "description": "Barbara (Valerie Pachner) und ihr Partner Heli (Robert Stadlober) führen mit ihren beiden Kindern Fini und Thimo ein glückliches und liebevolles Familienleben. Als professionelle Clowns nehmen sie das Leben nicht zu ernst und wissen, dass man auch über das lachen kann, was misslingt. Als Barbara wie aus dem Nichts durch einen Unfall ihre Familie verliert, bricht eine Welt für sie zusammen. Der Verlust lässt sie am Clownsein und dem eigenen Lebenssinn zweifeln. Doch Barbara stellt sich ihrem Schicksal. Mutig und unkonventionell findet sie ihren Weg, mit der Trauer umzugehen. Schritt für Schritt erkennt sie, dass das Leben trotz allem weitergeht, wenn man es nur wagt, ihm neu zu begegnen.\nMit ihrer gleichnamigen Autobiografie landete Barbara Pachl-Eberhart 2010 einen Bestseller: Eindringlich und mit viel Stärke beschreibt sie darin, wie es ihr nach dem tragischen Tod ihrer Familie gelang, sich dem Leben neu zu stellen. Nun hat der für seine sehr persönlichen Filmarbeiten gefeierte Regisseur Adrian Goiginger – unter anderem ausgezeichnet mit einer Lola in Silber für DER FUCHS – diese bewegende Lebensgeschichte verfilmt. Sensibel und mit feinem Gespür für seine Charaktere, inszeniert er in VIER MINUS DREI die lebendige, hoffnungsvolle Geschichte einer Frau, die nicht aufgibt. In einer schauspielerischen Ausnahmeleistung glänzt Valerie Pachner (EIN VERBORGENES LEBEN) in der Hauptrolle der Barbara, unterstützt von Robert Stadlober (FÜHRER UND VERFÜHRER). In den weiteren starken Rollen sind Stefanie Reinsperger, Hanno Koffler und Ronald Zehrfeld zu sehen. Das Drehbuch stammt von Senad Halilbašić\nwww.youtube.com/watch?v=Gaa2PWipOLA\nDonnerstag, 02.07.: 19:00 Uhr\nFreitag, 03.07.: 19:00 Uhr\nSamstag, 04.07.: 19:00 Uhr\nSonntag, 05.07.: 17:30 Uhr\nDienstag, 07.07.: 19:00 Uhr\nMittwoch, 08.07.: 20:00 Uhr\nDonnerstag, 09.07.: 19:00 Uhr\nFreitag, 10.07.: 19:00 Uhr\nSamstag, 11.07.: 19:00 Uhr\nSonntag, 12.07.: 17:30 Uhr\nDienstag, 14.07.: 19:00 Uhr\nMittwoch, 15.07.: 20:00 Uhr",
+      "start_date": "2026-07-02T19:00:00",
+      "end_date": null,
       "city": "Solingen",
       "venue": "Cobra",
-      "performer": {
-        "@type": "Organization",
-        "name": "Do. 02.07. - Mi. 15.07.. (Di 19h, Mi 20h, Do-Sa 19h & So 17:30h)"
-      },
-      "keywords": [
-        "Film",
-        "FILM"
-      ],
-      "description": "Infos\n\t\t\t\t\n\n\nBarbara (Valerie Pachner) und ihr Partner Heli (Robert Stadlober) führen mit ihren beiden Kindern Fini und Thimo ein glückliches und liebevolles Familienleben. Als professionelle Clowns nehmen sie das Leben nicht zu ernst und wissen, dass man auch über das lachen kann, was misslingt. Als Barbara wie aus dem Nichts durch einen Unfall ihre Familie verliert, bricht eine Welt für sie zusammen. Der Verlust lässt sie am Clownsein und dem eigenen Lebenssinn zweifeln. Doch Barbara stellt sich ihrem Schicksal. Mutig und unkonventionell findet sie ihren Weg, mit der Trauer umzugehen. Schritt für Schritt erkennt sie, dass das Leben trotz allem weitergeht, wenn man es nur wagt, ihm neu zu begegnen.\n\n\n\nMit ihrer gleichnamigen Autobiografie landete Barbara Pachl-Eberhart 2010 einen Bestseller: Eindringlich und mit viel Stärke beschreibt sie darin, wie es ihr nach dem tragischen Tod ihrer Familie gelang, sich dem Leben neu zu stellen. Nun hat der für seine sehr persönlichen Filmarbeiten gefeierte Regisseur Adrian Goiginger – unter anderem ausgezeichnet mit einer Lola in Silber für DER FUCHS – diese bewegende Lebensgeschichte verfilmt. Sensibel und mit feinem Gespür für seine Charaktere, inszeniert er in VIER MINUS DREI die lebendige, hoffnungsvolle Geschichte einer Frau, die nicht aufgibt. In einer schauspielerischen Ausnahmeleistung glänzt Valerie Pachner (EIN VERBORGENES LEBEN) in der Hauptrolle der Barbara, unterstützt von Robert Stadlober (FÜHRER UND VERFÜHRER). In den weiteren starken Rollen sind Stefanie Reinsperger, Hanno Koffler und Ronald Zehrfeld zu sehen. Das Drehbuch stammt von Senad Halilbašić\nwww.youtube.com/watch?v=Gaa2PWipOLA\n\n\n\nDonnerstag\n, 02.07.\n: 19:00 Uhr | 19:00 Uhr | 19:00 Uhr\nFreitag\n, 03.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 04.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 05.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 07.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 08.07.\n: 20:00 Uhr | 20:00 Uhr\nDonnerstag\n, 09.07.\n: 19:00 Uhr | 19:00 Uhr\nFreitag\n, 10.07.\n: 19:00 Uhr | 19:00 Uhr\nSamstag\n, 11.07.\n: 19:00 Uhr | 19:00 Uhr\nSonntag\n, 12.07.\n: 17:30 Uhr | 17:30 Uhr\nDienstag\n, 14.07.\n: 19:00 Uhr | 19:00 Uhr\nMittwoch\n, 15.07.\n: 20:00 Uhr | 20:00 Uhr",
+      "genre": "Film",
+      "category": null,
+      "schema_type": "ScreeningEvent",
+      "opening_hours": "immer geöffnet",
+      "opening_hours_spec": null,
+      "url": "https://www.remscheid-live.de/640566",
       "rank": 843,
       "cluster_id": 4,
       "cluster_label": "passt gar nicht",
@@ -837,5 +393,79 @@
         }
       ]
     }
+  ],
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "cluster_label": "passt am besten",
+      "size": 368,
+      "centroid": [
+        0.9603062494800093
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/639389",
+        "schema:https://www.remscheid-live.de/event/410215"
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "cluster_label": "passt gut",
+      "size": 173,
+      "centroid": [
+        0.9033356068307126
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/639720",
+        "schema:https://www.remscheid-live.de/event/410108"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_label": "passt mittel",
+      "size": 141,
+      "centroid": [
+        0.8348023015790383
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/640156",
+        "schema:https://www.remscheid-live.de/event/637595"
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_label": "passt nicht so gut",
+      "size": 121,
+      "centroid": [
+        0.7504591910707449
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/410124",
+        "schema:https://www.remscheid-live.de/event/635514"
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_label": "passt gar nicht",
+      "size": 40,
+      "centroid": [
+        0.6305774106180927
+      ],
+      "selected_event_ids": [
+        "schema:https://www.remscheid-live.de/event/639020",
+        "schema:https://www.remscheid-live.de/event/640566"
+      ]
+    }
+  ],
+  "selected_event_ids": [
+    "schema:https://www.remscheid-live.de/event/639389",
+    "schema:https://www.remscheid-live.de/event/410215",
+    "schema:https://www.remscheid-live.de/event/639720",
+    "schema:https://www.remscheid-live.de/event/410108",
+    "schema:https://www.remscheid-live.de/event/640156",
+    "schema:https://www.remscheid-live.de/event/637595",
+    "schema:https://www.remscheid-live.de/event/410124",
+    "schema:https://www.remscheid-live.de/event/635514",
+    "schema:https://www.remscheid-live.de/event/639020",
+    "schema:https://www.remscheid-live.de/event/640566"
   ]
 }
