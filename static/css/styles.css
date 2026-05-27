@@ -1,4 +1,5 @@
 :root {
+    --base-font-size: 15.48px; /* description text size (was 0.86 of 18px) */
     --bg: #07111f;
     --bg-2: #0c1629;
     --panel: rgba(10, 17, 31, 0.9);
@@ -25,7 +26,7 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: var(--base-font-size);
     scroll-behavior: smooth;
 }
 
@@ -85,13 +86,13 @@ a {
 
 .start-page .panel-note {
     max-width: 88ch;
-    font-size: 0.86rem;
+    font-size: 1rem; /* make description the base font size */
     line-height: 1.35;
     margin-bottom: 10px;
 }
 
 .start-page .participant-label {
-    font-size: 0.72rem;
+    font-size: 0.85rem;
 }
 
 .start-page .participant-input {
@@ -378,7 +379,7 @@ a {
 .participant-label {
     display: block;
     margin-bottom: 0.45rem;
-    font-size: 0.72rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--muted);
@@ -445,9 +446,12 @@ a {
     font-weight: 700;
 }
 
-/* add spacing between input and start button inside participant card */
+/* add spacing and center Start button inside participant card */
 .participant-card .board-actions {
-    margin-top: 0.5rem;
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .persona-hero-quote {
@@ -847,7 +851,7 @@ a {
 
 .event-card-preview .event-card-genre {
     font-size: 0.82rem;
-    color: var(--muted);
+    color: #67e8f9;
 }
 
 .primary-btn.is-ready:not(:disabled) {
@@ -1365,7 +1369,7 @@ body.has-event-modal {
 }
 
 .event-pool .event-card.is-details-open .event-card-genre {
-    color: #ffcda8;
+    color: #67e8f9;
 }
 
 @media (max-width: 820px) {

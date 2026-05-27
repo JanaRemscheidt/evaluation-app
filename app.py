@@ -988,6 +988,8 @@ def get_events_for_persona(persona):
     ranking_data = load_json_file(ranking_file)
     events = extract_ranked_events(ranking_data)
 
+    random.shuffle(events)
+
     if len(events) < 10:
         return events
 

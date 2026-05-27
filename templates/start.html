@@ -14,7 +14,6 @@
     <div class="page-shell">
         <header class="site-header">
             <div class="brand-lockup">
-                <div class="brand-mark">!</div>
                 <div>
                     <h1>Bevor du startest</h1>
                 </div>
@@ -29,14 +28,14 @@
                 <p class="panel-note">Ziehe die Events dafür per Drag &amp; Drop in die passenden Sterne-Kategorien:</p>
                 <p class="panel-note">⭐ = eher keine passende Empfehlung<br>⭐⭐⭐⭐⭐ = sehr passende Empfehlung</p>
                 <p class="panel-note">Innerhalb der Kategorien kannst du die Events zusätzlich sortieren, um eine genauere Reihenfolge festzulegen.</p>
-                <p class="panel-note">Bitte versuche, die Entscheidungen möglichst aus Sicht der Persona zu treffen — nicht nach deinen persönlichen Interessen.</p>
+                <p class="panel-note">Bitte versuche, die Entscheidungen möglichst aus Sicht der Persona zu treffen — nicht nach deinen persönlichen Interessen.</p><br>
 
 
                 {# Error message is rendered under the participant input to keep it visually connected #}
 
                 <form class="participant-card highlighted" method="post" action="/start">
                     <label class="participant-label" for="participant-label">Dein Pseudonym oder Kürzel</label>
-                    <p class="panel-note">Bitte wähle ein eindeutiges Pseudonym oder Kürzel. Damit können deine Bewertungen anonym gespeichert und später eindeutig zugeordnet werden.</p>
+                    <p class="panel-note">Bitte wähle ein eindeutiges Pseudonym oder Kürzel. Damit können deine Bewertungen anonym gespeichert und später eindeutig zugeordnet werden.</p><br>
                     <input
                         id="participant-label"
                         class="participant-input"
@@ -48,7 +47,7 @@
                         autocomplete="nickname"
                         spellcheck="false"
                         required
-                    >
+                    ><br>
                     {% if error_message %}
                     <p class="participant-error" role="alert" aria-live="polite">{{ error_message }}</p>
                     {% endif %}
