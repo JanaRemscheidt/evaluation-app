@@ -99,9 +99,3 @@ Für Plattformen wie Wasmer/Wasix oder Container-Runtimes gilt: `DATABASE_URL` i
 - `/persona/<persona_id>` – Persona + Events anzeigen
 - `/persona/<persona_id>/complete` – POST: Rangliste speichern
 - `/complete` – Abschlussseite
-
-Wenn du möchtest, kann ich: die README weiter verkürzen, eine englische Version hinzufügen oder ein `README_DE.md` anlegen.
-
----
-
-Änderungswünsche? Sag kurz, welche Infos du ergänzen willst.
